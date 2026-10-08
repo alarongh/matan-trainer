@@ -11,7 +11,8 @@
     "test:keyboard": "node tests/keyboard.cjs",
     "test:expanded": "node tests/expanded.cjs",
     "test:navigation": "node tests/navigation.cjs",
-    "test:linear": "node tests/linear.cjs"
+    "test:linear": "node tests/linear.cjs",
+    "test:theme": "node tests/theme.cjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.8",

@@ -4,12 +4,14 @@ import {checkLinearAnswer} from './linear-answer.js';
 import {subject,isLinear,subjectStorage,setupSubjects} from './subjects.js';
 import {linearFormulas,linearInputHelp,addLinearKeys,renderGraph} from './linear-ui.js';
 import {mountKeyboard} from './keyboard.js';
+import {THEME_KEY,loadTheme,saveTheme} from './theme.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const math=(target,tex)=>katex.render(tex,target,{displayMode:true,throwOnError:false,strict:'ignore',trust:false});
 let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,activeAnswerInput,storageWarning=false;
 try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error();}};}
+const preferences=storage;
 storage=subjectStorage(storage);
 const checkAnswer=isLinear?checkLinearAnswer:checkMathAnswer;
 let names={};
@@ -172,7 +174,7 @@ function submit(value){
   renderSteps();
  }
 }
-function theme(name){state.theme=name;document.documentElement.dataset.theme=name;document.querySelectorAll('button[data-theme]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.theme===name));$('theme-select').value=name;persist();}
+function theme(name,save=true){state.theme=name;document.documentElement.dataset.theme=name;document.querySelectorAll('button[data-theme]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.theme===name));$('theme-select').value=name;if(save){saveTheme(preferences,name);persist();}}
 function openSettings(){
  $('auto-advance').checked=state.autoAdvance;
  const values=Object.values(state.items),attempts=values.reduce((sum,v)=>sum+v.attempts.length,0);
@@ -225,7 +227,9 @@ async function init(){
   for(const [value,label] of [['sage','Шалфей'],['paper','Тёплая бумага'],['lavender','Лаванда'],['night','Тихий вечер']]){const option=el('option','',label);option.value=value;select.append(option);}
   row.append(select);$('settings-dialog').insertBefore(row,$('settings-stats'));
   const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
-  theme(state.theme);
+  // Adopt the current subject's legacy theme once, then share it across subjects.
+  theme(loadTheme(preferences,state.theme));
+  window.addEventListener('storage',event=>{if(event.key===THEME_KEY)theme(loadTheme(preferences,state.theme),false);});
   keyboard=mountKeyboard($('math-keyboard'),$('answer'));
   if(isLinear)addLinearKeys($('math-keyboard'),()=>activeAnswerInput);
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
@@ -247,7 +251,7 @@ async function init(){
   $('auto-advance').onchange=()=>{state.autoAdvance=$('auto-advance').checked;cancelAdvance();persist();};
   $('export-progress').onclick=()=>{const blob=new Blob([JSON.stringify({...state,subject,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});const a=el('a');a.href=URL.createObjectURL(blob);a.download=`${subject}-progress-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
   $('import-progress').onclick=()=>$('import-file').click();
-  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const raw=JSON.parse(await file.text());if((raw.subject&&raw.subject!==subject)||(isLinear&&raw.subject!=='linear'))throw Error('Это история другого предмета. Выбери соответствующий предмет перед загрузкой.');const incoming=validateState(raw,ids);state=incoming;theme(state.theme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
+  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const raw=JSON.parse(await file.text());if((raw.subject&&raw.subject!==subject)||(isLinear&&raw.subject!=='linear'))throw Error('Это история другого предмета. Выбери соответствующий предмет перед загрузкой.');const incoming=validateState(raw,ids);const keepTheme=loadTheme(preferences,state.theme);state=incoming;theme(keepTheme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
   $('reset-progress').onclick=()=>{if(!confirm('Удалить все попытки и подсказки в этом браузере?'))return;const keepTheme=state.theme;state=emptyState();state.theme=keepTheme;theme(keepTheme);render();$('settings-dialog').close();toast('Прогресс сброшен.');};
   render();
  }catch(e){$('task-heading').textContent='Не удалось открыть тренажёр';$('task-instruction').textContent=e.message+' Обнови страницу или проверь подключение.';console.error(e);}
