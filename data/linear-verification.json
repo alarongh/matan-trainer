@@ -1,0 +1,522 @@
+[
+  {
+    "id": "la-example-01",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-example-02",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-example-03",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-example-04",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-example-05",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-example-06",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-example-07",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-example-08",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-example-09",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-example-10",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-example-11",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-example-12",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-example-13",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-example-14",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-example-15",
+    "method": "given point lies in plane and gradient is the normal",
+    "passed": true
+  },
+  {
+    "id": "la-example-16",
+    "method": "parametric direction is nonzero",
+    "passed": true
+  },
+  {
+    "id": "la-example-17",
+    "method": "parametric direction is nonzero",
+    "passed": true
+  },
+  {
+    "id": "la-example-18",
+    "method": "given point lies in plane and gradient is the normal",
+    "passed": true
+  },
+  {
+    "id": "la-example-19",
+    "method": "projection lies on line; residual is perpendicular",
+    "passed": true
+  },
+  {
+    "id": "la-example-20",
+    "method": "all three coordinate equations solved together",
+    "passed": true
+  },
+  {
+    "id": "21",
+    "method": "plane projection and reflection",
+    "passed": true
+  },
+  {
+    "id": "la-example-22",
+    "method": "projection lies on line; residual is perpendicular",
+    "passed": true
+  },
+  {
+    "id": "22",
+    "method": "direction is cross product of plane normals",
+    "passed": true
+  },
+  {
+    "id": "la-example-23",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-24",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-25",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-26",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-27",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-28",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-29",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-example-30",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "31",
+    "method": "substitution into quadric and repeated root",
+    "passed": true
+  },
+  {
+    "id": "32",
+    "method": "focus of translated parabola",
+    "passed": true
+  },
+  {
+    "id": "la-example-33",
+    "method": "exact complex arithmetic",
+    "passed": true
+  },
+  {
+    "id": "35.0",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "36.0",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "36.1",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "36.2",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "36.3",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "36.4",
+    "method": "polar representation reconstructs number",
+    "passed": true
+  },
+  {
+    "id": "la-example-37",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-37",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-37",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-example-38",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-38",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-38",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-38",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-38",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-example-39",
+    "method": "De Moivre and exact integer power agree",
+    "passed": true
+  },
+  {
+    "id": "la-example-40",
+    "method": "exact complex arithmetic",
+    "passed": true
+  },
+  {
+    "id": "la-example-41",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-41",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-41",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-41",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-41",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-example-42",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-42",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-42",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-42",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-example-43",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-43",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-43",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-example-43",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-example-44",
+    "method": "ranks preserved by echelon reduction",
+    "passed": true
+  },
+  {
+    "id": "la-example-45",
+    "method": "ranks preserved by echelon reduction",
+    "passed": true
+  },
+  {
+    "id": "46",
+    "method": "general solution and particular satisfy all equations",
+    "passed": true
+  },
+  {
+    "id": "la-example-46",
+    "method": "ranks preserved by echelon reduction",
+    "passed": true
+  },
+  {
+    "id": "la-example-47",
+    "method": "moment orthogonal to lever and force",
+    "passed": true
+  },
+  {
+    "id": "la-example-48",
+    "method": "dot product recomputed coordinatewise",
+    "passed": true
+  },
+  {
+    "id": "la-example-49",
+    "method": "dot product recomputed coordinatewise",
+    "passed": true
+  },
+  {
+    "id": "la-example-50",
+    "method": "reciprocal product equals one",
+    "passed": true
+  },
+  {
+    "id": "la-example-51",
+    "method": "reciprocal product equals one",
+    "passed": true
+  },
+  {
+    "id": "55",
+    "method": "cross product of normals",
+    "passed": true
+  },
+  {
+    "id": "la-demo-1-3",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-demo-1-4",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-demo-1-7",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-demo-2-1",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-demo-3-1",
+    "method": "projection lies on line; residual is perpendicular",
+    "passed": true
+  },
+  {
+    "id": "la-demo-5-6",
+    "method": "De Moivre and exact integer power agree",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-1",
+    "method": "all entries recomputed as row-column dot products",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-2",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-3",
+    "method": "all three coordinate equations solved together",
+    "passed": true
+  },
+  {
+    "id": "ticket1-line-point",
+    "method": "point lies on both planes",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-4",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-5",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-6",
+    "method": "general solution and particular satisfy all equations",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-6",
+    "method": "ranks preserved by echelon reduction",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-1-7",
+    "method": "moment orthogonal to lever and force",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-1",
+    "method": "A*Ainv=I; substitution into matrix equation",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-2",
+    "method": "vector identity: cross norm squared = Gram determinant",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-3",
+    "method": "projection lies on line; residual is perpendicular",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-4",
+    "method": "conic parameters satisfy focal identity",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-5",
+    "method": "each root substituted into polynomial",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-5",
+    "method": "number of distinct roots equals degree",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-6",
+    "method": "general solution and particular satisfy all equations",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-6",
+    "method": "ranks preserved by echelon reduction",
+    "passed": true
+  },
+  {
+    "id": "la-ticket-2-7",
+    "method": "dot product recomputed coordinatewise",
+    "passed": true
+  }
+]

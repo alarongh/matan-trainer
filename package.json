@@ -10,7 +10,8 @@
     "test:browser": "node tests/browser.cjs",
     "test:keyboard": "node tests/keyboard.cjs",
     "test:expanded": "node tests/expanded.cjs",
-    "test:navigation": "node tests/navigation.cjs"
+    "test:navigation": "node tests/navigation.cjs",
+    "test:linear": "node tests/linear.cjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.8",

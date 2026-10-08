@@ -1,12 +1,17 @@
 import katex from './vendor/katex/katex.mjs';
-import {checkAnswer} from './answer.js';
+import {checkAnswer as checkMathAnswer} from './answer.js';
+import {checkLinearAnswer} from './linear-answer.js';
+import {subject,isLinear,subjectStorage,setupSubjects} from './subjects.js';
+import {linearFormulas,linearInputHelp,addLinearKeys,renderGraph} from './linear-ui.js';
 import {mountKeyboard} from './keyboard.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const math=(target,tex)=>katex.render(tex,target,{displayMode:true,throwOnError:false,strict:'ignore',trust:false});
-let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,storageWarning=false;
+let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,activeAnswerInput,storageWarning=false;
 try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error();}};}
+storage=subjectStorage(storage);
+const checkAnswer=isLinear?checkLinearAnswer:checkMathAnswer;
 let names={};
 const statuses={new:'Ещё не решено',learning:'В работе',solved:'Самостоятельно ✓',assisted:'Решено с помощью'};
 function persist(){if(!saveState(storage,state)){$('save-status').textContent='Сохранение недоступно';if(!storageWarning){storageWarning=true;toast('Браузер запретил сохранение. Скачивай историю перед закрытием.');}}}
@@ -83,7 +88,7 @@ function render(){
  updateNavigation();
  $('source-links').replaceChildren();
  for(const src of current.sources){
-  const a=el('a','',`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория'}[src.file]}: ${src.label} ↗`);
+  const a=el('a','',isLinear?`${src.label} ↗`:`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория'}[src.file]}: ${src.label} ↗`);
   a.href=`./sources/${src.file}.pdf#page=${src.page}`;a.target='_blank';a.rel='noopener';$('source-links').append(a);
  }
  if(!current.sources.length)$('source-links').append(el('span','input-help','Дополнительная задача для тренировки.'));
@@ -96,7 +101,7 @@ function answerValue(){
  return $('answer').value;
 }
 function draft(){if(current){itemState(state,current.id).draft=answerValue();persist();}}
-function activateInput(input){keyboard.setInput(input);document.querySelectorAll('.field-entry').forEach(row=>row.classList.toggle('active-field',row.contains(input)));}
+function activateInput(input){activeAnswerInput=input;keyboard.setInput(input);document.querySelectorAll('.field-entry').forEach(row=>row.classList.toggle('active-field',row.contains(input)));}
 function renderAnswer(item){
  const choice=['choice','multi'].includes(current.kind),fields=current.kind==='fields';
  $('answer-row').hidden=choice||fields;$('choices').hidden=!choice;$('answer-fields').hidden=!fields;$('math-keyboard').hidden=choice;
@@ -114,10 +119,13 @@ function renderAnswer(item){
   let values={};try{values=JSON.parse(item.draft||'{}');}catch{}
   for(const f of current.fields){
    const row=el('div','field-entry'),label=el('label','',f.label),input=el('input');input.id='field-'+f.id;input.dataset.field=f.id;input.name=f.id;input.maxLength=256;input.spellcheck=false;input.value=values[f.id]||'';input.placeholder=({points:'(x;y) | (x;y)',lines:'x=…; y=…',set:'значение; значение',expression:'Выражение через '+(f.variables||[]).join(', ')})[f.kind]||'Только итоговый ответ';
+   if(isLinear)linearInputHelp(f,input);
    label.htmlFor=input.id;input.onfocus=()=>activateInput(input);input.onpointerdown=()=>activateInput(input);input.oninput=draft;row.append(label,input);$('answer-fields').append(row);
+   if(isLinear&&['matrix','complex','complex-set','equation','line3','affine','system-point','vector'].includes(f.kind)){const help=el('p','input-help');linearInputHelp(f,input,help);row.append(help);}
   }
   const button=el('button','primary-button','Проверить все поля ↵');button.type='submit';$('answer-fields').append(button);activateInput($('answer-fields').querySelector('input'));
- }else{$('answer').value=item.draft||'';activateInput($('answer'));}
+ }else{$('answer').value=item.draft||'';activateInput($('answer'));if(isLinear)linearInputHelp(current,$('answer'),$('answer-help'));}
+ if(isLinear&&fields)$('answer-help').textContent='Заполни все поля. Матрицы: 1 2; 3 4. Координаты: (1;2;3). Корни: sqrt(2). Углы в радианах.';
 }
 function renderSteps(){
  if(!current)return;
@@ -125,7 +133,7 @@ function renderSteps(){
  $('solution').hidden=!count;$('steps').replaceChildren();$('step-count').textContent=`${count} / ${current.stages.length}`;
  current.stages.slice(0,count).forEach((stage,i)=>{
   const section=el('article','step');section.append(el('span','step-number',`${i+1}`),el('h4','',stage.title));
-  for(const block of stage.blocks){if(block.note)section.append(el('p','',block.note));if(block.tex){const m=el('div','math');math(m,block.tex);section.append(m);}}
+  for(const block of stage.blocks){if(block.note)section.append(el('p','',block.note));if(block.tex){const m=el('div','math');math(m,block.tex);section.append(m);}if(isLinear&&block.graph)section.append(renderGraph(block.graph));}
   $('steps').append(section);
  });
  $('next-step').textContent=count<current.stages.length?'Открыть следующий шаг ↓':'Повторить самостоятельно ↺';
@@ -176,7 +184,7 @@ function openSettings(){
  $('settings-dialog').showModal();
 }
 function sources(){
- $('sources-description').textContent=`Все №1–10 билета: ${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
+ $('sources-description').textContent=`${isLinear?'Линал · 1 семестр 2025–26. ':''}Все №1–10 билета: ${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
  $('sources-content').replaceChildren();
  for(const file of coverage.sourceFiles){const a=el('a','source-document',file.title);a.href=`./sources/${file.id}.pdf`;a.target='_blank';a.rel='noopener';a.append(el('small','',file.id==='theory'?'Теоретический список доступен как PDF.':'Оригинал PDF · открыть в новой вкладке ↗'));$('sources-content').append(a);}
  for(const note of coverage.notes)$('sources-content').append(el('p','input-help',note));
@@ -185,7 +193,7 @@ function sources(){
 }
 function formulas(){
  $('formula-content').replaceChildren();
- const sections=[
+ const sections=isLinear?linearFormulas:[
   ['Второй замечательный предел','При A → 1 и положительном основании; L конечен.',String.raw`L=\lim(A-1)B\quad\Longrightarrow\quad A^B\to e^L`],
   ['Эквивалентности','Все формулы при t → 0. Углы в радианах.',String.raw`\begin{gathered}\sin t\sim t,\quad\tan t\sim t,\quad\arctan t\sim t,\quad\arcsin t\sim t\\1-\cos t\sim\frac{t^2}{2},\quad\ln(1+t)\sim t,\quad e^t-1\sim t\end{gathered}`],
   ['Знаки и сложный аргумент','При x → 0 и фиксированном k ≠ 0.',String.raw`\cos^2t-1=-\sin^2t,\quad\sin^2(kx)\sim k^2x^2`],
@@ -205,7 +213,8 @@ function formulas(){
 }
 async function init(){
  try{
-  const responses=await Promise.all([fetch('./tasks.json'),fetch('./coverage.json')]);
+  setupSubjects();
+  const responses=await Promise.all(isLinear?[fetch('./linear-tasks.json'),fetch('./linear-coverage.json')]:[fetch('./tasks.json'),fetch('./coverage.json')]);
   if(responses.some(r=>!r.ok))throw Error('Не удалось загрузить банк заданий.');
   [tasks,coverage]=await Promise.all(responses.map(r=>r.json()));ids=new Set(tasks.map(t=>t.id));state=loadState(storage,ids);
   names=coverage.sections;
@@ -218,6 +227,7 @@ async function init(){
   const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
   theme(state.theme);
   keyboard=mountKeyboard($('math-keyboard'),$('answer'));
+  if(isLinear)addLinearKeys($('math-keyboard'),()=>activeAnswerInput);
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
   document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;render();}));
   document.querySelectorAll('button[data-theme]').forEach(b=>b.addEventListener('click',()=>theme(b.dataset.theme)));
@@ -235,9 +245,9 @@ async function init(){
   document.querySelectorAll('.close-dialog').forEach(b=>b.onclick=()=>b.closest('dialog').close());
   document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
   $('auto-advance').onchange=()=>{state.autoAdvance=$('auto-advance').checked;cancelAdvance();persist();};
-  $('export-progress').onclick=()=>{const blob=new Blob([JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});const a=el('a');a.href=URL.createObjectURL(blob);a.download=`matan-progress-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+  $('export-progress').onclick=()=>{const blob=new Blob([JSON.stringify({...state,subject,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});const a=el('a');a.href=URL.createObjectURL(blob);a.download=`${subject}-progress-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
   $('import-progress').onclick=()=>$('import-file').click();
-  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const incoming=validateState(JSON.parse(await file.text()),ids);state=incoming;theme(state.theme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
+  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const raw=JSON.parse(await file.text());if((raw.subject&&raw.subject!==subject)||(isLinear&&raw.subject!=='linear'))throw Error('Это история другого предмета. Выбери соответствующий предмет перед загрузкой.');const incoming=validateState(raw,ids);state=incoming;theme(state.theme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
   $('reset-progress').onclick=()=>{if(!confirm('Удалить все попытки и подсказки в этом браузере?'))return;const keepTheme=state.theme;state=emptyState();state.theme=keepTheme;theme(keepTheme);render();$('settings-dialog').close();toast('Прогресс сброшен.');};
   render();
  }catch(e){$('task-heading').textContent='Не удалось открыть тренажёр';$('task-instruction').textContent=e.message+' Обнови страницу или проверь подключение.';console.error(e);}

@@ -46,6 +46,17 @@
 .field-entry label{font-size:14px;line-height:1.5}
 .field-entry input{width:100%;min-width:0;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;font-size:16px}
 .field-entry.active-field{border-color:var(--accent);background:var(--accent-soft)}
+.subject-picker{display:grid;gap:7px;margin:0 0 22px;padding:0 10px;min-width:0}
+.subject-picker>span{font-size:8px;letter-spacing:.7px;color:var(--muted)}
+.subject-picker select{width:100%;max-width:100%;min-width:0;padding:11px 26px 11px 10px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--ink);font-size:11px}
+.subject-picker+.sidebar-caption{margin-top:5px}
+.linear-keys{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;margin-bottom:9px}
+.linear-keys .math-key{font-size:14px;padding-inline:2px}
+.linear-keys .math-key:last-child{font-size:9px}
+.solution-graph{margin:18px 0 5px;max-width:480px}
+.solution-graph svg{display:block;width:100%;height:auto;overflow:hidden;border:1px solid var(--border);border-radius:12px}
+.solution-graph figcaption{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.6}
+@container(max-width:720px){.subject-picker{margin:0 0 14px;padding:0;max-width:400px}.subject-picker select{font-size:13px;min-height:44px}.linear-keys{gap:4px}}
 .source-issue{display:block;width:100%;text-align:left;border:1px solid var(--border);border-radius:12px;padding:12px;margin:10px 0;background:var(--card);color:var(--ink);font:inherit;font-size:13px;line-height:1.6}
 .group-nav .nav-number{flex-shrink:0}
 .history-entry span:last-child{overflow-wrap:anywhere}
