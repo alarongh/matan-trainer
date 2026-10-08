@@ -57,7 +57,9 @@ export function mountKeyboard(root,input){
  ]);
  const more=document.createElement('details');more.className='keyboard-more';const summary=document.createElement('summary');summary.textContent='Ещё функции';more.append(summary);
  grid('keyboard-functions',['sin','cos','tan','arctan','arccot','arcsin','arccos','ln','exp','abs'].map(name=>({id:name,label:name,prefix:name+'(',suffix:')',hint:name+' — вставить функцию'})),more);panel.append(more);
+ grid('keyboard-functions',['x','y','t','a','l','k','c','=',';','|','нет'].map(text=>({text,label:text})),more);
  const actions=document.createElement('div');actions.className='keyboard-actions';
  actions.append(button({action:'clear',label:'Очистить'}),button({action:'delete',label:'⌫',hint:'Удалить символ или выделение'}));
  const check=document.createElement('button');check.type='submit';check.className='primary-button';check.id='keyboard-check';check.textContent='Проверить ↵';actions.append(check);panel.append(actions);
+ return {setInput(next){input=next;}};
 }

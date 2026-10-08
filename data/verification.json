@@ -394,5 +394,1466 @@
     "method": "symbolic limit",
     "result": "1",
     "passed": true
+  },
+  {
+    "id": "function-limit-01",
+    "method": "symbolic limit vs reference",
+    "result": "2/5",
+    "passed": true
+  },
+  {
+    "id": "function-limit-02",
+    "method": "symbolic limit vs reference",
+    "result": "16/5",
+    "passed": true
+  },
+  {
+    "id": "function-limit-03",
+    "method": "symbolic limit vs reference",
+    "result": "-1/56",
+    "passed": true
+  },
+  {
+    "id": "function-limit-04",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "function-limit-05",
+    "method": "symbolic limit vs reference",
+    "result": "6",
+    "passed": true
+  },
+  {
+    "id": "function-limit-06",
+    "method": "symbolic limit vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-07",
+    "method": "symbolic limit vs reference",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "function-limit-08",
+    "method": "symbolic limit vs reference",
+    "result": "3/4",
+    "passed": true
+  },
+  {
+    "id": "function-limit-09",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "function-limit-11",
+    "method": "symbolic limit vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-12",
+    "method": "symbolic limit vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-13",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-14",
+    "method": "symbolic limit vs reference",
+    "result": "-2/5",
+    "passed": true
+  },
+  {
+    "id": "function-limit-15",
+    "method": "symbolic limit vs reference",
+    "result": "-1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-16",
+    "method": "symbolic limit vs reference",
+    "result": "-2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-17",
+    "method": "symbolic limit vs reference",
+    "result": "10",
+    "passed": true
+  },
+  {
+    "id": "function-limit-18",
+    "method": "symbolic limit vs reference",
+    "result": "1/8",
+    "passed": true
+  },
+  {
+    "id": "function-limit-19",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-22",
+    "method": "bounded cosine squeeze",
+    "result": "-1/4",
+    "passed": true
+  },
+  {
+    "id": "function-limit-23",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "function-limit-24",
+    "method": "symbolic limit vs reference",
+    "result": "1/(2*pi)",
+    "passed": true
+  },
+  {
+    "id": "function-limit-25",
+    "method": "symbolic limit vs reference",
+    "result": "-3/4",
+    "passed": true
+  },
+  {
+    "id": "function-limit-26",
+    "method": "symbolic limit vs reference",
+    "result": "-pi**2/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-27",
+    "method": "symbolic limit vs reference",
+    "result": "-1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-28",
+    "method": "symbolic limit vs reference",
+    "result": "1/4",
+    "passed": true
+  },
+  {
+    "id": "function-limit-29",
+    "method": "symbolic limit vs reference",
+    "result": "-pi/6",
+    "passed": true
+  },
+  {
+    "id": "function-limit-30",
+    "method": "symbolic limit vs reference",
+    "result": "-1/6",
+    "passed": true
+  },
+  {
+    "id": "function-limit-31",
+    "method": "symbolic limit vs reference",
+    "result": "oo",
+    "passed": true
+  },
+  {
+    "id": "function-limit-32",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-33",
+    "method": "symbolic limit vs reference",
+    "result": "32/57",
+    "passed": true
+  },
+  {
+    "id": "function-limit-34",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "function-limit-35",
+    "method": "symbolic limit vs reference",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "function-limit-36",
+    "method": "symbolic limit vs reference",
+    "result": "6/13",
+    "passed": true
+  },
+  {
+    "id": "function-limit-37",
+    "method": "symbolic limit vs reference",
+    "result": "3/5",
+    "passed": true
+  },
+  {
+    "id": "function-limit-38",
+    "method": "symbolic limit vs reference",
+    "result": "3/5",
+    "passed": true
+  },
+  {
+    "id": "function-limit-39",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "function-limit-40",
+    "method": "symbolic limit vs reference",
+    "result": "4/5",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-01",
+    "method": "symbolic limit vs reference",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-02",
+    "method": "symbolic limit vs reference",
+    "result": "-2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-03",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-06",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-07",
+    "method": "symbolic limit vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-08",
+    "method": "symbolic limit vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-09",
+    "method": "symbolic limit vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-10",
+    "method": "symbolic limit vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-11",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-13",
+    "method": "symbolic limit vs reference",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-15",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-16",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-17",
+    "method": "symbolic limit vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-18",
+    "method": "symbolic limit vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-19",
+    "method": "symbolic limit vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-20",
+    "method": "symbolic limit vs reference",
+    "result": "-1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-31",
+    "method": "symbolic limit vs reference",
+    "result": "-2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-32",
+    "method": "symbolic limit vs reference",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-33",
+    "method": "symbolic limit vs reference",
+    "result": "9/50",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-34",
+    "method": "symbolic limit vs reference",
+    "result": "18",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-35",
+    "method": "symbolic limit vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-36",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-37",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-38",
+    "method": "symbolic limit vs reference",
+    "result": "cos(3)",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-39",
+    "method": "symbolic limit vs reference",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-40",
+    "method": "symbolic limit vs reference",
+    "result": "-oo",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-21",
+    "method": "root derivatives vs reference",
+    "result": "1/36",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-22",
+    "method": "root derivatives vs reference",
+    "result": "-1/35",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-23",
+    "method": "root derivatives vs reference",
+    "result": "8/15",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-24",
+    "method": "root derivatives vs reference",
+    "result": "1/10",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-25",
+    "method": "root derivatives vs reference",
+    "result": "-11/21",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-26",
+    "method": "root derivatives vs reference",
+    "result": "11/15",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-27",
+    "method": "root derivatives vs reference",
+    "result": "-1/10",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-28",
+    "method": "root derivatives vs reference",
+    "result": "-13/20",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-29",
+    "method": "root derivatives vs reference",
+    "result": "2/15",
+    "passed": true
+  },
+  {
+    "id": "advanced-limit-30",
+    "method": "root derivatives vs reference",
+    "result": "35/24",
+    "passed": true
+  },
+  {
+    "id": "derivative-01",
+    "method": "symbolic differentiation vs reference",
+    "result": "2*(-2 + pi)/pi**2",
+    "passed": true
+  },
+  {
+    "id": "derivative-02",
+    "method": "symbolic differentiation vs reference",
+    "result": "4",
+    "passed": true
+  },
+  {
+    "id": "derivative-03",
+    "method": "symbolic differentiation vs reference",
+    "result": "-2/pi",
+    "passed": true
+  },
+  {
+    "id": "derivative-04",
+    "method": "symbolic differentiation vs reference",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "derivative-05",
+    "method": "symbolic differentiation vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "derivative-06",
+    "method": "symbolic differentiation vs reference",
+    "result": "E",
+    "passed": true
+  },
+  {
+    "id": "derivative-07",
+    "method": "symbolic differentiation vs reference",
+    "result": "-2**(2/3)/8",
+    "passed": true
+  },
+  {
+    "id": "derivative-08",
+    "method": "symbolic differentiation vs reference",
+    "result": "-3/5",
+    "passed": true
+  },
+  {
+    "id": "derivative-09",
+    "method": "symbolic differentiation vs reference",
+    "result": "exp(-1)",
+    "passed": true
+  },
+  {
+    "id": "derivative-10",
+    "method": "symbolic differentiation vs reference",
+    "result": "-1/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-11",
+    "method": "symbolic differentiation vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "derivative-12",
+    "method": "symbolic differentiation vs reference",
+    "result": "1/3",
+    "passed": true
+  },
+  {
+    "id": "derivative-13",
+    "method": "symbolic differentiation vs reference",
+    "result": "3/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-15",
+    "method": "symbolic differentiation vs reference",
+    "result": "3",
+    "passed": true
+  },
+  {
+    "id": "derivative-16",
+    "method": "symbolic differentiation vs reference",
+    "result": "3/2 + log(531441)",
+    "passed": true
+  },
+  {
+    "id": "derivative-17",
+    "method": "symbolic differentiation vs reference",
+    "result": "5/(8*log(2))",
+    "passed": true
+  },
+  {
+    "id": "derivative-18",
+    "method": "symbolic differentiation vs reference",
+    "result": "1/5",
+    "passed": true
+  },
+  {
+    "id": "derivative-19",
+    "method": "symbolic differentiation vs reference",
+    "result": "2*sqrt(3)",
+    "passed": true
+  },
+  {
+    "id": "derivative-21",
+    "method": "symbolic differentiation vs reference",
+    "result": "-pi/4",
+    "passed": true
+  },
+  {
+    "id": "derivative-22",
+    "method": "symbolic differentiation vs reference",
+    "result": "-pi/6",
+    "passed": true
+  },
+  {
+    "id": "derivative-23",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/4",
+    "passed": true
+  },
+  {
+    "id": "derivative-24",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/3",
+    "passed": true
+  },
+  {
+    "id": "derivative-25",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-26",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-27",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/4",
+    "passed": true
+  },
+  {
+    "id": "derivative-28",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/4",
+    "passed": true
+  },
+  {
+    "id": "derivative-29",
+    "method": "symbolic differentiation vs reference",
+    "result": "pi/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-30",
+    "method": "symbolic differentiation vs reference",
+    "result": "3/2 + 3*pi/4",
+    "passed": true
+  },
+  {
+    "id": "derivative-31",
+    "method": "symbolic differentiation vs reference",
+    "result": "-1/3",
+    "passed": true
+  },
+  {
+    "id": "derivative-32",
+    "method": "symbolic differentiation vs reference",
+    "result": "-sqrt(6)/9",
+    "passed": true
+  },
+  {
+    "id": "derivative-33",
+    "method": "symbolic differentiation vs reference",
+    "result": "2/3",
+    "passed": true
+  },
+  {
+    "id": "derivative-34",
+    "method": "symbolic differentiation vs reference",
+    "result": "-3/5",
+    "passed": true
+  },
+  {
+    "id": "derivative-35",
+    "method": "symbolic differentiation vs reference",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "derivative-36",
+    "method": "symbolic differentiation vs reference",
+    "result": "-3*exp(-1)/2",
+    "passed": true
+  },
+  {
+    "id": "derivative-37",
+    "method": "symbolic differentiation vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "derivative-38",
+    "method": "symbolic differentiation vs reference",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "derivative-39",
+    "method": "symbolic differentiation vs reference",
+    "result": "2**(1/4)*3**(3/4)/4",
+    "passed": true
+  },
+  {
+    "id": "demo-derivative-1",
+    "method": "demo derivative",
+    "result": "sin(1)",
+    "passed": true
+  },
+  {
+    "id": "demo-derivative-2",
+    "method": "demo derivative",
+    "result": "tan(1)",
+    "passed": true
+  },
+  {
+    "id": "demo-derivative-3",
+    "method": "demo derivative",
+    "result": "-125/36 + 125*pi/216",
+    "passed": true
+  },
+  {
+    "id": "inflection-21",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-22",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-23",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-24",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-25",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-26",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-27",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-28",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-29",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "inflection-30",
+    "method": "second derivative zero",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-05",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-06",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-07",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-08",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-10",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-11",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-12",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-13",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-14",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-15",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-16",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-17",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-18",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-19",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-20",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-30",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-31",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-35",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-38",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-39",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "asymptote-40",
+    "method": "rational polynomial division and pole cancellation",
+    "passed": true
+  },
+  {
+    "id": "practical-11",
+    "method": "all critical points and endpoints",
+    "passed": true,
+    "result": "18"
+  },
+  {
+    "id": "practical-12",
+    "method": "all critical points and endpoints",
+    "passed": true,
+    "result": "36"
+  },
+  {
+    "id": "practical-13",
+    "method": "all critical points and endpoints",
+    "passed": true,
+    "result": "65"
+  },
+  {
+    "id": "practical-14",
+    "method": "all critical points and endpoints",
+    "passed": true,
+    "result": "21"
+  },
+  {
+    "id": "practical-15",
+    "method": "all critical points and endpoints",
+    "passed": true,
+    "result": "25"
+  },
+  {
+    "id": "tangent-04",
+    "method": "point lies on source curve",
+    "result": "4",
+    "passed": true
+  },
+  {
+    "id": "tangent-04",
+    "method": "required tangent slope",
+    "result": "4",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "point lies on source curve",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "required tangent slope",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "point lies on source curve",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "required tangent slope",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "point lies on source curve",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-05",
+    "method": "required tangent slope",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-06",
+    "method": "point lies on source curve",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "tangent-06",
+    "method": "required tangent slope",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-07",
+    "method": "point lies on source curve",
+    "result": "1/2",
+    "passed": true
+  },
+  {
+    "id": "tangent-07",
+    "method": "required tangent slope",
+    "result": "-1/4",
+    "passed": true
+  },
+  {
+    "id": "tangent-07",
+    "method": "point lies on source curve",
+    "result": "-1/2",
+    "passed": true
+  },
+  {
+    "id": "tangent-07",
+    "method": "required tangent slope",
+    "result": "-1/4",
+    "passed": true
+  },
+  {
+    "id": "tangent-09",
+    "method": "point lies on source curve",
+    "result": "5/2",
+    "passed": true
+  },
+  {
+    "id": "tangent-09",
+    "method": "required tangent slope",
+    "result": "3/2",
+    "passed": true
+  },
+  {
+    "id": "tangent-10",
+    "method": "point lies on source curve",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "tangent-10",
+    "method": "required tangent slope",
+    "result": "3/4",
+    "passed": true
+  },
+  {
+    "id": "tangent-34",
+    "method": "point lies on source curve",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "tangent-34",
+    "method": "required tangent slope",
+    "result": "(-4*log(2) + 4*log(4))/log(4)",
+    "passed": true
+  },
+  {
+    "id": "tangent-11",
+    "method": "line slope vs derivative",
+    "result": "-6",
+    "passed": true
+  },
+  {
+    "id": "tangent-11",
+    "method": "line passes through tangency point",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "tangent-12",
+    "method": "line slope vs derivative",
+    "result": "36",
+    "passed": true
+  },
+  {
+    "id": "tangent-12",
+    "method": "line passes through tangency point",
+    "result": "28",
+    "passed": true
+  },
+  {
+    "id": "tangent-13",
+    "method": "line slope vs derivative",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "tangent-13",
+    "method": "line passes through tangency point",
+    "result": "-3",
+    "passed": true
+  },
+  {
+    "id": "tangent-14",
+    "method": "line slope vs derivative",
+    "result": "-4",
+    "passed": true
+  },
+  {
+    "id": "tangent-14",
+    "method": "line passes through tangency point",
+    "result": "3",
+    "passed": true
+  },
+  {
+    "id": "tangent-14",
+    "method": "line slope vs derivative",
+    "result": "6",
+    "passed": true
+  },
+  {
+    "id": "tangent-14",
+    "method": "line passes through tangency point",
+    "result": "11/2",
+    "passed": true
+  },
+  {
+    "id": "tangent-15",
+    "method": "line slope vs derivative",
+    "result": "15",
+    "passed": true
+  },
+  {
+    "id": "tangent-15",
+    "method": "line passes through tangency point",
+    "result": "4",
+    "passed": true
+  },
+  {
+    "id": "tangent-16",
+    "method": "line slope vs derivative",
+    "result": "4",
+    "passed": true
+  },
+  {
+    "id": "tangent-16",
+    "method": "line passes through tangency point",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "tangent-19",
+    "method": "line slope vs derivative",
+    "result": "-2",
+    "passed": true
+  },
+  {
+    "id": "tangent-19",
+    "method": "line passes through tangency point",
+    "result": "-5",
+    "passed": true
+  },
+  {
+    "id": "tangent-08",
+    "method": "tangent passes through M for p=1/2",
+    "result": "3",
+    "passed": true
+  },
+  {
+    "id": "tangent-39",
+    "method": "triangle determinant",
+    "result": "15/4",
+    "passed": true
+  },
+  {
+    "id": "practical-11",
+    "method": "rounded maximum vs independent reference",
+    "result": "18",
+    "passed": true
+  },
+  {
+    "id": "practical-12",
+    "method": "rounded maximum vs independent reference",
+    "result": "36",
+    "passed": true
+  },
+  {
+    "id": "practical-13",
+    "method": "rounded maximum vs independent reference",
+    "result": "65",
+    "passed": true
+  },
+  {
+    "id": "practical-14",
+    "method": "rounded maximum vs independent reference",
+    "result": "21",
+    "passed": true
+  },
+  {
+    "id": "practical-15",
+    "method": "rounded maximum vs independent reference",
+    "result": "25",
+    "passed": true
+  },
+  {
+    "id": "demo-partial-1",
+    "method": "mixed symbolic derivative at M",
+    "result": "-1",
+    "passed": true
+  },
+  {
+    "id": "demo-partial-2",
+    "method": "mixed symbolic derivative at M",
+    "result": "2",
+    "passed": true
+  },
+  {
+    "id": "demo-parametric",
+    "method": "parameter derivative at t=1",
+    "result": "1",
+    "passed": true
+  },
+  {
+    "id": "asymptote-05",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-05",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-06",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-06",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-07",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-07",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-08",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-08",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-09",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-09",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-10",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-10",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-11",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-11",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-12",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-12",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-13",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-13",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-14",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-14",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-15",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-15",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-16",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-16",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-17",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-17",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-18",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-18",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-19",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-19",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-20",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-20",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-21",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-21",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-25",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-25",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-28",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-28",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-29",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-29",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-30",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-30",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-31",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-31",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-35",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-35",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-38",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-38",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-39",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-39",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-40",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "asymptote-40",
+    "method": "linear asymptote residual at infinity",
+    "result": "0",
+    "passed": true
   }
 ]

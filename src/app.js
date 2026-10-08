@@ -5,14 +5,15 @@ import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const math=(target,tex)=>katex.render(tex,target,{displayMode:true,throwOnError:false,strict:'ignore',trust:false});
-let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,storageWarning=false;
+let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,storageWarning=false;
 try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error();}};}
-const names={1:'Чётность и ОДЗ',2:'Предел последовательности',3:'Второй замечательный предел'};
+let names={};
 const statuses={new:'Ещё не решено',learning:'В работе',solved:'Самостоятельно ✓',assisted:'Решено с помощью'};
 function persist(){if(!saveState(storage,state)){$('save-status').textContent='Сохранение недоступно';if(!storageWarning){storageWarning=true;toast('Браузер запретил сохранение. Скачивай историю перед закрытием.');}}}
 function toast(text){clearTimeout(toastTimer);$('toast').textContent=text;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,3500);}
 function cancelAdvance(){clearTimeout(advanceTimer);}
 function meta(task){
+ if(task.meta)return task.meta;
  if(task.id.startsWith('parity-'))return `Банк · пример ${Number(task.id.split('-')[1])}`;
  if(task.id.startsWith('sequence-'))return `Банк · пример ${Number(task.id.split('-')[1])}`;
  if(task.origin==='source')return task.sources[0].file==='solutions'?'Разбор · вариант 3':`Демо · ${task.sources[0].label}`;
@@ -63,14 +64,11 @@ function render(){
  $('task-position').textContent=`${list.findIndex(t=>t.id===current.id)+1} из ${list.length}`;
  $('task-heading').textContent=current.topic;
  $('task-status').textContent=statuses[item.status];
- $('task-instruction').textContent=current.kind==='choice'?'Определи чётность функции на её исходной области определения.':'Вычисли предел. Введи только итоговый ответ.';
+ $('task-instruction').textContent=current.instruction||(current.kind==='choice'?'Определи чётность функции на её исходной области определения.':'Вычисли предел. Введи только итоговый ответ.');
+ $('task-description').textContent=current.description||'';$('task-description').hidden=!current.description;
  math($('problem'),current.prompt);
  $('task-note').hidden=!current.note;$('task-note').textContent=current.note||'';
- $('answer-row').hidden=current.kind==='choice';$('choices').hidden=current.kind!=='choice';
- $('math-keyboard').hidden=current.kind==='choice';
- $('answer-label').textContent=current.kind==='choice'?'Выбери верное утверждение':'Твой ответ';
- $('answer-help').textContent=current.kind==='choice'?'1 — чётная · 2 — нечётная · 3 — ни та ни другая':'Примеры: 2/3, sqrt(2), 3sqrt(3), e^(-3), e^(-3*pi/4), ∞. Десятичная запятая тоже работает.';
- $('answer').value=item.draft||'';
+ renderAnswer(item);
  $('feedback').hidden=true;
  $('next').firstChild.textContent=['solved','assisted'].includes(item.status)?'Следующее ':'Пропустить ';
  $('previous').disabled=list.findIndex(t=>t.id===current.id)===0;
@@ -82,6 +80,35 @@ function render(){
  if(!current.sources.length)$('source-links').append(el('span','input-help','Дополнительная задача для тренировки.'));
  $('reveal').textContent=item.step?'Продолжить разбор ＋':'Нужна помощь ＋';
  renderSteps();persist();
+}
+function answerValue(){
+ if(current.kind==='fields')return JSON.stringify(Object.fromEntries([...$('answer-fields').querySelectorAll('input')].map(i=>[i.dataset.field,i.value])));
+ if(current.kind==='multi')return [...$('choices').querySelectorAll('input:checked')].map(i=>i.value).join(';');
+ return $('answer').value;
+}
+function draft(){if(current){itemState(state,current.id).draft=answerValue();persist();}}
+function activateInput(input){keyboard.setInput(input);document.querySelectorAll('.field-entry').forEach(row=>row.classList.toggle('active-field',row.contains(input)));}
+function renderAnswer(item){
+ const choice=['choice','multi'].includes(current.kind),fields=current.kind==='fields';
+ $('answer-row').hidden=choice||fields;$('choices').hidden=!choice;$('answer-fields').hidden=!fields;$('math-keyboard').hidden=choice;
+ $('answer-label').hidden=fields;$('answer-label').textContent=choice?'Выбери утверждения':'Твой ответ';
+ $('answer-help').textContent=choice?(current.kind==='multi'?'Можно выбрать несколько пунктов. Отметь все подходящие и нажми «Проверить».':'Нажми на один вариант ответа.'):'Дробь: 2/3 · корень: sqrt(2) · степень: e^(-3). Координаты: (x;y), точки разделяй |, прямые и числа в списке — ;. Углы в радианах.';
+ $('choices').replaceChildren();$('answer-fields').replaceChildren();
+ if(choice){
+  const options=current.options||[{value:'1',label:'Чётная'},{value:'2',label:'Нечётная'},{value:'3',label:'Ни та ни другая'}];
+  for(const o of options){
+   if(current.kind==='choice'){const button=el('button');button.type='button';button.dataset.choice=o.value;button.append(el('span','',o.value),document.createTextNode(' '+o.label));button.onclick=()=>submit(o.value);$('choices').append(button);}
+   else{const label=el('label','multi-option'),input=el('input');input.type='checkbox';input.value=o.value;input.checked=(item.draft||'').split(';').includes(o.value);input.onchange=draft;label.append(input,el('span','',`${o.value}. ${o.label}`));$('choices').append(label);}
+  }
+  if(current.kind==='multi'){const button=el('button','primary-button','Проверить ↵');button.type='submit';$('choices').append(button);}
+ }else if(fields){
+  let values={};try{values=JSON.parse(item.draft||'{}');}catch{}
+  for(const f of current.fields){
+   const row=el('div','field-entry'),label=el('label','',f.label),input=el('input');input.id='field-'+f.id;input.dataset.field=f.id;input.name=f.id;input.maxLength=256;input.spellcheck=false;input.value=values[f.id]||'';input.placeholder=({points:'(x;y) | (x;y)',lines:'x=…; y=…',set:'значение; значение',expression:'Выражение через '+(f.variables||[]).join(', ')})[f.kind]||'Только итоговый ответ';
+   label.htmlFor=input.id;input.onfocus=()=>activateInput(input);input.onpointerdown=()=>activateInput(input);input.oninput=draft;row.append(label,input);$('answer-fields').append(row);
+  }
+  const button=el('button','primary-button','Проверить все поля ↵');button.type='submit';$('answer-fields').append(button);activateInput($('answer-fields').querySelector('input'));
+ }else{$('answer').value=item.draft||'';activateInput($('answer'));}
 }
 function renderSteps(){
  if(!current)return;
@@ -120,11 +147,11 @@ function submit(value){
   if(state.autoAdvance){advanceTimer=setTimeout(()=>{
    if(current?.id!==task.id)return;
    const eligible=filtered(),nextCandidate=oldList.slice(index+1).find(t=>eligible.some(v=>v.id===t.id))||eligible.find(t=>t.id!==task.id);
-   if(nextCandidate){navigate(nextCandidate.id,true);toast('Верно. Перешли к следующему заданию.');if(window.matchMedia('(pointer:fine)').matches)(current?.kind==='choice'?$('choices').querySelector('button'):$('answer')).focus({preventScroll:true});else $('answer').blur();}
+   if(nextCandidate){navigate(nextCandidate.id,true);toast('Верно. Перешли к следующему заданию.');if(window.matchMedia('(pointer:fine)').matches)(document.querySelector('#choices:not([hidden]) button, #answer-fields:not([hidden]) input, #answer-row:not([hidden]) input'))?.focus({preventScroll:true});else document.activeElement?.blur();}
    else toast('Все задания в этом списке пройдены. Выбери другой раздел или фильтр.');
   },1100);}
  }else{
-  feedback(item.step===1?'Пока неверно. Проверь своё решение. Ниже открыт только первый этап: нужные формулы.':'Пока неверно. Проверь своё решение; следующий этап разбора можно открыть кнопкой ниже.','error');
+  feedback((result.incorrect?.length?`Проверь поля: ${result.incorrect.join(', ')}. `:'Пока неверно. ')+(item.step===1?'Ниже открыт первый этап: нужные формулы.':'Следующий этап разбора можно открыть кнопкой ниже.'),'error');
   renderSteps();
  }
 }
@@ -136,14 +163,15 @@ function openSettings(){
  $('history-list').replaceChildren(el('h3','', 'Последние попытки'));
  const all=Object.entries(state.items).flatMap(([id,v])=>v.attempts.map(a=>({id,...a}))).sort((a,b)=>b.at-a.at).slice(0,30);
  if(!all.length)$('history-list').append(el('p','input-help','Здесь появится история ответов.'));
- for(const a of all){const task=tasks.find(t=>t.id===a.id);const row=el('div','history-entry');row.append(el('span','',`№${task.group} · ${meta(task)}`),el('time','',new Date(a.at).toLocaleString('ru-RU',{dateStyle:'short',timeStyle:'short'})),el('span',a.correct?'correct':'wrong',`${a.correct?'Верно':'Ошибка'}: ${a.answer}`));$('history-list').append(row);}
+ for(const a of all){const task=tasks.find(t=>t.id===a.id);let text=a.answer;if(task.kind==='fields')try{const values=JSON.parse(a.answer);text=task.fields.map(f=>`${f.label}: ${values[f.id]||'—'}`).join(' · ');}catch{}const row=el('div','history-entry');row.append(el('span','',`№${task.group} · ${meta(task)}`),el('time','',new Date(a.at).toLocaleString('ru-RU',{dateStyle:'short',timeStyle:'short'})),el('span',a.correct?'correct':'wrong',`${a.correct?'Верно':'Ошибка'}: ${text}`));$('history-list').append(row);}
  $('settings-dialog').showModal();
 }
 function sources(){
- $('sources-description').textContent=`Интерактивно: ${coverage.total} заданий по №1–3 билета (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
+ $('sources-description').textContent=`Все №1–10 билета: ${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
  $('sources-content').replaceChildren();
  for(const file of coverage.sourceFiles){const a=el('a','source-document',file.title);a.href=`./sources/${file.id}.pdf`;a.target='_blank';a.rel='noopener';a.append(el('small','',file.id==='theory'?'Теоретический список доступен как PDF.':'Оригинал PDF · открыть в новой вкладке ↗'));$('sources-content').append(a);}
  for(const note of coverage.notes)$('sources-content').append(el('p','input-help',note));
+ if(coverage.sourceIssues?.length){$('sources-content').append(el('h3','','Особенности печатных условий'));for(const issue of coverage.sourceIssues){const task=tasks.find(t=>t.id===issue.id);const button=el('button','source-issue',`${meta(task)}: ${issue.reason}`);button.onclick=()=>{state.group='all';state.mode='all';state.origin='all';$('search').value='';$('sources-dialog').close();navigate(issue.id,true);};$('sources-content').append(button);}}
  $('sources-dialog').showModal();
 }
 function formulas(){
@@ -156,7 +184,12 @@ function formulas(){
   ['Корни и степени','n > 0. Сравнивай дробные показатели без округления.',String.raw`\sqrt[k]{n^p}=n^{p/k},\qquad\sqrt{x^2}=|x|`],
   ['Суммы','Геометрическая формула при q ≠ 1.',String.raw`1+\cdots+n=\frac{n(n+1)}2,\quad1+q+\cdots+q^n=\frac{1-q^{n+1}}{1-q}`],
   ['Арктангенс и арккотангенс','Пределы при x → +∞; arccot x ∈ (0, π).',String.raw`\arctan x\to\frac\pi2,\quad\operatorname{arccot}x\to0,\quad\arctan x+\operatorname{arccot}x=\frac\pi2`],
-  ['Чётность','Сначала симметричная исходная ОДЗ. Сокращение не возвращает исключённые точки.',String.raw`f(-x)=f(x)\ \text{(чётная)},\qquad f(-x)=-f(x)\ \text{(нечётная)}`]
+  ['Чётность','Сначала симметричная исходная ОДЗ. Сокращение не возвращает исключённые точки.',String.raw`f(-x)=f(x)\ \text{(чётная)},\qquad f(-x)=-f(x)\ \text{(нечётная)}`],
+  ['Производные','Сначала производная как функция, затем подстановка точки.',String.raw`\begin{gathered}(x^a)'=ax^{a-1},\ (e^x)'=e^x,\ (\ln x)'=1/x\\(\sin x)'=\cos x,\ (\cos x)'=-\sin x\\(\tan x)'=1/\cos^2x,\ (\arctan x)'=1/(1+x^2)\\(uv)'=u'v+uv',\ (u/v)'=(u'v-uv')/v^2\\(F(u))'=F'(u)u'\end{gathered}`],
+  ['Касательная и нормаль','У нормали эта формула при f′(x₀) ≠ 0.',String.raw`y-f(x_0)=f'(x_0)(x-x_0),\quad k_n=-1/f'(x_0)`],
+  ['Асимптоты','На +∞ и −∞ проверяем отдельно. Для вертикальной нужен бесконечный односторонний предел.',String.raw`k=\lim f(x)/x,\quad b=\lim(f(x)-kx),\quad y=kx+b`],
+  ['Экстремум и перегиб','Нулевой производной недостаточно: проверяй смену знака. Для максимума на отрезке сравнивай также концы.',String.raw`f':+\to-\Rightarrow\max,\quad f':-\to+\Rightarrow\min;\quad f''\text{ меняет знак}\Rightarrow\text{перегиб}`],
+  ['Частные и параметрические производные','При частном дифференцировании остальные независимые переменные фиксируем.',String.raw`z_{xy}=\partial_y(\partial_xz),\quad dy/dx=y_t'/x_t'\quad(x_t'\ne0)`]
  ];
  for(const [title,note,tex] of sections){const box=el('section','formula-section');const m=el('div','math');math(m,tex);box.append(el('h3','',title),el('p','',note),m);$('formula-content').append(box);}
  $('formulas-dialog').showModal();
@@ -166,22 +199,23 @@ async function init(){
   const responses=await Promise.all([fetch('./tasks.json'),fetch('./coverage.json')]);
   if(responses.some(r=>!r.ok))throw Error('Не удалось загрузить банк заданий.');
   [tasks,coverage]=await Promise.all(responses.map(r=>r.json()));ids=new Set(tasks.map(t=>t.id));state=loadState(storage,ids);
+  names=coverage.sections;
+  const nav=document.querySelector('.group-nav');nav.replaceChildren();
+  for(const [g,label] of [['all','Все задания'],...Object.entries(names)]){const button=el('button','nav-item');button.dataset.group=g;button.append(el('span',g==='all'?'nav-icon':'nav-number',g==='all'?'◈':g),el('span','',label));const count=el('span','nav-count',String(g==='all'?tasks.length:coverage.groups[g]));count.id='count-'+g;button.append(count);nav.append(button);}
   // Mobile controls live in the same settings dialog.
   const row=el('label','setting-row');row.append(el('span','','Цветовая тема'));const select=el('select');select.id='theme-select';
   for(const [value,label] of [['sage','Шалфей'],['paper','Тёплая бумага'],['lavender','Лаванда'],['night','Тихий вечер']]){const option=el('option','',label);option.value=value;select.append(option);}
   row.append(select);$('settings-dialog').insertBefore(row,$('settings-stats'));
   const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
   theme(state.theme);
-  mountKeyboard($('math-keyboard'),$('answer'));
-  for(const g of ['all','1','2','3'])$('count-'+g).textContent=g==='all'?tasks.length:coverage.groups[g];
+  keyboard=mountKeyboard($('math-keyboard'),$('answer'));
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
   document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;render();}));
   document.querySelectorAll('button[data-theme]').forEach(b=>b.addEventListener('click',()=>theme(b.dataset.theme)));
   select.onchange=()=>theme(select.value);
   $('origin-filter').onchange=()=>{state.origin=$('origin-filter').value;render();};$('search').oninput=render;
-  $('answer').oninput=()=>{if(current){itemState(state,current.id).draft=$('answer').value;persist();}};
-  $('answer-form').onsubmit=e=>{e.preventDefault();submit($('answer').value);};
-  document.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>submit(b.dataset.choice));
+  $('answer').oninput=draft;$('answer').onfocus=()=>activateInput($('answer'));
+  $('answer-form').onsubmit=e=>{e.preventDefault();submit(answerValue());};
   $('reveal').onclick=reveal;
   $('next-step').onclick=()=>{const item=itemState(state,current.id);if(item.step>=current.stages.length){item.step=0;item.status='learning';item.draft='';render();toast('Новая попытка без раскрытого решения.');}else reveal();};
   $('next').onclick=next;

@@ -29,12 +29,16 @@ test('inverse trigonometric notation is conventional in every displayed task',()
  assert.equal(numeric('3×4÷2'),6);
 });
 test('complete bank contains all source examples with valid math, sources and accepted answers',()=>{
- assert.equal(tasks.length,96);assert.equal(ids.size,96);
- assert.equal(tasks.filter(t=>t.origin==='source').length,76);
- for(const [prefix,count] of [['parity',30],['sequence',40]])for(let n=1;n<=count;n++)assert.ok(ids.has(`${prefix}-${String(n).padStart(2,'0')}`));
+ assert.equal(tasks.length,426);assert.equal(ids.size,426);
+ assert.equal(tasks.filter(t=>t.origin==='source').length,378);
+ for(const [prefix,count,start=1] of [['parity',30],['sequence',40],['monotonic',29],['sequence-theory',10],['function-theory',10],['function-limit',40],['advanced-limit',40],['derivative',39],['asymptote',40],['tangent',20],['tangent',10,31],['inflection',10,21],['practical',35],['oral',28]])for(let n=start;n<start+count;n++)assert.ok(ids.has(`${prefix}-${String(n).padStart(2,'0')}`),`${prefix}-${n}`);
  for(const task of tasks){
   assert.equal(checkAnswer(task,task.answer).correct,true,task.id+' answer');
-  assert.equal(checkAnswer(task,task.kind==='choice'?String(Number(task.answer)%3+1):task.answer==='0'?'1':'0').correct,false,task.id+' wrong answer');
+  let wrong=task.answer==='0'?'1':'0';
+  if(task.kind==='choice')wrong=(task.options?.map(o=>o.value)||['1','2','3']).find(v=>v!==task.answer);
+  if(task.kind==='multi')wrong=task.answer==='1'?'2':'1';
+  if(task.kind==='fields'){const map=JSON.parse(task.answer);const f=task.fields[0];map[f.id]=f.answer==='0'?'1':f.kind==='lines'?'x=98765':f.kind==='points'?'(98765;98765)':'0';wrong=JSON.stringify(map);}
+  assert.notEqual(checkAnswer(task,wrong).correct,true,task.id+' wrong answer');
   assert.ok(task.stages.length>=4,task.id+' stages');
   for(const tex of [task.prompt,...task.stages.flatMap(s=>s.blocks.map(b=>b.tex).filter(Boolean))])assert.doesNotThrow(()=>katex.renderToString(tex,{throwOnError:true,strict:'ignore',trust:false}),task.id+' '+tex);
   for(const src of task.sources)assert.ok(existsSync(new URL(`../sources/${src.file}.pdf`,import.meta.url)),task.id+' PDF');
@@ -55,6 +59,13 @@ test('history preserves independent versus assisted attempts across export and r
  assert.deepEqual(validateState(JSON.parse(stored),ids),state);
  assert.equal(loadState({getItem:()=>'{broken'},ids).theme,'sage');
  assert.equal(saveState({setItem:()=>{throw Error();}},state),false);
- const incoming={...state,items:{unknown:{status:'solved'},'sequence-02':{status:'solved',step:999,draft:'x'.repeat(999),attempts:[]}}};
- const safe=validateState(incoming,ids);assert.equal(safe.items.unknown,undefined);assert.equal(safe.items['sequence-02'].step,20);assert.equal(safe.items['sequence-02'].draft.length,256);
+ const incoming={...state,group:'10',items:{unknown:{status:'solved'},'sequence-02':{status:'solved',step:999,draft:'x'.repeat(9999),attempts:[]}}};
+ const safe=validateState(incoming,ids);assert.equal(safe.items.unknown,undefined);assert.equal(safe.items['sequence-02'].step,20);assert.equal(safe.items['sequence-02'].draft.length,2048);assert.equal(safe.group,'10');
+});
+test('structured results compare coordinates, lines, sets and parameter expressions',()=>{
+ for(const [task,input] of [[{kind:'points',answer:'(2;1/2)|(-2;-1/2)'},'(-2;-0,5) | (sqrt(4);0.5)'],[{kind:'lines',answer:'x=2; y=3x+1'},'y=1+3*x; x=4/2'],[{kind:'set',answer:'-2;5'},'5;-2'],[{kind:'expression',variables:['l'],answer:'l/4'},'0.25*l']])assert.equal(checkAnswer(task,input).correct,true);
+ assert.equal(checkAnswer({kind:'expression',variables:['a'],answer:'a/sqrt(2)'},'a/2').correct,false);
+ assert.equal(checkAnswer({kind:'lines',answer:'y=x'},'y=x^2').valid,false);
+ assert.equal(checkAnswer({kind:'points',answer:'none'},'нет').correct,true);
+ assert.equal(checkAnswer({kind:'multi',options:[{value:'1'},{value:'2'},{value:'3'}],answer:'1;3'},'3;1').correct,true);
 });

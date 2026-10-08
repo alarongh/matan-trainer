@@ -8,7 +8,8 @@
     "dev": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/browser.cjs",
-    "test:keyboard": "node tests/keyboard.cjs"
+    "test:keyboard": "node tests/keyboard.cjs",
+    "test:expanded": "node tests/expanded.cjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.8",

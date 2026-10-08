@@ -43,11 +43,13 @@ async function main(){
  for(const task of tasks){
   await page.locator(`[data-task-id="${task.id}"]`).click();
   if(task.kind==='choice')await page.locator(`[data-choice="${task.answer}"]`).click();
+  else if(task.kind==='multi'){for(const value of task.answer.split(';'))await page.locator(`#choices input[value="${value}"]`).check();await page.locator('#choices button[type=submit]').click();}
+  else if(task.kind==='fields'){for(const f of task.fields)await page.locator('#field-'+f.id).fill(f.answer);await page.locator('#answer-fields button[type=submit]').click();}
   else{await page.locator('#answer').fill(task.answer);await page.locator('#check-button').click();}
   assert.match(await page.locator('#feedback').innerText(),/^Верно/,task.id);
   assert.equal(await page.locator('.katex-error').count(),0,task.id);
  }
- assert.equal(await page.locator('#progress-number').innerText(),'96');
+ assert.equal(await page.locator('#progress-number').innerText(),String(tasks.length));
  await page.locator('[data-task-id="extra-07"]').count().then(async n=>{if(n)await page.locator('[data-task-id="extra-07"]').click();});
  await page.locator('#open-formulas').click();assert.equal(await page.locator('.katex-error').count(),0);await page.locator('#formulas-dialog .close-dialog').click();
  await page.locator('#open-settings').click();await page.locator('#auto-advance').check();await page.locator('#settings-dialog .close-dialog').click();
@@ -63,6 +65,6 @@ async function main(){
  await page.screenshot({path:'test-results/zoom.png',fullPage:true});await page.evaluate(()=>document.body.style.zoom='1');
  await page.locator('[data-theme="night"]').click();await page.screenshot({path:'test-results/night.png',fullPage:true});
  assert.deepEqual(errors,[]);
- await browser.close();console.log('Browser passed: 96 answers; progressive hints; persistence; export/import; navigation; formula rendering; 320–1440 px; 200% zoom; no page or HTTP errors.');
+ await browser.close();console.log('Browser passed: 426 answers; progressive hints; persistence; export/import; navigation; formula rendering; 320–1440 px; 200% zoom; no page or HTTP errors.');
 }
 main().catch(e=>{console.error(e);process.exit(1);});

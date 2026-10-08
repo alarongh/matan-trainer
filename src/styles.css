@@ -34,4 +34,19 @@
 .keyboard-actions .math-key svg{display:block;margin:auto}
 .skip:not(:focus){width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .keyboard-actions .primary-button{min-width:0;font-size:11px;padding-inline:7px;touch-action:manipulation}
+.task-description{line-height:1.75;color:var(--ink);white-space:pre-line;overflow-wrap:anywhere;margin:14px 0}
+.choice-options:has(.multi-option),.choice-options:has(button:nth-child(4)){display:flex;flex-direction:column;gap:10px}
+.choice-options>button{text-align:left;white-space:normal;line-height:1.5;min-width:0}
+.choice-options>button.primary-button{background:var(--accent);color:var(--card);justify-content:center;text-align:center}
+.multi-option{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--border);border-radius:14px;cursor:pointer;line-height:1.55}
+.multi-option:has(input:checked){background:var(--accent-soft);border-color:var(--accent)}
+.multi-option input{margin-top:5px;flex:0 0 auto;accent-color:var(--accent);width:18px;height:18px}
+.answer-fields{display:grid;gap:15px}
+.field-entry{display:grid;gap:8px;padding:12px;border:1px solid transparent;border-radius:15px;transition:border-color .2s,background .2s}
+.field-entry label{font-size:14px;line-height:1.5}
+.field-entry input{width:100%;min-width:0;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;font-size:16px}
+.field-entry.active-field{border-color:var(--accent);background:var(--accent-soft)}
+.source-issue{display:block;width:100%;text-align:left;border:1px solid var(--border);border-radius:12px;padding:12px;margin:10px 0;background:var(--card);color:var(--ink);font:inherit;font-size:13px;line-height:1.6}
+.group-nav .nav-number{flex-shrink:0}
+.history-entry span:last-child{overflow-wrap:anywhere}
 @container(max-width:330px){.keyboard-panel{padding:9px}.keyboard-functions{grid-template-columns:repeat(3,minmax(0,1fr))}.keyboard-heading .text-button{font-size:10px}.keyboard-shortcuts,.keyboard-digits{gap:5px}}
