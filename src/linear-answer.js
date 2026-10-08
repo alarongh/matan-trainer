@@ -32,7 +32,8 @@ export function complex(input){
 function matrix(text){
  let rows;
  if(text.trim().startsWith('[[')){try{rows=JSON.parse(text);}catch{throw Error('Матрица: 1 2; 3 4.');}}
- else rows=text.trim().split(/[;\n]+/).map(row=>row.trim().replace(/^\[|\]$/g,'').split(/\s+|,/).filter(Boolean));
+ // Spaces separate entries; a comma inside an entry is a decimal separator.
+ else rows=text.trim().split(/[;\n]+/).map(row=>row.trim().replace(/^\[|\]$/g,'').split(/\s+/).filter(Boolean));
  if(!Array.isArray(rows)||!rows.length||rows.some(r=>!Array.isArray(r)||r.length!==rows[0].length)||!rows[0].length)throw Error('Строки матрицы разделяй ;, элементы строки пробелом.');
  return rows.map(r=>r.map(v=>numeric(v)));
 }
