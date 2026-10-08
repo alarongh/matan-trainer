@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const base=process.env.TEST_URL||'http://127.0.0.1:4173/';
 async function main(){
- const browser=await chromium.launch({headless:true,channel:'msedge'});
+ const browser=await chromium.launch({headless:true,channel:'msedge',ignoreDefaultArgs:['--disable-back-forward-cache']});
  const context=await browser.newContext({viewport:{width:1440,height:1000}});
  const page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -30,6 +30,12 @@ async function main(){
   assert.deepEqual(await progress('matan-trainer:v1'),matan.items);
   assert.deepEqual(await progress('linear-trainer:v1'),linear.items);
   assert.equal(await page.locator('#answer').inputValue(),'5');
+  await switchTo('linear');await page.locator('button[data-theme="paper"]').click();
+  await page.goBack({waitUntil:'commit'});await ready();await hasTheme('paper');
+  assert.equal(await page.locator('#subject-select').inputValue(),'matan');
+  await page.goForward({waitUntil:'commit'});await ready();await hasTheme('paper');
+  assert.equal(await page.locator('#subject-select').inputValue(),'linear');
+  await page.locator('button[data-theme="lavender"]').click();await switchTo('matan');await hasTheme('lavender');
   // Importing an old progress file must not restore its subject-specific theme.
   await page.locator('#open-settings').click();
   await page.locator('#import-file').setInputFiles({name:'old-progress.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(matan))});
@@ -45,7 +51,7 @@ async function main(){
   await page.locator('#mobile-settings').click();await page.locator('#settings-dialog details summary').click();page.once('dialog',d=>d.accept());await page.locator('#reset-progress').click();await hasTheme('sage');
   await page.reload();await ready();await hasTheme('sage');await switchTo('matan');await hasTheme('sage');
   assert.deepEqual(await progress('matan-trainer:v1'),matan.items);assert.deepEqual(errors,[]);
-  console.log('Shared theme passed: legacy migration, all four themes, both subjects, reload, settings, mobile, old imports, reset, cross-tab sync and intact study progress.');
+  console.log('Shared theme passed: legacy migration, all four themes, both subjects, reload, back/forward cache, settings, mobile, old imports, reset, cross-tab sync and intact study progress.');
  }finally{await browser.close();}
 }
 main().catch(e=>{console.error(e);process.exit(1)});

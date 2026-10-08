@@ -12,6 +12,7 @@ const math=(target,tex)=>katex.render(tex,target,{displayMode:true,throwOnError:
 let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,activeAnswerInput,storageWarning=false;
 try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error();}};}
 const preferences=storage;
+document.documentElement.dataset.theme=loadTheme(preferences,document.documentElement.dataset.theme);
 storage=subjectStorage(storage);
 const checkAnswer=isLinear?checkLinearAnswer:checkMathAnswer;
 let names={};
@@ -229,7 +230,10 @@ async function init(){
   const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
   // Adopt the current subject's legacy theme once, then share it across subjects.
   theme(loadTheme(preferences,state.theme));
-  window.addEventListener('storage',event=>{if(event.key===THEME_KEY)theme(loadTheme(preferences,state.theme),false);});
+  const syncTheme=()=>theme(loadTheme(preferences,state.theme),false);
+  window.addEventListener('storage',event=>{if(event.key===THEME_KEY)syncTheme();});
+  window.addEventListener('pageshow',()=>{syncTheme();$('subject-select').value=subject;});
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')syncTheme();});
   keyboard=mountKeyboard($('math-keyboard'),$('answer'));
   if(isLinear)addLinearKeys($('math-keyboard'),()=>activeAnswerInput);
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
