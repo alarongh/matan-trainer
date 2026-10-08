@@ -11,3 +11,27 @@
 @container(max-width:720px){.app-shell{display:block}.sidebar{position:static;height:auto;padding:16px 18px 12px;border-right:0;border-bottom:1px solid var(--border);overflow:visible}.brand{font-size:23px;padding:0 0 15px;gap:9px}.brand-mark{width:30px;height:33px;font-size:30px;border-radius:10px}.sidebar-caption,.resources-label,.sidebar>.nav-item,.sidebar-bottom{display:none}.group-nav{display:flex;flex-direction:row;gap:6px;overflow:auto;padding-bottom:3px}.group-nav .nav-item{white-space:nowrap;width:auto;flex-shrink:0;min-height:37px;font-size:10px;padding:8px 10px;gap:7px}.nav-count{font-size:9px}.nav-number{width:17px;height:17px;font-size:9px;flex-basis:17px;border-radius:5px}.nav-icon{font-size:15px;width:17px;flex-basis:17px}.main{padding:25px 18px 20px}.page-header{margin-bottom:22px;gap:12px}.page-header h1{font-size:27px;letter-spacing:-1px;max-width:300px}.page-header p{font-size:11px;max-width:280px;line-height:1.7}.eyebrow{font-size:8px;letter-spacing:1.4px}.mobile-settings{display:inline-grid!important;margin-top:18px}.overview{padding:16px 15px 13px;gap:13px;margin-bottom:21px;border-radius:12px}.overview-icon{display:none}.overview-lead strong{font-size:12px}.overview-lead div>span{font-size:9px;max-width:220px}.progress-number strong{font-size:23px}.progress-number small{font-size:8px}.toolbar{gap:9px;align-items:flex-start;flex-wrap:wrap}.mode-tabs{gap:1px}.mode-tabs button{padding:6px 9px;font-size:10px}.toolbar select{font-size:10px;padding:6px 7px}.task-card{padding:22px 18px 13px;border-radius:13px}.task-title-row h2{font-size:19px}.task-topline{margin-bottom:15px}.problem-frame{margin:20px 0;padding:23px 12px;min-height:135px}.math.problem{font-size:.9em}.answer-row{flex-wrap:wrap}.answer-row input{flex-basis:100%;min-height:47px;font-size:16px}.primary-button{width:100%;font-size:12px;min-height:44px}.task-footer{margin-top:20px}.source-links a{font-size:9px}.solution{padding:20px 17px}.step .math{font-size:.8em}.page-footer{flex-direction:column;gap:4px;font-size:9px;margin-top:20px}.gentle-note{font-size:10px}.task-list{max-height:250px}.task-list-panel{margin-top:6px}dialog{padding:21px 18px}.dialog-header h2{font-size:18px}}
 @container(max-width:380px){.main{padding-inline:12px}.sidebar{padding-inline:12px}.task-card{padding-inline:14px}.task-status{font-size:9px;max-width:90px}.task-list{grid-template-columns:minmax(0,1fr)}.overview-lead strong{font-size:11px}.progress-number strong{font-size:21px}.page-header h1{font-size:25px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.math-keyboard{margin-top:15px;container-type:inline-size}
+.keyboard-heading{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:5px}
+.keyboard-heading .text-button{width:100%;justify-content:space-between;font-size:11px;min-height:40px;gap:10px;text-align:left}
+.keyboard-heading .text-button>span:last-child{font-size:10px;color:var(--muted);white-space:nowrap}
+.keyboard-panel{width:100%;max-width:480px;margin:6px auto 0;padding:12px;border:1px solid var(--border);background:var(--frame);border-radius:12px;animation:arrive .2s ease}
+.keyboard-shortcuts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-bottom:9px}
+.keyboard-digits{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.math-key{min-height:44px;min-width:0;padding:6px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--ink);font-size:17px;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.math-key:hover{background:var(--accent-soft)}
+.math-key:active{background:var(--border)}
+.keyboard-shortcuts .math-key{color:var(--accent);font-size:18px;background:var(--accent-soft)}
+.keyboard-shortcuts .math-key[data-key="/"]{font-size:14px}
+.keyboard-digits .math-key[data-key="left"],.keyboard-digits .math-key[data-key="right"]{color:var(--accent)}
+.keyboard-more{margin:10px 0 0;padding:9px 0 0;border-top:1px solid var(--border);font-size:11px}
+.keyboard-more summary{padding:4px 0;min-height:28px}
+.keyboard-functions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding-top:9px}
+.keyboard-functions .math-key{font-size:12px}
+.keyboard-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.7fr) minmax(0,1.6fr);gap:6px;margin-top:10px}
+.keyboard-actions .math-key{font-size:11px;color:var(--muted)}
+.keyboard-actions .math-key[data-key="delete"]{font-size:19px;color:var(--ink)}
+.keyboard-actions .math-key svg{display:block;margin:auto}
+.skip:not(:focus){width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.keyboard-actions .primary-button{min-width:0;font-size:11px;padding-inline:7px;touch-action:manipulation}
+@container(max-width:330px){.keyboard-panel{padding:9px}.keyboard-functions{grid-template-columns:repeat(3,minmax(0,1fr))}.keyboard-heading .text-button{font-size:10px}.keyboard-shortcuts,.keyboard-digits{gap:5px}}

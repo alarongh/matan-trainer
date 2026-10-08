@@ -3,6 +3,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 
 import sympy as s
+def latex(expr):return s.latex(expr,inv_trig_style='full')
 ROOT=Path(__file__).resolve().parents[1]; (ROOT/'data').mkdir(exist_ok=True);(ROOT/'sources').mkdir(exist_ok=True)
 files=[Path(title) for title in ['Задачи для подготовки к экзамену. Мат. анализ 1 семестр.pdf','Математический_анализ_1_сем_25_26_разбор_билета 28.11.2025.pdf','Математический_анализ_1сем_25-26_демо.pdf','Теоретические вопросы к экзамену.pdf']]
 tasks=[]; checks=[]
@@ -123,9 +124,9 @@ for i in range(1,41):
  topic,formula,first,second,last=S[i]
  src=[source('bank',4,f'Задача 3, пример {i}')]
  if i==5:src +=[source('demo',1,'№2, вариант с корнями'),source('solutions',2,'№2, вариант с корнями')]
- add(f'sequence-{i:02}',2,topic,r'\lim_{n\to\infty}\left('+s.latex(E[i])+r'\right)',answers[i],[
+ add(f'sequence-{i:02}',2,topic,r'\lim_{n\to\infty}\left('+latex(E[i])+r'\right)',answers[i],[
  stage('Нужные формулы',block('',formula),block('Работаем при положительных n. Сравнивай показатели степеней точно; ∞ − ∞ и 0/0 требуют преобразований.')),
- stage('Первое преобразование',block('',first)),stage('Ключевое сокращение или сравнение',block('',second)),stage('Переход к пределу',block('',last),block('Ответ исходной задачи.',r'\boxed{'+s.latex(s.sympify(answers[i].replace('infinity','oo')))+'}'))],src)
+ stage('Первое преобразование',block('',first)),stage('Ключевое сокращение или сравнение',block('',second)),stage('Переход к пределу',block('',last),block('Ответ исходной задачи.',r'\boxed{'+latex(s.sympify(answers[i].replace('infinity','oo')))+'}'))],src)
  checks.append((f'sequence-{i:02}',E[i],n,s.oo,answers[i]))
 
 # Keep printed prompts intact: a CAS must not simplify away the problem itself.
@@ -146,18 +147,18 @@ for task in tasks:
 for id,expr,ans,topic,formula,first,second,last,variant in [
  ('demo-sequence-1',root(4*n*n+5*n)-root(4*n*n-3*n),'2','Разность двух корней',r'(\sqrt A-\sqrt B)(\sqrt A+\sqrt B)=A-B',r'\frac{8n}{\sqrt{4n^2+5n}+\sqrt{4n^2-3n}}',r'\frac8{\sqrt{4+5/n}+\sqrt{4-3/n}}',r'\frac8{2+2}=2','разность корней'),
  ('demo-sequence-3',(2**n+5)*(5**n+2)/(10**n+1),'1','Произведения показательных функций',r'2^n5^n=10^n',r'(2^n+5)(5^n+2)=10^n+2\cdot2^n+5\cdot5^n+10',r'\frac{1+2/5^n+5/2^n+10/10^n}{1+1/10^n}',r'1','показательные функции')]:
- add(id,2,topic,r'\lim_{n\to\infty}\left('+s.latex(expr)+r'\right)',ans,[stage('Формулы',block('',formula)),stage('Преобразование',block('',first)),stage('Сокращение',block('',second)),stage('Ответ',block('',last))],[source('demo',1,'№2, '+variant),source('solutions',1 if id.endswith('1') else 2,'№2, '+variant)])
+ add(id,2,topic,r'\lim_{n\to\infty}\left('+latex(expr)+r'\right)',ans,[stage('Формулы',block('',formula)),stage('Преобразование',block('',first)),stage('Сокращение',block('',second)),stage('Ответ',block('',last))],[source('demo',1,'№2, '+variant),source('solutions',1 if id.endswith('1') else 2,'№2, '+variant)])
  checks.append((id,expr,n,s.oo,ans))
 
 x=s.symbols('x',real=True)
 baseform=r'L=\lim(A-1)B;\quad A\to1,\ A>0\quad\Longrightarrow\quad A^B\to e^L'
 equiv=r'\sin t\sim t,\ \tan t\sim t,\ 1-\cos t\sim t^2/2,\ \ln(1+t)\sim t,\ e^t-1\sim t\quad(t\to0)'
 def power_task(id,A,B,point,L,first,product,calc,src=None,topic='Второй замечательный предел',origin='extra',note=''):
- add(id,3,topic,r'\lim_{x\to'+s.latex(point)+r'}\left('+s.latex(A)+r'\right)^{'+s.latex(B)+'}',s.sstr(s.exp(L)),[
+ add(id,3,topic,r'\lim_{x\to'+latex(point)+r'}\left('+latex(A)+r'\right)^{'+latex(B)+'}',s.sstr(s.exp(L)),[
  stage('Нужные формулы',block('Проверь, что основание стремится к 1. Все углы в радианах.',baseform),block('',equiv)),
  stage('Выделить единицу',block('Выпиши основание минус один. Сохрани все множители и знак.',first)),
  stage('Вычислить показатель у e',block('Умножаем всю добавку к единице на исходный показатель.',product),block('Упрощаем выражение до перехода к пределу.',calc)),
- stage('Ответ исходного предела',block('Полученное число становится показателем у e.',r'L='+s.latex(L)+r',\qquad\boxed{e^{'+s.latex(L)+'}}'))
+ stage('Ответ исходного предела',block('Полученное число становится показателем у e.',r'L='+latex(L)+r',\qquad\boxed{e^{'+latex(L)+'}}'))
  ],src,origin=origin,note=note)
  checks.append((id,(A-1)*B,x,point,s.sstr(L)))
 

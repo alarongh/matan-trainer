@@ -1,5 +1,6 @@
 import katex from './vendor/katex/katex.mjs';
 import {checkAnswer} from './answer.js';
+import {mountKeyboard} from './keyboard.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
@@ -66,6 +67,7 @@ function render(){
  math($('problem'),current.prompt);
  $('task-note').hidden=!current.note;$('task-note').textContent=current.note||'';
  $('answer-row').hidden=current.kind==='choice';$('choices').hidden=current.kind!=='choice';
+ $('math-keyboard').hidden=current.kind==='choice';
  $('answer-label').textContent=current.kind==='choice'?'Выбери верное утверждение':'Твой ответ';
  $('answer-help').textContent=current.kind==='choice'?'1 — чётная · 2 — нечётная · 3 — ни та ни другая':'Примеры: 2/3, sqrt(2), 3sqrt(3), e^(-3), e^(-3*pi/4), ∞. Десятичная запятая тоже работает.';
  $('answer').value=item.draft||'';
@@ -105,7 +107,7 @@ function next(){
  if(list.length<=1){toast('Это последнее задание в текущем списке. Можно изменить фильтр.');return;}
  navigate(list[(i+1)%list.length].id);
 }
-function feedback(text,kind){$('feedback').className=`feedback ${kind}`;$('feedback').textContent=text;$('feedback').hidden=false;}
+function feedback(text,kind){$('feedback').className=`feedback ${kind}`;$('feedback').textContent=text;$('feedback').hidden=false;const r=$('feedback').getBoundingClientRect();if(r.bottom>innerHeight||r.top<0)$('feedback').scrollIntoView({behavior:'smooth',block:'nearest'});}
 function submit(value){
  if(!current)return;cancelAdvance();const task=current,oldList=filtered(),index=oldList.findIndex(t=>t.id===task.id);
  const result=checkAnswer(task,value);
@@ -118,7 +120,7 @@ function submit(value){
   if(state.autoAdvance){advanceTimer=setTimeout(()=>{
    if(current?.id!==task.id)return;
    const eligible=filtered(),nextCandidate=oldList.slice(index+1).find(t=>eligible.some(v=>v.id===t.id))||eligible.find(t=>t.id!==task.id);
-   if(nextCandidate){navigate(nextCandidate.id,true);toast('Верно. Перешли к следующему заданию.');(current?.kind==='choice'?$('choices').querySelector('button'):$('answer')).focus({preventScroll:true});}
+   if(nextCandidate){navigate(nextCandidate.id,true);toast('Верно. Перешли к следующему заданию.');if(window.matchMedia('(pointer:fine)').matches)(current?.kind==='choice'?$('choices').querySelector('button'):$('answer')).focus({preventScroll:true});else $('answer').blur();}
    else toast('Все задания в этом списке пройдены. Выбери другой раздел или фильтр.');
   },1100);}
  }else{
@@ -170,6 +172,7 @@ async function init(){
   row.append(select);$('settings-dialog').insertBefore(row,$('settings-stats'));
   const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
   theme(state.theme);
+  mountKeyboard($('math-keyboard'),$('answer'));
   for(const g of ['all','1','2','3'])$('count-'+g).textContent=g==='all'?tasks.length:coverage.groups[g];
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
   document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;render();}));

@@ -20,6 +20,14 @@ test('answer comparison distinguishes small exponentials from zero and sign erro
  assert.equal(checkAnswer({answer:'sqrt(2)'},'1.414214').correct,true);
  assert.equal(checkAnswer({answer:'1/2'},'').valid,false);
 });
+test('inverse trigonometric notation is conventional in every displayed task',()=>{
+ for(const task of tasks)for(const tex of [task.prompt,...task.stages.flatMap(s=>s.blocks.map(b=>b.tex))])assert.doesNotMatch(tex,/\\operatorname\{(?:atan|acot|asin|acos)\}/,task.id);
+ assert.equal(numeric('arctan(1)'),Math.PI/4);
+ assert.equal(numeric('arccot(1)'),Math.PI/4);
+ assert.equal(numeric('arcsin(1)'),Math.PI/2);
+ assert.equal(numeric('arccos(1)'),0);
+ assert.equal(numeric('3×4÷2'),6);
+});
 test('complete bank contains all source examples with valid math, sources and accepted answers',()=>{
  assert.equal(tasks.length,96);assert.equal(ids.size,96);
  assert.equal(tasks.filter(t=>t.origin==='source').length,76);

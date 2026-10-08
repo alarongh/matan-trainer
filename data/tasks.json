@@ -4569,7 +4569,7 @@
     "id": "demo-power-3",
     "group": 3,
     "topic": "Арктангенс и арккотангенс",
-    "prompt": "\\lim_{x\\to\\infty}\\left(\\frac{2 x - \\operatorname{atan}{\\left(x \\right)}}{2 x + \\operatorname{acot}{\\left(x \\right)}}\\right)^{3 x}",
+    "prompt": "\\lim_{x\\to\\infty}\\left(\\frac{2 x - \\arctan{\\left(x \\right)}}{2 x + \\operatorname{arccot}{\\left(x \\right)}}\\right)^{3 x}",
     "answer": "exp(-3*pi/4)",
     "stages": [
       {
@@ -4632,7 +4632,7 @@
     "id": "solution-power-3",
     "group": 3,
     "topic": "Арктангенс и арккотангенс",
-    "prompt": "\\lim_{x\\to\\infty}\\left(\\frac{2 x - \\operatorname{atan}{\\left(x \\right)}}{2 x + \\operatorname{atan}{\\left(x \\right)}}\\right)^{3 x}",
+    "prompt": "\\lim_{x\\to\\infty}\\left(\\frac{2 x - \\arctan{\\left(x \\right)}}{2 x + \\arctan{\\left(x \\right)}}\\right)^{3 x}",
     "answer": "exp(-3*pi/2)",
     "stages": [
       {
@@ -5550,7 +5550,7 @@
     "id": "extra-16",
     "group": 3,
     "topic": "Арктангенс около нуля",
-    "prompt": "\\lim_{x\\to0}\\left(3 \\operatorname{atan}{\\left(x \\right)} + 1\\right)^{\\frac{1}{x}}",
+    "prompt": "\\lim_{x\\to0}\\left(3 \\arctan{\\left(x \\right)} + 1\\right)^{\\frac{1}{x}}",
     "answer": "exp(3)",
     "stages": [
       {
@@ -5607,7 +5607,7 @@
     "id": "extra-17",
     "group": 3,
     "topic": "Арксинус около нуля",
-    "prompt": "\\lim_{x\\to0}\\left(2 \\operatorname{asin}{\\left(x \\right)} + 1\\right)^{\\frac{1}{x}}",
+    "prompt": "\\lim_{x\\to0}\\left(2 \\arcsin{\\left(x \\right)} + 1\\right)^{\\frac{1}{x}}",
     "answer": "exp(2)",
     "stages": [
       {

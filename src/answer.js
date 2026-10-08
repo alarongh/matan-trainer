@@ -1,6 +1,6 @@
 // A small arithmetic parser. No eval, Function, assignment or property access.
 export function normalize(input) {
- let s=String(input).trim().toLowerCase().replace(/[её]/g,'e').replace(/[−–—]/g,'-').replace(/π/g,'pi').replace(/²/g,'^2').replace(/³/g,'^3');
+ let s=String(input).trim().toLowerCase().replace(/[её]/g,'e').replace(/[−–—]/g,'-').replace(/×/g,'*').replace(/÷/g,'/').replace(/π/g,'pi').replace(/²/g,'^2').replace(/³/g,'^3');
  s=s.replace(/\\(?:left|right)|\$/g,'').replace(/\\(?:cdot|times)/g,'*').replace(/\\pi/g,'pi').replace(/\\infty/g,'infinity').replace(/\\,/g,'');
  for(let i=0;i<10;i++){
   const next=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'(($1)/($2))').replace(/\\sqrt\{([^{}]*)\}/g,'sqrt($1)');
@@ -17,7 +17,7 @@ export function numeric(input) {
  if(tokens.join('')!==s||tokens.length>128) throw new Error('Не удалось прочитать выражение. Пример: e^(-3), 2/3, sqrt(2).');
  let i=0;
  const peek=()=>tokens[i]; const take=()=>tokens[i++];
- const functions={sqrt:Math.sqrt,exp:Math.exp,ln:Math.log,log:Math.log,abs:Math.abs,sin:Math.sin,cos:Math.cos,tan:Math.tan,arctan:Math.atan,arccot:x=>Math.PI/2-Math.atan(x)};
+ const functions={sqrt:Math.sqrt,exp:Math.exp,ln:Math.log,log:Math.log,abs:Math.abs,sin:Math.sin,cos:Math.cos,tan:Math.tan,arcsin:Math.asin,arccos:Math.acos,arctan:Math.atan,arccot:x=>Math.PI/2-Math.atan(x)};
  function atom(){
   const t=take();
   if(t==='('){const n=sum();if(take()!==')')throw new Error('Проверьте скобки.');return n;}
