@@ -28,6 +28,15 @@ function filtered(){
    (!query||`${t.topic} ${meta(t)} ${t.id} ${names[t.group]}`.toLocaleLowerCase('ru').includes(query));
  });
 }
+function adjacent(direction=1){
+ if(!current)return;
+ // Status filters can remove the displayed task after an answer or a hint.
+ // Keep its position in the full list as the anchor for both directions.
+ const index=tasks.findIndex(t=>t.id===current.id),eligible=new Set(filtered().map(t=>t.id));
+ if(index<0)return;
+ for(let i=index+direction;i>=0&&i<tasks.length;i+=direction)if(eligible.has(tasks[i].id))return tasks[i];
+}
+function updateNavigation(){$('previous').disabled=!adjacent(-1);}
 function updateOverview(){
  const values=Object.values(state.items),solved=values.filter(v=>v.status==='solved').length,assisted=values.filter(v=>v.status==='assisted').length;
  $('progress-number').textContent=solved;$('progress-total').textContent=`/ ${tasks.length}`;
@@ -71,7 +80,7 @@ function render(){
  renderAnswer(item);
  $('feedback').hidden=true;
  $('next').firstChild.textContent=['solved','assisted'].includes(item.status)?'Следующее ':'Пропустить ';
- $('previous').disabled=list.findIndex(t=>t.id===current.id)===0;
+ updateNavigation();
  $('source-links').replaceChildren();
  for(const src of current.sources){
   const a=el('a','',`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория'}[src.file]}: ${src.label} ↗`);
@@ -125,30 +134,30 @@ function renderSteps(){
 function reveal(){
  if(!current)return;cancelAdvance();const item=itemState(state,current.id);
  if(item.step<current.stages.length){item.step++;if(item.status==='new'||item.status==='solved')item.status='learning';}
- renderSteps();updateOverview();renderList(filtered());$('task-status').textContent=statuses[item.status];persist();
+ renderSteps();updateOverview();renderList(filtered());updateNavigation();$('task-status').textContent=statuses[item.status];persist();
  $('solution').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function navigate(id,focus=false){cancelAdvance();state.selected=id;render();if(focus){$('task-card').scrollIntoView({behavior:'smooth',block:'start'});}}
 function next(){
- if(!current)return;const list=filtered(),i=list.findIndex(t=>t.id===current.id);
- if(list.length<=1){toast('Это последнее задание в текущем списке. Можно изменить фильтр.');return;}
- navigate(list[(i+1)%list.length].id);
+ if(!current)return;const candidate=adjacent();
+ if(candidate)navigate(candidate.id);
+ else toast('Дальше в этом списке заданий нет. Можно выбрать другое задание или изменить фильтр.');
 }
 function feedback(text,kind){$('feedback').className=`feedback ${kind}`;$('feedback').textContent=text;$('feedback').hidden=false;const r=$('feedback').getBoundingClientRect();if(r.bottom>innerHeight||r.top<0)$('feedback').scrollIntoView({behavior:'smooth',block:'nearest'});}
 function submit(value){
- if(!current)return;cancelAdvance();const task=current,oldList=filtered(),index=oldList.findIndex(t=>t.id===task.id);
+ if(!current)return;cancelAdvance();const task=current;
  const result=checkAnswer(task,value);
  if(!result.valid){feedback(result.message,'neutral');return;}
  const item=recordAttempt(state,task.id,String(value),result.correct);item.draft=String(value);persist();updateOverview();
- $('task-status').textContent=statuses[item.status];renderList(filtered());
+ $('task-status').textContent=statuses[item.status];renderList(filtered());updateNavigation();
  if(result.correct){
   feedback(item.status==='solved'?'Верно. Задание решено самостоятельно.':'Верно. Сохранили в «Повторить»: в этой попытке была помощь.','success');
   $('next').firstChild.textContent='Следующее ';
   if(state.autoAdvance){advanceTimer=setTimeout(()=>{
    if(current?.id!==task.id)return;
-   const eligible=filtered(),nextCandidate=oldList.slice(index+1).find(t=>eligible.some(v=>v.id===t.id))||eligible.find(t=>t.id!==task.id);
+   const nextCandidate=adjacent();
    if(nextCandidate){navigate(nextCandidate.id,true);toast('Верно. Перешли к следующему заданию.');if(window.matchMedia('(pointer:fine)').matches)(document.querySelector('#choices:not([hidden]) button, #answer-fields:not([hidden]) input, #answer-row:not([hidden]) input'))?.focus({preventScroll:true});else document.activeElement?.blur();}
-   else toast('Все задания в этом списке пройдены. Выбери другой раздел или фильтр.');
+   else toast('Дальше в этом списке заданий нет. Можно выбрать другое задание или изменить фильтр.');
   },1100);}
  }else{
   feedback((result.incorrect?.length?`Проверь поля: ${result.incorrect.join(', ')}. `:'Пока неверно. ')+(item.step===1?'Ниже открыт первый этап: нужные формулы.':'Следующий этап разбора можно открыть кнопкой ниже.'),'error');
@@ -219,7 +228,7 @@ async function init(){
   $('reveal').onclick=reveal;
   $('next-step').onclick=()=>{const item=itemState(state,current.id);if(item.step>=current.stages.length){item.step=0;item.status='learning';item.draft='';render();toast('Новая попытка без раскрытого решения.');}else reveal();};
   $('next').onclick=next;
-  $('previous').onclick=()=>{const list=filtered(),i=list.findIndex(t=>t.id===current.id);if(i>0)navigate(list[i-1].id);};
+  $('previous').onclick=()=>{const candidate=adjacent(-1);if(candidate)navigate(candidate.id);};
   $('clear-filters').onclick=()=>{state.mode='all';state.group='all';state.origin='all';$('search').value='';render();};
   $('open-settings').onclick=openSettings;$('mobile-settings').onclick=openSettings;
   $('open-sources').onclick=sources;$('open-formulas').onclick=formulas;
