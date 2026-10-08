@@ -1,0 +1,19 @@
+{
+  "name": "matan-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/onest": "^5.2.8",
+    "katex": "^0.19.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
+}

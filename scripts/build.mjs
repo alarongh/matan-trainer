@@ -1,0 +1,12 @@
+import { cp, mkdir, rm, copyFile } from 'node:fs/promises';
+await rm('dist', {recursive:true, force:true});
+await mkdir('dist/vendor', {recursive:true});
+await cp('src', 'dist', {recursive:true});
+await cp('node_modules/katex/dist', 'dist/vendor/katex', {recursive:true});
+await cp('node_modules/@fontsource-variable/onest/files', 'dist/fonts', {recursive:true});
+await copyFile('node_modules/katex/LICENSE','dist/vendor/katex/LICENSE');
+await copyFile('node_modules/@fontsource-variable/onest/LICENSE','dist/fonts/LICENSE');
+await cp('sources', 'dist/sources', {recursive:true});
+await copyFile('data/tasks.json','dist/tasks.json');
+await copyFile('data/coverage.json','dist/coverage.json');
+console.log('Built self-contained static site in dist/');
