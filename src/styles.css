@@ -108,5 +108,6 @@
 .quiz-actions button{min-height:46px}
 #quiz-help{margin-top:12px;min-height:44px}
 .quiz-save{font-size:10px;margin:18px 0;line-height:1.7}
+#restart-attempt{display:block;min-height:44px;margin:10px auto 0;text-align:center}
 .quiz-solution .secondary-button{width:100%;margin-top:14px}
 @container(max-width:720px){.practice-switch{width:100%;margin-bottom:22px}.practice-switch button{flex:1;padding-inline:8px;font-size:11px}.quiz-heading{flex-direction:column;gap:9px}.quiz-heading h2{font-size:25px}.quiz-topics{padding:12px}.quiz-topic-list{grid-template-columns:1fr}.quiz-config-bottom{flex-direction:column;align-items:stretch;gap:12px}.quiz-card{padding:20px 15px}.quiz-card h3{font-size:21px}.quiz-preview{font-size:.9em}.quiz-pieces{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.quiz-piece{font-size:14px;min-height:60px}.quiz-slots{grid-template-columns:repeat(2,minmax(0,1fr))}.quiz-slot{min-height:76px}.quiz-actions{grid-template-columns:1fr}.quiz-conditions{font-size:11px}.quiz-topic{font-size:12px}}

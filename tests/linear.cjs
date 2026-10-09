@@ -29,12 +29,12 @@ async function main(){
   await page.locator('#field-inverse').fill('1 0;0 1');await page.locator('#field-result').fill('1 0 -3;0 -2 -1');await page.locator('#answer-fields button[type=submit]').click();
   assert.match(await page.locator('#feedback').innerText(),/Обратная матрица/);assert.equal(await page.locator('.step').count(),1);
   await page.locator('#field-inverse').fill('3 -2;1 -1');await page.locator('#answer-fields button[type=submit]').click();assert.match(await page.locator('#feedback').innerText(),/^Верно/);
-  await page.reload();await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'3 -2;1 -1');
+  await page.reload();await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'');
   assert.equal(await page.evaluate(()=>localStorage.getItem('matan-trainer:v1')),calculus);
   await page.locator('#subject-select').selectOption('matan');await page.locator('[data-task-id="sequence-10"]').waitFor();
-  assert.equal(await page.locator('#answer').inputValue(),'5');assert.equal(await page.locator('html').getAttribute('data-theme'),'night');
+  assert.equal(await page.locator('#answer').inputValue(),'');assert.equal(await page.locator('html').getAttribute('data-theme'),'night');
   assert.equal(await page.evaluate(()=>localStorage.getItem('matan-trainer:v1')),calculus);
-  await page.locator('#subject-select').selectOption('linear');await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'3 -2;1 -1');
+  await page.locator('#subject-select').selectOption('linear');await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'');
   await page.locator('[data-mode="new"]').click();await select('la-example-07');await enter(tasks.find(t=>t.id==='la-example-07'));await page.locator('#next').click();
   assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('linear-trainer:v1')).selected),'la-example-08');
   await page.locator('[data-group="all"]').click();await page.locator('[data-mode="all"]').click();

@@ -16,7 +16,8 @@ async function main(){
   const variants=[['3/2 1/2;2 1','27/2 -13/2;19 -11'],['1.5 0.5;2 1','13.5 -6.5;19 -11'],['1,5 0,5;2 1','13,5 -6,5;19 -11']];
   for(const [inverse,result] of variants){await page.locator('#field-inverse').fill(inverse);await page.locator('#field-result').fill(result);await page.locator('#answer-fields button[type=submit]').click();await correct();}
   assert.match(await page.locator('.field-entry .input-help').first().innerText(),/0,5/);
-  await page.reload();await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'1,5 0,5;2 1');
+  await page.reload();await page.locator('#field-inverse').waitFor();assert.equal(await page.locator('#field-inverse').inputValue(),'');
+  await page.locator('#field-result').fill('13,5 -6,5;19 -11');
   await page.locator('#field-inverse').fill('1,5 0,6;2 1');await page.locator('#answer-fields button[type=submit]').click();assert.match(await page.locator('#feedback').innerText(),/Проверь поля: Обратная матрица/);
   assert.deepEqual(errors,[]);console.log('Decimal browser QA passed: real calculus half, both linear matrix fields, fractions/points/commas, wrong values and reload.');
  }finally{await browser.close();}

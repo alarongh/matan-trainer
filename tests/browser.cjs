@@ -27,8 +27,7 @@ async function main(){
  await page.locator('#answer').fill('1/2');await page.locator('#check-button').click();
  assert.match(await page.locator('#feedback').innerText(),/Верно/);
  state=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);assert.equal(state.items['sequence-01'].status,'assisted');
- await page.reload();await page.locator('#answer').waitFor();assert.equal(await page.locator('#answer').inputValue(),'1/2');assert.equal(await page.locator('.step').count(),4);
- await page.locator('#next-step').click();assert.equal(await page.locator('.step').count(),0);
+ await page.reload();await page.locator('#answer').waitFor();assert.equal(await page.locator('#answer').inputValue(),'');assert.equal(await page.locator('#steps .step').count(),0);
  await page.locator('#answer').fill('0,5');await page.locator('#check-button').click();
  assert.equal(await page.locator('#progress-number').innerText(),'1');
  await page.locator('[data-theme="night"]').click();await page.reload();await page.locator('[data-task-id]').first().waitFor();assert.equal(await page.locator('html').getAttribute('data-theme'),'night');

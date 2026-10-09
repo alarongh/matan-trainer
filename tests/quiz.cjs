@@ -70,7 +70,7 @@ async function main(){
   }
   const linearHistory=await page.evaluate(()=>localStorage.getItem('linear-trainer:v1'));
   await page.locator('#subject-select').selectOption('matan');await ready();assert.ok(await page.locator('#formula-quiz').isVisible());assert.ok((await state('matan')).items);
-  await page.locator('#show-tasks').click();assert.ok(await page.locator('#task-practice').isVisible());assert.equal(await page.locator('#answer').inputValue(),'1/2');
+  await page.locator('#show-tasks').click();assert.ok(await page.locator('#task-practice').isVisible());assert.equal(await page.locator('#answer').inputValue(),'');
   assert.equal(await page.evaluate(()=>localStorage.getItem('linear-trainer:v1')),linearHistory);
   assert.deepEqual(errors,[]);
   const phone=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});

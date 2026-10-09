@@ -15,12 +15,13 @@ async function main(){
  assert.equal(await page.locator('[data-group]').count(),11);
  assert.equal(await page.locator('#count-all').innerText(),'426');
  assert.equal(await page.locator('#progress-number').innerText(),'1');
- assert.equal(await page.locator('#answer').inputValue(),'1/2');
+ assert.equal(await page.locator('#answer').inputValue(),'');
  await page.locator('[data-group="6"]').click();await page.locator('[data-task-id="tangent-11"]').click();
  await page.locator('#field-line').fill('y=5-6x');await page.locator('#field-area').fill('49/12');await page.locator('#answer-fields button[type=submit]').click();
  assert.match(await page.locator('#feedback').innerText(),/Площадь/);assert.equal(await page.locator('.step').count(),1);
  await page.locator('#field-area').fill('25/12');await page.locator('#answer-fields button[type=submit]').click();assert.match(await page.locator('#feedback').innerText(),/^Верно/);
- await page.reload();await page.locator('#field-area').waitFor();assert.equal(await page.locator('#field-line').inputValue(),'y=5-6x');assert.equal(await page.locator('#field-area').inputValue(),'25/12');
+ await page.reload();await page.locator('#field-area').waitFor();assert.equal(await page.locator('#field-line').inputValue(),'');assert.equal(await page.locator('#field-area').inputValue(),'');
+ await page.locator('#field-line').fill('y=5-6x');
  await page.locator('#field-area').click();await page.locator('[data-key="clear"]').click();await page.locator('[data-key="2"]').click();assert.equal(await page.locator('#field-area').inputValue(),'2');assert.equal(await page.locator('#field-line').inputValue(),'y=5-6x');
  await page.locator('[data-group="5"]').click();await page.locator('[data-task-id="function-theory-06"]').click();
  assert.ok(await page.locator('#choices button[type=submit]').evaluate(e=>{const s=getComputedStyle(e);return s.color!==s.backgroundColor;}),'Submit label must contrast with the button');

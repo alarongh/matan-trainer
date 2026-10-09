@@ -10,7 +10,7 @@ import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const math=(target,tex)=>katex.render(tex,target,{displayMode:true,throwOnError:false,strict:'ignore',trust:false});
-let tasks=[],coverage,state,ids,current,advanceTimer,toastTimer,storage,keyboard,activeAnswerInput,storageWarning=false;
+let tasks=[],coverage,state,ids,current,renderedTaskId,advanceTimer,toastTimer,storage,keyboard,activeAnswerInput,storageWarning=false;
 try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{throw Error();}};}
 const preferences=storage;
 document.documentElement.dataset.theme=loadTheme(preferences,document.documentElement.dataset.theme);
@@ -76,8 +76,11 @@ function render(){
  current=tasks.find(t=>t.id===state.selected);
  renderList(list);
  $('task-card').hidden=!current;$('empty-state').hidden=!!current;$('solution').hidden=true;
- if(!current){persist();return;}
+ if(!current){renderedTaskId=null;persist();return;}
  const item=itemState(state,current.id);
+ // A completed task starts a fresh attempt when reopened, including legacy drafts.
+ if(renderedTaskId!==current.id&&['solved','assisted'].includes(item.status)){item.draft='';item.step=0;}
+ renderedTaskId=current.id;
  $('task-group').textContent=`ЗАДАНИЕ ${current.group}`;
  $('task-position').textContent=`${list.findIndex(t=>t.id===current.id)+1} из ${list.length}`;
  $('task-heading').textContent=current.topic;
@@ -104,7 +107,12 @@ function answerValue(){
  if(current.kind==='multi')return [...$('choices').querySelectorAll('input:checked')].map(i=>i.value).join(';');
  return $('answer').value;
 }
-function draft(){if(current){itemState(state,current.id).draft=answerValue();persist();}}
+function draft(){if(current){
+ cancelAdvance();
+ const item=itemState(state,current.id);
+ if(['solved','assisted'].includes(item.status)){item.status='learning';item.step=0;renderSteps();updateOverview();renderList(filtered());updateNavigation();$('task-status').textContent=statuses[item.status];}
+ item.draft=answerValue();persist();
+}}
 function activateInput(input){activeAnswerInput=input;keyboard.setInput(input);document.querySelectorAll('.field-entry').forEach(row=>row.classList.toggle('active-field',row.contains(input)));}
 function renderAnswer(item){
  const choice=['choice','multi'].includes(current.kind),fields=current.kind==='fields';
@@ -145,9 +153,14 @@ function renderSteps(){
 }
 function reveal(){
  if(!current)return;cancelAdvance();const item=itemState(state,current.id);
- if(item.step<current.stages.length){item.step++;if(item.status==='new'||item.status==='solved')item.status='learning';}
+ if(item.step<current.stages.length){item.step++;if(['new','solved','assisted'].includes(item.status))item.status='learning';}
  renderSteps();updateOverview();renderList(filtered());updateNavigation();$('task-status').textContent=statuses[item.status];persist();
  $('solution').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function restartAttempt(){
+ if(!current)return;
+ const item=itemState(state,current.id);item.step=0;item.status='learning';item.draft='';render();
+ toast('Разбор и ответ очищены. Новая самостоятельная попытка.');
 }
 function navigate(id,focus=false){cancelAdvance();state.selected=id;render();if(focus){$('task-card').scrollIntoView({behavior:'smooth',block:'start'});}}
 function next(){
@@ -160,7 +173,7 @@ function submit(value){
  if(!current)return;cancelAdvance();const task=current;
  const result=checkAnswer(task,value);
  if(!result.valid){feedback(result.message,'neutral');return;}
- const item=recordAttempt(state,task.id,String(value),result.correct);item.draft=String(value);persist();updateOverview();
+ const item=recordAttempt(state,task.id,String(value),result.correct);item.draft=result.correct?'':String(value);persist();updateOverview();
  $('task-status').textContent=statuses[item.status];renderList(filtered());updateNavigation();
  if(result.correct){
   feedback(item.status==='solved'?'Верно. Задание решено самостоятельно.':'Верно. Сохранили в «Повторить»: в этой попытке была помощь.','success');
@@ -234,7 +247,7 @@ async function init(){
   theme(loadTheme(preferences,state.theme));
   const syncTheme=()=>theme(loadTheme(preferences,state.theme),false);
   window.addEventListener('storage',event=>{if(event.key===THEME_KEY)syncTheme();});
-  window.addEventListener('pageshow',()=>{syncTheme();$('subject-select').value=subject;});
+  window.addEventListener('pageshow',event=>{syncTheme();$('subject-select').value=subject;if(event.persisted){renderedTaskId=null;render();}});
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')syncTheme();});
   keyboard=mountKeyboard($('math-keyboard'),$('answer'));
   if(isLinear)addLinearKeys($('math-keyboard'),()=>activeAnswerInput);
@@ -246,7 +259,8 @@ async function init(){
   $('answer').oninput=draft;$('answer').onfocus=()=>activateInput($('answer'));
   $('answer-form').onsubmit=e=>{e.preventDefault();submit(answerValue());};
   $('reveal').onclick=reveal;
-  $('next-step').onclick=()=>{const item=itemState(state,current.id);if(item.step>=current.stages.length){item.step=0;item.status='learning';item.draft='';render();toast('Новая попытка без раскрытого решения.');}else reveal();};
+  $('next-step').onclick=()=>{const item=itemState(state,current.id);if(item.step>=current.stages.length)restartAttempt();else reveal();};
+  $('restart-attempt').onclick=restartAttempt;
   $('next').onclick=next;
   $('previous').onclick=()=>{const candidate=adjacent(-1);if(candidate)navigate(candidate.id);};
   $('clear-filters').onclick=()=>{state.mode='all';state.group='all';state.origin='all';$('search').value='';render();};
