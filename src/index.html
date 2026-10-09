@@ -22,6 +22,7 @@
    </nav>
    <div class="sidebar-caption resources-label">ПОД РУКОЙ</div>
    <button class="nav-item" id="open-formulas"><span class="nav-icon">ƒ</span><span>Памятка с формулами</span><span aria-hidden="true">↗</span></button>
+   <button class="nav-item" id="open-quiz"><span class="nav-icon">✧</span><span>Викторина формул</span></button>
    <button class="nav-item" id="open-sources"><span class="nav-icon">▤</span><span>Исходные материалы</span></button>
    <div class="sidebar-bottom">
     <div class="save-status"><span class="save-dot"></span><span id="save-status">Прогресс в этом браузере</span></div>
@@ -39,6 +40,9 @@
     <div><div class="eyebrow">ТВОЙ ТЕМП. ТВОЙ ПРОГРЕСС.</div><h1>Разобраться, шаг за шагом<span>.</span></h1><p>Один ответ. Немного практики. Чуть больше уверенности.</p></div>
     <button class="mobile-settings icon-button" id="mobile-settings" aria-label="Открыть настройки">⚙</button>
    </header>
+   <div class="practice-switch" role="group" aria-label="Режим подготовки"><button id="show-tasks" class="selected" aria-pressed="true">Задания билета</button><button id="show-quiz" aria-pressed="false">✧ Учить формулы</button></div>
+   <section id="formula-quiz" aria-label="Викторина формул" hidden></section>
+   <div id="task-practice">
    <section class="overview" aria-label="Прогресс подготовки">
     <div class="overview-lead"><span class="overview-icon">↗</span><div><strong id="progress-title">Начни с одного задания</strong><span id="progress-description">Решения откроются только тогда, когда понадобятся.</span></div></div>
     <div class="progress-number"><strong id="progress-number">0</strong><span id="progress-total">/ 96</span><small>самостоятельно</small></div>
@@ -83,6 +87,7 @@
     </aside>
    </div>
    <footer class="page-footer"><span>Весь билет, по одному шагу.</span><span id="coverage-label"></span></footer>
+   </div>
   </main>
  </div>
  <dialog id="settings-dialog"><div class="dialog-header"><h2>Настройки и история</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><p>Прогресс сохраняется в этом браузере на этом устройстве. Для переноса между телефоном и компьютером используй файл истории. Загрузка заменяет текущую историю.</p><label class="setting-row"><span>Переходить дальше после верного ответа</span><input type="checkbox" id="auto-advance"></label><div class="settings-stats" id="settings-stats"></div><div class="dialog-actions"><button class="secondary-button" id="export-progress">Скачать историю</button><button class="secondary-button" id="import-progress">Загрузить историю</button><input type="file" id="import-file" accept="application/json,.json" hidden></div><div class="dialog-message" id="import-message" role="status"></div><details><summary>Сбросить прогресс</summary><p>Удалит попытки и раскрытые подсказки в этом браузере. Сначала можно скачать историю.</p><button class="danger-button" id="reset-progress">Сбросить всё</button></details><div class="history-list" id="history-list"></div></dialog>

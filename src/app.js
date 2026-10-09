@@ -4,6 +4,7 @@ import {checkLinearAnswer} from './linear-answer.js';
 import {subject,isLinear,subjectStorage,setupSubjects} from './subjects.js';
 import {linearFormulas,linearInputHelp,addLinearKeys,renderGraph} from './linear-ui.js';
 import {mountKeyboard} from './keyboard.js';
+import {mountFormulaQuiz} from './formula-quiz.js';
 import {THEME_KEY,loadTheme,saveTheme} from './theme.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
@@ -227,7 +228,8 @@ async function init(){
   const row=el('label','setting-row');row.append(el('span','','Цветовая тема'));const select=el('select');select.id='theme-select';
   for(const [value,label] of [['sage','Шалфей'],['paper','Тёплая бумага'],['lavender','Лаванда'],['night','Тихий вечер']]){const option=el('option','',label);option.value=value;select.append(option);}
   row.append(select);$('settings-dialog').insertBefore(row,$('settings-stats'));
-  const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
+  const quiz=mountFormulaQuiz({subject,names,storage:preferences,cancelTaskAdvance:cancelAdvance});
+  const tools=el('div','dialog-actions');for(const [label,callback] of [['Формулы',formulas],['Викторина формул',quiz.open],['Материалы',sources]]){const b=el('button','secondary-button',label);b.onclick=()=>{$('settings-dialog').close();callback();};tools.append(b);}$('settings-dialog').insertBefore(tools,$('history-list'));
   // Adopt the current subject's legacy theme once, then share it across subjects.
   theme(loadTheme(preferences,state.theme));
   const syncTheme=()=>theme(loadTheme(preferences,state.theme),false);
