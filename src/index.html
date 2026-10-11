@@ -90,6 +90,18 @@
    </div>
    <footer class="page-footer"><span>Весь билет, по одному шагу.</span><span id="coverage-label"></span></footer>
    </div>
+   <footer class="mobile-tools" aria-label="Формулы и оформление">
+    <button class="secondary-button" id="mobile-formulas">ƒ Формулы под рукой</button>
+    <div class="mobile-themes" role="group" aria-label="Цветовая тема на телефоне">
+     <span>Цветовая тема</span>
+     <div class="mobile-theme-options">
+      <button data-mobile-theme="sage" aria-pressed="false"><i class="theme-dot sage" aria-hidden="true"></i>Шалфей</button>
+      <button data-mobile-theme="paper" aria-pressed="false"><i class="theme-dot paper" aria-hidden="true"></i>Бумага</button>
+      <button data-mobile-theme="lavender" aria-pressed="false"><i class="theme-dot lavender" aria-hidden="true"></i>Лаванда</button>
+      <button data-mobile-theme="night" aria-pressed="false"><i class="theme-dot night" aria-hidden="true"></i>Вечер</button>
+     </div>
+    </div>
+   </footer>
   </main>
  </div>
  <dialog id="settings-dialog"><div class="dialog-header"><h2>Настройки и история</h2><button class="icon-button close-dialog" aria-label="Закрыть">×</button></div><p>Прогресс сохраняется в этом браузере на этом устройстве. Для переноса между телефоном и компьютером используй файл истории. Загрузка заменяет текущую историю.</p><label class="setting-row"><span>Переходить дальше после верного ответа</span><input type="checkbox" id="auto-advance"></label><div class="settings-stats" id="settings-stats"></div><div class="dialog-actions"><button class="secondary-button" id="export-progress">Скачать историю</button><button class="secondary-button" id="import-progress">Загрузить историю</button><input type="file" id="import-file" accept="application/json,.json" hidden></div><div class="dialog-message" id="import-message" role="status"></div><details><summary>Сбросить прогресс</summary><p>Удалит попытки и раскрытые подсказки в этом браузере. Сначала можно скачать историю.</p><button class="danger-button" id="reset-progress">Сбросить всё</button></details><div class="history-list" id="history-list"></div></dialog>

@@ -8,11 +8,11 @@ export function mountFormulaQuiz({subject,names,storage,cancelTaskAdvance}){
  const cards=formulaBanks[subject],state=loadQuiz(storage,subject,cards),root=document.getElementById('formula-quiz');
  let timer,visible=false,renderedRound=null;
  const heading=el('div','quiz-heading'),intro=el('div');
- intro.append(el('div','eyebrow','ФОРМУЛЫ · '+(subject==='linear'?'ЛИНАЛ':'МАТАН')),el('h2','','Собери и запомни'),el('p','','Выбирай фрагменты правой части. Ошибка откроет разбор по одному шагу.'));
+ intro.append(el('div','eyebrow','ФОРМУЛЫ · '+(subject==='physics'?'ФИЗИКА':subject==='linear'?'ЛИНАЛ':'МАТАН')),el('h2','','Собери и запомни'),el('p','','Выбирай фрагменты правой части. Ошибка откроет разбор по одному шагу.'));
  heading.append(intro,el('span','quiz-infinite','∞ Бесконечные волны'));root.append(heading);
  const topics=el('details','quiz-topics');topics.open=!state.round;
- const summary=el('summary','','Выбрать номера билета'),topicsList=el('div','quiz-topic-list');
- const all=button('Все номера','text-button'),none=button('Снять выбор','text-button'),selectionTools=el('div','quiz-selection-tools');selectionTools.append(all,none);
+ const summary=el('summary','',subject==='physics'?'Выбрать разделы':'Выбрать номера билета'),topicsList=el('div','quiz-topic-list');
+ const all=button(subject==='physics'?'Все разделы':'Все номера','text-button'),none=button('Снять выбор','text-button'),selectionTools=el('div','quiz-selection-tools');selectionTools.append(all,none);
  const checkboxes=[];
  for(const [number,title] of Object.entries(names)){
   const label=el('label','quiz-topic'),input=el('input');input.type='checkbox';input.value=number;input.checked=state.groups.includes(Number(number));

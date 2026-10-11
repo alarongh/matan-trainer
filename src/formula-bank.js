@@ -1,3 +1,4 @@
+import {physicsFormulas} from './physics-formulas.js';
 // Authored recall cards based on the formulas used in the existing study banks.
 // Every tile is complete TeX; templates place tiles inside fractions/powers safely.
 function f(id,groups,title,left,layout,parts,wrong,conditions,tip,explanation,relation='='){
@@ -6,6 +7,7 @@ function f(id,groups,title,left,layout,parts,wrong,conditions,tip,explanation,re
 const M=(...args)=>f('m-'+args[0],...args.slice(1));
 const L=(...args)=>f('l-'+args[0],...args.slice(1));
 export const formulaBanks={
+ physics:physicsFormulas,
  matan:[
   M('even',[1,5],"Чётная функция","f(-x)","@0@",["f(x)"],["-f(x)","f(x)+1"],"Область определения симметрична относительно нуля, x и −x принадлежат ей.","У чётной функции отражение аргумента не меняет значение.","Значения в симметричных точках одинаковы. Минус перед f(x) относится к нечётной функции."),
   M('odd',[1,5],"Нечётная функция","f(-x)","@0@",["-f(x)"],["f(x)","|f(x)|"],"Область определения симметрична относительно нуля.","При отражении аргумента знак значения меняется.","Нечётность означает противоположные значения в симметричных точках."),
@@ -128,6 +130,7 @@ const orders={
  'l-parabola':swapped,
  'l-polynomial-division':[[0,1,2],[1,0,2]]
 };
+orders['p-m16']=[[0,1],[1,0]];orders['p-m23']=[[0,1],[1,0]];orders['p-g31']=[[0,1],[1,0]];orders['p-g05']=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
 for(const bank of Object.values(formulaBanks))for(const card of bank)card.orders=orders[card.id]||[card.parts.map((_,i)=>i)];
 export function tileTex(tex){return tex.includes('&')?'\\begin{matrix}'+tex+'\\end{matrix}':tex;}
 export function rightTex(card,selected=card.parts){return card.layout.replace(/@(\d+)@/g,(_,i)=>' '+(selected[i]??'\\boxed{\\;?\\;}')+' ');}

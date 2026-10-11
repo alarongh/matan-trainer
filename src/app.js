@@ -1,12 +1,15 @@
 import katex from './vendor/katex/katex.mjs';
 import {checkAnswer as checkMathAnswer} from './answer.js';
 import {checkLinearAnswer} from './linear-answer.js';
-import {subject,isLinear,subjectStorage,setupSubjects} from './subjects.js';
+import {subject,isLinear,isPhysics,subjectStorage,setupSubjects} from './subjects.js';
 import {linearFormulas,linearInputHelp,addLinearKeys,renderGraph} from './linear-ui.js';
 import {mountKeyboard} from './keyboard.js';
 import {mountFormulaQuiz} from './formula-quiz.js';
 import {THEME_KEY,loadTheme,saveTheme} from './theme.js';
 import {mountReview,graphReference} from './written-review.js';
+import {checkPhysicsAnswer,physicsInputHelp} from './physics-answer.js';
+import {physicsFormulas} from './physics-formulas.js';
+import {physicsDiagram} from './physics-ui.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
@@ -16,7 +19,7 @@ try{storage=window.localStorage;}catch{storage={getItem:()=>null,setItem:()=>{th
 const preferences=storage;
 document.documentElement.dataset.theme=loadTheme(preferences,document.documentElement.dataset.theme);
 storage=subjectStorage(storage);
-const checkAnswer=isLinear?checkLinearAnswer:checkMathAnswer;
+const checkAnswer=isPhysics?checkPhysicsAnswer:isLinear?checkLinearAnswer:checkMathAnswer;
 let names={};
 const statuses={new:'Ещё не решено',learning:'В работе',solved:'Самостоятельно ✓',assisted:'Решено с помощью'};
 function persist(){if(!saveState(storage,state)){$('save-status').textContent='Сохранение недоступно';if(!storageWarning){storageWarning=true;toast('Браузер запретил сохранение. Скачивай историю перед закрытием.');}}}
@@ -73,7 +76,7 @@ function render(){
  document.querySelectorAll('[data-group]').forEach(b=>{const active=b.dataset.group===state.group;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active);});
  document.querySelectorAll('[data-mode]').forEach(b=>{const active=b.dataset.mode===state.mode;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',active);});
  $('origin-filter').value=state.origin;
- $('textbook-section-row').hidden=isLinear||state.origin!=='textbook';$('textbook-section').value=state.textbookSection;
+ $('textbook-section-row').hidden=subject!=='matan'||state.origin!=='textbook';$('textbook-section').value=state.textbookSection;
  const list=filtered();
  if(!list.some(t=>t.id===state.selected))state.selected=list[0]?.id||null;
  current=tasks.find(t=>t.id===state.selected);
@@ -98,7 +101,7 @@ function render(){
  updateNavigation();
  $('source-links').replaceChildren();
  for(const src of current.sources){
-  const a=el('a','',isLinear?`${src.label} ↗`:`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория',textbook:'Пособие'}[src.file]}: ${src.label} ↗`);
+  const a=el('a','',subject!=='matan'?`${src.label} ↗`:`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория',textbook:'Пособие'}[src.file]}: ${src.label} ↗`);
   a.href=`./sources/${src.file}.pdf#page=${src.page}`;a.target='_blank';a.rel='noopener';$('source-links').append(a);
  }
  if(!current.sources.length)$('source-links').append(el('span','input-help','Дополнительная задача для тренировки.'));
@@ -136,12 +139,13 @@ function renderAnswer(item){
   let values={};try{values=JSON.parse(item.draft||'{}');}catch{}
   for(const f of current.fields){
    const row=el('div','field-entry'),label=el('label','',f.label),input=el('input');input.id='field-'+f.id;input.dataset.field=f.id;input.name=f.id;input.maxLength=256;input.spellcheck=false;input.value=values[f.id]||'';input.placeholder=({points:'(x;y) | (x;y)',lines:'x=…; y=…',set:'значение; значение',expression:'Выражение через '+(f.variables||[]).join(', ')})[f.kind]||'Только итоговый ответ';
-   if(isLinear)linearInputHelp(f,input);
+   if(isLinear)linearInputHelp(f,input);if(isPhysics)physicsInputHelp(f,input);
    label.htmlFor=input.id;input.onfocus=()=>activateInput(input);input.onpointerdown=()=>activateInput(input);input.oninput=draft;row.append(label,input);$('answer-fields').append(row);
    if(isLinear&&['matrix','complex','complex-set','equation','line3','affine','system-point','vector'].includes(f.kind)){const help=el('p','input-help');linearInputHelp(f,input,help);row.append(help);}
   }
   const button=el('button','primary-button','Проверить все поля ↵');button.type='submit';$('answer-fields').append(button);activateInput($('answer-fields').querySelector('input'));
- }else{$('answer').value=item.draft||'';activateInput($('answer'));if(isLinear)linearInputHelp(current,$('answer'),$('answer-help'));}
+ }else{$('answer').value=item.draft||'';activateInput($('answer'));if(isLinear)linearInputHelp(current,$('answer'),$('answer-help'));if(isPhysics)physicsInputHelp(current,$('answer'),$('answer-help'));}
+ if(isPhysics&&fields)$('answer-help').textContent='Введи все значения в единицах возле полей. Дроби и десятичные записи равнозначны; для КПД можно ввести 0,25 или 25%. Допускается округление до 0,5%.';
  if(isLinear&&fields)$('answer-help').textContent='Заполни все поля. Матрицы: 1 2; 3 4. Координаты: (1;2;3). Корни: sqrt(2). Углы в радианах.';
 }
 function renderWritten(item){
@@ -156,7 +160,7 @@ function renderSteps(){
  $('solution').hidden=!count;$('steps').replaceChildren();$('step-count').textContent=`${count} / ${current.stages.length}`;
  current.stages.slice(0,count).forEach((stage,i)=>{
   const section=el('article','step');section.append(el('span','step-number',`${i+1}`),el('h4','',stage.title));
-  for(const block of stage.blocks){if(block.note)section.append(el('p','',block.note));if(block.tex){const m=el('div','math');math(m,block.tex);section.append(m);}if(isLinear&&block.graph)section.append(renderGraph(block.graph));}
+  for(const block of stage.blocks){if(block.note)section.append(el('p','',block.note));if(block.tex){const m=el('div','math');math(m,block.tex);section.append(m);}if(isLinear&&block.graph)section.append(renderGraph(block.graph));if(isPhysics&&block.physicsDiagram)section.append(physicsDiagram(block.physicsDiagram));}
   $('steps').append(section);
  });
  if(current.kind==='review'){
@@ -216,7 +220,7 @@ function submit(value){
   renderSteps();
  }
 }
-function theme(name,save=true){state.theme=name;document.documentElement.dataset.theme=name;document.querySelectorAll('button[data-theme]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.theme===name));$('theme-select').value=name;if(save){saveTheme(preferences,name);persist();}}
+function theme(name,save=true){state.theme=name;document.documentElement.dataset.theme=name;document.querySelectorAll('button[data-theme],button[data-mobile-theme]').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.theme||b.dataset.mobileTheme)===name));$('theme-select').value=name;if(save){saveTheme(preferences,name);persist();}}
 function openSettings(){
  $('auto-advance').checked=state.autoAdvance;
  const values=Object.values(state.items),attempts=values.reduce((sum,v)=>sum+v.attempts.length,0);
@@ -228,7 +232,7 @@ function openSettings(){
  $('settings-dialog').showModal();
 }
 function sources(){
- $('sources-description').textContent=`${isLinear?'Линал · 1 семестр 2025–26. Все №1–10 билета. ':'Матан · все практические задачи 1–26 пособия и банк билета. '}${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
+ $('sources-description').textContent=`${isPhysics?'Физика · часть 1, 1 семестр 2025–26. ':isLinear?'Линал · 1 семестр 2025–26. Все №1–10 билета. ':'Матан · все практические задачи 1–26 пособия и банк билета. '}${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
  $('sources-content').replaceChildren();
  for(const file of coverage.sourceFiles){const a=el('a','source-document',file.title);a.href=`./sources/${file.id}.pdf`;a.target='_blank';a.rel='noopener';a.append(el('small','',file.id==='theory'?'Теоретический список доступен как PDF.':'Оригинал PDF · открыть в новой вкладке ↗'));$('sources-content').append(a);}
  for(const note of coverage.notes)$('sources-content').append(el('p','input-help',note));
@@ -237,7 +241,7 @@ function sources(){
 }
 function formulas(){
  $('formula-content').replaceChildren();
- const sections=isLinear?linearFormulas:[
+ const sections=isPhysics?physicsFormulas.map(f=>[f.title,f.conditions, f.left+'='+f.layout.replace(/@(\d+)@/g,(_,i)=>f.parts[i])]):isLinear?linearFormulas:[
   ['Второй замечательный предел','При A → 1 и положительном основании; L конечен.',String.raw`L=\lim(A-1)B\quad\Longrightarrow\quad A^B\to e^L`],
   ['Эквивалентности','Все формулы при t → 0. Углы в радианах.',String.raw`\begin{gathered}\sin t\sim t,\quad\tan t\sim t,\quad\arctan t\sim t,\quad\arcsin t\sim t\\1-\cos t\sim\frac{t^2}{2},\quad\ln(1+t)\sim t,\quad e^t-1\sim t\end{gathered}`],
   ['Знаки и сложный аргумент','При x → 0 и фиксированном k ≠ 0.',String.raw`\cos^2t-1=-\sin^2t,\quad\sin^2(kx)\sim k^2x^2`],
@@ -258,11 +262,11 @@ function formulas(){
 async function init(){
  try{
   setupSubjects();
-  if(isLinear)$('origin-filter').querySelector('[value="textbook"]').remove();
-  const responses=await Promise.all(isLinear?[fetch('./linear-tasks.json'),fetch('./linear-coverage.json')]:[fetch('./tasks.json'),fetch('./coverage.json')]);
+  if(subject!=='matan')$('origin-filter').querySelector('[value="textbook"]').remove();
+  const responses=await Promise.all(isPhysics?[fetch('./physics-tasks.json'),fetch('./physics-coverage.json')]:isLinear?[fetch('./linear-tasks.json'),fetch('./linear-coverage.json')]:[fetch('./tasks.json'),fetch('./coverage.json')]);
   if(responses.some(r=>!r.ok))throw Error('Не удалось загрузить банк заданий.');
   [tasks,coverage]=await Promise.all(responses.map(r=>r.json()));ids=new Set(tasks.map(t=>t.id));state=loadState(storage,ids);
-  if(!isLinear){
+  if(subject==='matan'){
    const chapters=['Доказательство предела последовательности','Пределы последовательностей','Определения предела функции','Элементарные пределы','Эквивалентности','Степенные пределы','Второй замечательный предел','Непрерывность и разрывы','Производные','Сложные производные','Логарифмическое дифференцирование','Параметрические производные','Неявные производные','Касательные и нормали','Неопределённости и Лопиталь','Степенные пределы с Лопиталем','Прикладные задачи','Разложения Тейлора','Пределы с Тейлором','Рациональные графики','Графики с корнями','Элементарные графики','Полярные кривые','Частные производные','Смешанные производные','Экстремумы трёх переменных'];
    chapters.forEach((name,i)=>{const option=el('option','',`${i+1}. ${name}`);option.value=String(i+1);$('textbook-section').append(option);});
   }
@@ -285,7 +289,7 @@ async function init(){
   if(isLinear)addLinearKeys($('math-keyboard'),()=>activeAnswerInput);
   document.querySelectorAll('[data-group]').forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;render();}));
   document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;render();}));
-  document.querySelectorAll('button[data-theme]').forEach(b=>b.addEventListener('click',()=>theme(b.dataset.theme)));
+  document.querySelectorAll('button[data-theme],button[data-mobile-theme]').forEach(b=>b.addEventListener('click',()=>theme(b.dataset.theme||b.dataset.mobileTheme)));
   select.onchange=()=>theme(select.value);
   $('origin-filter').onchange=()=>{state.origin=$('origin-filter').value;if(state.origin==='textbook')state.group='all';render();};$('search').oninput=render;
   $('textbook-section').onchange=()=>{state.textbookSection=$('textbook-section').value;state.group='all';$('search').value='';render();};
@@ -299,13 +303,13 @@ async function init(){
   document.addEventListener('keydown',navigateWithArrows);
   $('clear-filters').onclick=()=>{state.mode='all';state.group='all';state.origin='all';$('search').value='';render();};
   $('open-settings').onclick=openSettings;$('mobile-settings').onclick=openSettings;
-  $('open-sources').onclick=sources;$('open-formulas').onclick=formulas;
+  $('open-sources').onclick=sources;$('open-formulas').onclick=formulas;$('mobile-formulas').onclick=formulas;
   document.querySelectorAll('.close-dialog').forEach(b=>b.onclick=()=>b.closest('dialog').close());
   document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
   $('auto-advance').onchange=()=>{state.autoAdvance=$('auto-advance').checked;cancelAdvance();persist();};
   $('export-progress').onclick=()=>{const blob=new Blob([JSON.stringify({...state,subject,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});const a=el('a');a.href=URL.createObjectURL(blob);a.download=`${subject}-progress-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
   $('import-progress').onclick=()=>$('import-file').click();
-  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const raw=JSON.parse(await file.text());if((raw.subject&&raw.subject!==subject)||(isLinear&&raw.subject!=='linear'))throw Error('Это история другого предмета. Выбери соответствующий предмет перед загрузкой.');const incoming=validateState(raw,ids);const keepTheme=loadTheme(preferences,state.theme);state=incoming;theme(keepTheme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
+  $('import-file').onchange=async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2_000_000)throw Error('Файл слишком большой.');const raw=JSON.parse(await file.text());if((raw.subject&&raw.subject!==subject)||(subject!=='matan'&&raw.subject!==subject))throw Error('Это история другого предмета. Выбери соответствующий предмет перед загрузкой.');const incoming=validateState(raw,ids);const keepTheme=loadTheme(preferences,state.theme);state=incoming;theme(keepTheme);render();$('settings-dialog').close();toast('История загружена.');}catch(e){$('import-message').textContent=e.message;}$('import-file').value='';};
   $('reset-progress').onclick=()=>{if(!confirm('Удалить все попытки и подсказки в этом браузере?'))return;const keepTheme=state.theme;state=emptyState();state.theme=keepTheme;theme(keepTheme);render();$('settings-dialog').close();toast('Прогресс сброшен.');};
   render();
  }catch(e){$('task-heading').textContent='Не удалось открыть тренажёр';$('task-instruction').textContent=e.message+' Обнови страницу или проверь подключение.';console.error(e);}

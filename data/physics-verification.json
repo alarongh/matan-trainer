@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "ph-problem-1-1",
+    "sourceNumber": "1.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "120",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-2",
+    "sourceNumber": "1.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(4+8)/(4/12+40/60+8/8)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-3",
+    "sourceNumber": "1.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "4+0.5*30",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-4",
+    "sourceNumber": "1.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-5",
+    "sourceNumber": "1.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20/g",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-6",
+    "sourceNumber": "1.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "50-g*3^2/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-7",
+    "sourceNumber": "1.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2/(1/16+1/((12+5)/2))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-8",
+    "sourceNumber": "1.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*60*40/(60+40)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-9",
+    "sourceNumber": "1.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "6*2/3+4/3",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-1-10",
+    "sourceNumber": "1.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(10.8/3.6-18/3.6)/8",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-1",
+    "sourceNumber": "2.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(400/60)^2/100",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-2",
+    "sourceNumber": "2.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20^2/100",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-3",
+    "sourceNumber": "2.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "9/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-4",
+    "sourceNumber": "2.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*pi*180/60/3",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-5",
+    "sourceNumber": "2.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*pi*(180-300)/60/60",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-6",
+    "sourceNumber": "2.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20^2/(2*2*pi*10)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-7",
+    "sourceNumber": "2.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(15*cos(pi/6))^2/g",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-8",
+    "sourceNumber": "2.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(0.6)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-9",
+    "sourceNumber": "2.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(1*2)^2/(0.6*1)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-2-10",
+    "sourceNumber": "2.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(14*0.3/(5*g*sin(pi/6)^2))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-1",
+    "sourceNumber": "3.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*(g-5)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-2",
+    "sourceNumber": "3.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "125*abs(cos(10))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-3",
+    "sourceNumber": "3.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "g+5",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-4",
+    "sourceNumber": "3.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "98000*60/500000",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-5",
+    "sourceNumber": "3.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "Масса и μ не заданы. Численного максимума из печатного условия получить нельзя; фактическую силу можно выразить через m.",
+    "manual": true
+  },
+  {
+    "id": "ph-problem-3-6",
+    "sourceNumber": "3.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "m*g/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-7",
+    "sourceNumber": "3.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "v^2/(2*k*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-8",
+    "sourceNumber": "3.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*(1600-12000/g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-9",
+    "sourceNumber": "3.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20*g+100*sin(pi/6)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-10",
+    "sourceNumber": "3.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1000*2+0.1*1000*g",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-11",
+    "sourceNumber": "3.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "m*w^2*r/k",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-3-12",
+    "sourceNumber": "3.12",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*a*b*g/(a+b)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-1",
+    "sourceNumber": "4.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*5.976e24*(6.371e6)^2/5",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-2",
+    "sourceNumber": "4.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*10*(0.2/2)^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-3",
+    "sourceNumber": "4.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.36*0.5^2/12+0.36*(0.5/3)^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-4",
+    "sourceNumber": "4.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "7*0.4*0.07^2/5",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-5",
+    "sourceNumber": "4.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*0.05*0.1^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-6",
+    "sourceNumber": "4.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.0981/(0.5/12)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-7",
+    "sourceNumber": "4.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "-63.6*31.4/20",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-8",
+    "sourceNumber": "4.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*5*0.1^2/5*(4-3*3)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-9",
+    "sourceNumber": "4.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.1*0.8^2/3+0.4*0.4^2+0.3*0.8^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-10",
+    "sourceNumber": "4.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "m*l^2/3",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-4-11",
+    "sourceNumber": "4.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*m*r^2/4",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-1",
+    "sourceNumber": "5.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "50/10",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-2",
+    "sourceNumber": "5.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*5",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-6",
+    "sourceNumber": "5.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(0.1*0.5-0.2*0.5)/0.3",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-7",
+    "sourceNumber": "5.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20*(102-2)/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-9",
+    "sourceNumber": "5.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "25*abs(sin(10))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-10",
+    "sourceNumber": "5.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "При M=1000 кг до выстрела и u относительно орудия получается 1,5 м/с. При 1000 кг массы платформы после выстрела: 1+500/1010 м/с. Нужна выбранная преподавателем трактовка.",
+    "manual": true
+  },
+  {
+    "id": "ph-problem-5-11",
+    "sourceNumber": "5.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.5*1+0.5*2-0.5*3*((1-2)/3)^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-12",
+    "sourceNumber": "5.12",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(2^2+3^2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-13",
+    "sourceNumber": "5.13",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "10/(g*2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-14",
+    "sourceNumber": "5.14",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "4/(1+1/3)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-15",
+    "sourceNumber": "5.15",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*0.2*3/(0.2+1)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-16",
+    "sourceNumber": "5.16",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(0.009*500/(6+0.009))^2/(2*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-5-17",
+    "sourceNumber": "5.17",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.5*g*(3-2*cos(pi/3))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-1",
+    "sourceNumber": "6.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "10*g*2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-2",
+    "sourceNumber": "6.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "80*g*5/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-3",
+    "sourceNumber": "6.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "5*(g+2)*2*5^2/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-4",
+    "sourceNumber": "6.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20^2/(4*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-5",
+    "sourceNumber": "6.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1.8e6*10/600",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-6",
+    "sourceNumber": "6.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.1*sqrt(1000/0.02)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-7",
+    "sourceNumber": "6.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1000*(0.15^2-0.05^2)/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-8",
+    "sourceNumber": "6.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*500*sin(2*pi/3)/(5*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-9",
+    "sourceNumber": "6.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "5*6/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-10",
+    "sourceNumber": "6.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*10^2/(8*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-6-11",
+    "sourceNumber": "6.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(5*g*2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-7-1",
+    "sourceNumber": "7.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*60/(2*pi*5)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-7-2",
+    "sourceNumber": "7.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*5.976e24*(6.371e6)^2/5*2*pi/86400",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-7-3",
+    "sourceNumber": "7.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "12*(120/2+60)/(120/2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-7-4",
+    "sourceNumber": "7.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(2*(20*0.6^2/2)*0.4*10000)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-7-5",
+    "sourceNumber": "7.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.4*20*0.8/(6+0.4*0.8^2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-1",
+    "sourceNumber": "8.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Поступательная энергия",
+        "5*20/2",
+        "Дж"
+      ],
+      [
+        "Полная энергия",
+        "7*20/2",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-2",
+    "sourceNumber": "8.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*2*4^2/4",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-3",
+    "sourceNumber": "8.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "7*0.25*(2*pi*4*0.03)^2/10",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-4",
+    "sourceNumber": "8.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(1500-700)/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-5",
+    "sourceNumber": "8.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*4*2^2/4",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-6",
+    "sourceNumber": "8.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*4^2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-7",
+    "sourceNumber": "8.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(10*g*0.1/7)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-8",
+    "sourceNumber": "8.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(4*2^2/(g*0.1))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-9",
+    "sourceNumber": "8.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "15/14",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-10",
+    "sourceNumber": "8.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "6*(120+80*1^2)/120",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-11",
+    "sourceNumber": "8.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "-(5*0.5^2/2)*2*pi*8/4",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-12",
+    "sourceNumber": "8.12",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "80*0.1^2*(g/(2*1.6/2^2)-1)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-13",
+    "sourceNumber": "8.13",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(3*g*(1-cos(pi/3)))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-8-14",
+    "sourceNumber": "8.14",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(4^2-2^2)/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-1",
+    "sourceNumber": "9.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "20*na",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-2",
+    "sourceNumber": "9.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(3*1e5/(3e25*(0.002/na)))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-3",
+    "sourceNumber": "9.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.2*0.032/0.002",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-4",
+    "sourceNumber": "9.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "4000*6/(8-6)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-5",
+    "sourceNumber": "9.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1e20*k*300/1e-4",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-6",
+    "sourceNumber": "9.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(828000*0.03/(r*300)-0.024/0.004)/(1/0.002-1/0.004)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-7",
+    "sourceNumber": "9.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.4e6*0.025*0.002/(r*290)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-8",
+    "sourceNumber": "9.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "100000*5*200*0.029/(r*(17+273.15))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-9",
+    "sourceNumber": "9.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*266.6/((0.002/na)*2400^2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-10",
+    "sourceNumber": "9.10",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Число атомов",
+        "na/0.001",
+        "атомов"
+      ],
+      [
+        "Масса одного атома",
+        "0.001/na",
+        "кг"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-11",
+    "sourceNumber": "9.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(0.006/0.002+0.012/0.004)*r*300/0.02",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-12",
+    "sourceNumber": "9.12",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(100000*0.015/(r*(27+273.15))-0.014/0.028)*r*(17+273.15)/0.015",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-13",
+    "sourceNumber": "9.13",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Начальный объём",
+        "(0.007/0.028)*r*290/100000",
+        "м³"
+      ],
+      [
+        "Конечная температура",
+        "100000*0.01/((0.007/0.028)*r)",
+        "К"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-14",
+    "sourceNumber": "9.14",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.001/0.032*na/0.001",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-15",
+    "sourceNumber": "9.15",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Количество вещества",
+        "101325*0.005/(r*273.15)",
+        "моль"
+      ],
+      [
+        "Масса азота",
+        "101325*0.005/(r*273.15)*0.028",
+        "кг"
+      ],
+      [
+        "Концентрация",
+        "101325/(k*273.15)",
+        "м⁻³"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-16",
+    "sourceNumber": "9.16",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.001*480^2/(3*k*273.15)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-17",
+    "sourceNumber": "9.17",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "sqrt(2*40000/0.35)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-18",
+    "sourceNumber": "9.18",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "3*0.1/(2*1e19)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-19",
+    "sourceNumber": "9.19",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Наиболее вероятная скорость",
+        "sqrt(2*r*(27+273.15)/0.028)",
+        "м/с"
+      ],
+      [
+        "Средняя скорость",
+        "sqrt(8*r*(27+273.15)/(pi*0.028))",
+        "м/с"
+      ],
+      [
+        "Квадратичная скорость",
+        "sqrt(3*r*(27+273.15)/0.028)",
+        "м/с"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-20",
+    "sourceNumber": "9.20",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Энергия одной молекулы",
+        "5*k*290/2",
+        "Дж"
+      ],
+      [
+        "Вращательная энергия всех молекул",
+        "0.01/0.028*r*290",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-21",
+    "sourceNumber": "9.21",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Внутренняя энергия всего газа",
+        "5/2*(1/0.032)*r*320",
+        "Дж"
+      ],
+      [
+        "Вращательная энергия всего газа",
+        "1/0.032*r*320",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-22",
+    "sourceNumber": "9.22",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(0.2e6*0.003+0.1e6*0.004)/0.007",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-23",
+    "sourceNumber": "9.23",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "a*exp(0.029*g*1000/(r*(22+273.15)))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-24",
+    "sourceNumber": "9.24",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "r*t/(0.029*g)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-9-25",
+    "sourceNumber": "9.25",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "600*400/(200*900)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-1",
+    "sourceNumber": "10.1",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-2",
+    "sourceNumber": "10.2",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "5/2*0.01*(5-1)*100000",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-3",
+    "sourceNumber": "10.3",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "5/2*(0.056/0.028+0.064/0.032)*r*(-20)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-4",
+    "sourceNumber": "10.4",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Удельная теплоёмкость c_V",
+        "5*r/(2*0.028)",
+        "Дж/(кг·К)"
+      ],
+      [
+        "Удельная теплоёмкость c_p",
+        "7*r/(2*0.028)",
+        "Дж/(кг·К)"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-5",
+    "sourceNumber": "10.5",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(1-300/400)*500*1.26e7",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-6",
+    "sourceNumber": "10.6",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "((410000-245000)*(0.02-0.01))/(5/2*0.01*(410000-245000)+7/2*410000*(0.02-0.01))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-7",
+    "sourceNumber": "10.7",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(2*ln(2)-1)/(5/2+2*ln(2))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-8",
+    "sourceNumber": "10.8",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "9/(1-0.1)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-9",
+    "sourceNumber": "10.9",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.01/0.032*r*20",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-11",
+    "sourceNumber": "10.11",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "Внутренняя энергия не изменилась. Само U определить нельзя без начальной температуры или начальной энергии.",
+    "manual": true
+  },
+  {
+    "id": "ph-problem-10-12",
+    "sourceNumber": "10.12",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1/0.028*r*(7+273.15)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-13",
+    "sourceNumber": "10.13",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Объём сосуда",
+        "r*290/100000",
+        "м³"
+      ],
+      [
+        "Конечная температура",
+        "4*290",
+        "К"
+      ],
+      [
+        "Сообщённое тепло",
+        "5/2*r*(4*290-290)",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-14",
+    "sourceNumber": "10.14",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "При начальной T=289 К ответ 24015,9 Дж; при конечной T=289 К — 8005,3 Дж. Перед расчётом нужно согласовать смысл температуры.",
+    "manual": true
+  },
+  {
+    "id": "ph-problem-10-15",
+    "sourceNumber": "10.15",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "7/2*1e6*0.001",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-16",
+    "sourceNumber": "10.16",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Формальный КПД соответствующего двигателя",
+        "1-(273.15-10)/(273.15+17)",
+        "доля"
+      ],
+      [
+        "Тепло от холодного тела Q₂",
+        "37000*(273.15-10)/27",
+        "Дж"
+      ],
+      [
+        "Тепло горячему телу Q₁",
+        "37000*(273.15+17)/27",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-17",
+    "sourceNumber": "10.17",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2.26e6/3.34e5*273.15/373.15",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-18",
+    "sourceNumber": "10.18",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "(1-273.15/373.15)*(273.15+16)/(16-(-10))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-19",
+    "sourceNumber": "10.19",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Фактический КПД",
+        "14700*3600/(8.1*33e6)",
+        "доля"
+      ],
+      [
+        "КПД Карно",
+        "1-(58+273.15)/(200+273.15)",
+        "доля"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-20",
+    "sourceNumber": "10.20",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "КПД",
+        "1.1/5.5",
+        "доля"
+      ],
+      [
+        "Отношение T₁/T₂",
+        "1/(1-1.1/5.5)",
+        "раз"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-21",
+    "sourceNumber": "10.21",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "-(1-0.4)*400",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-22",
+    "sourceNumber": "10.22",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "КПД",
+        "1-300/500",
+        "доля"
+      ],
+      [
+        "Отданное тепло: модуль",
+        "2000*300/500",
+        "Дж"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-23",
+    "sourceNumber": "10.23",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "1-4^(-1/3)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-24",
+    "sourceNumber": "10.24",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "exp(57.6/(5*r))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-28a",
+    "sourceNumber": "10.28a",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": [
+      [
+        "Изохорное изменение энтропии",
+        "2*5/2*r*ln(2)",
+        "Дж/К"
+      ],
+      [
+        "Изобарное изменение энтропии",
+        "2*7/2*r*ln(2)",
+        "Дж/К"
+      ]
+    ],
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-25",
+    "sourceNumber": "10.25",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "2*r*ln(2)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-26",
+    "sourceNumber": "10.26",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "-7*r*ln(2)/2",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-27",
+    "sourceNumber": "10.27",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.01*(2100*ln(273.15/253.15)+3.34e5/273.15+4200*ln(373.15/273.15)+2.26e6/373.15)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-28b",
+    "sourceNumber": "10.28b",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.001*(4200*ln(373.15/273.15)+2.26e6/373.15)",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-29",
+    "sourceNumber": "10.29",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.008/0.032*(5/2*r*ln((300+273.15)/(80+273.15))+r*ln(40/10))",
+    "manual": false
+  },
+  {
+    "id": "ph-problem-10-30",
+    "sourceNumber": "10.30",
+    "method": "Derived from the explicitly displayed physical law and SI substitution; ambiguous conditions are self-review.",
+    "answers": "0.006/0.002*(5/2*r*ln((100*60)/(150*20))+r*ln(60/20))",
+    "manual": false
+  }
+]
