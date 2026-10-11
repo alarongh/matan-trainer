@@ -32,7 +32,7 @@ function filtered(){
  const query=$('search').value.trim().toLocaleLowerCase('ru');
  return tasks.filter(t=>{
   const status=state.items[t.id]?.status||'new';
-  return (state.group==='all'||t.group===Number(state.group))&&(state.origin==='all'||t.origin===state.origin)&&
+  return (state.group==='all'||t.group===Number(state.group))&&(state.origin==='all'||t.origin===state.origin||state.origin==='textbook'&&t.sources.some(s=>s.file==='textbook'))&&
    (state.mode==='all'||state.mode==='new'&&status==='new'||state.mode==='review'&&['learning','assisted'].includes(status)||state.mode==='solved'&&status==='solved')&&
    (!query||`${t.topic} ${meta(t)} ${t.id} ${names[t.group]}`.toLocaleLowerCase('ru').includes(query));
  });
@@ -95,7 +95,7 @@ function render(){
  updateNavigation();
  $('source-links').replaceChildren();
  for(const src of current.sources){
-  const a=el('a','',isLinear?`${src.label} ↗`:`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория'}[src.file]}: ${src.label} ↗`);
+  const a=el('a','',isLinear?`${src.label} ↗`:`${{bank:'Банк',demo:'Демо',solutions:'Разбор',theory:'Теория',textbook:'Пособие'}[src.file]}: ${src.label} ↗`);
   a.href=`./sources/${src.file}.pdf#page=${src.page}`;a.target='_blank';a.rel='noopener';$('source-links').append(a);
  }
  if(!current.sources.length)$('source-links').append(el('span','input-help','Дополнительная задача для тренировки.'));
@@ -231,6 +231,7 @@ function formulas(){
 async function init(){
  try{
   setupSubjects();
+  if(isLinear)$('origin-filter').querySelector('[value="textbook"]').remove();
   const responses=await Promise.all(isLinear?[fetch('./linear-tasks.json'),fetch('./linear-coverage.json')]:[fetch('./tasks.json'),fetch('./coverage.json')]);
   if(responses.some(r=>!r.ok))throw Error('Не удалось загрузить банк заданий.');
   [tasks,coverage]=await Promise.all(responses.map(r=>r.json()));ids=new Set(tasks.map(t=>t.id));state=loadState(storage,ids);

@@ -29,8 +29,10 @@ test('inverse trigonometric notation is conventional in every displayed task',()
  assert.equal(numeric('3×4÷2'),6);
 });
 test('complete bank contains all source examples with valid math, sources and accepted answers',()=>{
- assert.equal(tasks.length,426);assert.equal(ids.size,426);
- assert.equal(tasks.filter(t=>t.origin==='source').length,378);
+ const coverage=JSON.parse(readFileSync(new URL('../data/coverage.json',import.meta.url),'utf8'));
+ assert.equal(tasks.length,coverage.total);assert.equal(ids.size,coverage.total);
+ const legacy=tasks.filter(t=>!t.id.startsWith('textbook-'));
+ assert.equal(legacy.length,426);assert.equal(legacy.filter(t=>t.origin==='source').length,378);
  for(const [prefix,count,start=1] of [['parity',30],['sequence',40],['monotonic',29],['sequence-theory',10],['function-theory',10],['function-limit',40],['advanced-limit',40],['derivative',39],['asymptote',40],['tangent',20],['tangent',10,31],['inflection',10,21],['practical',35],['oral',28]])for(let n=start;n<start+count;n++)assert.ok(ids.has(`${prefix}-${String(n).padStart(2,'0')}`),`${prefix}-${n}`);
  for(const task of tasks){
   assert.equal(checkAnswer(task,task.answer).correct,true,task.id+' answer');

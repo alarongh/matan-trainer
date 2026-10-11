@@ -16,11 +16,14 @@ worked={'demo-limit-1':4,'demo-limit-2':5,'demo-limit-3':5,'advanced-limit-21':6
 for id,page in worked.items():bank.find(id)['sources'].append(source(page,'Разбор соответствующего варианта','solutions'))
 from verify_extended import verify
 verify(bank)
+from build_textbook import populate as textbook,coverage_update
+textbook(bank)
 ids=[v['id'] for v in bank.tasks];assert len(ids)==len(set(ids))
 sections={'1':'Чётность и ОДЗ','2':'Последовательности','3':'Замечательный предел','4':'Пределы функций','5':'Теория','6':'Производные и касательные','7':'Точки перегиба','8':'Асимптоты','9':'Частные производные','10':'Практические задачи'}
 coverage=json.loads((root/'data/coverage.json').read_text(encoding='utf8'))
 coverage.update(total=len(bank.tasks),source=sum(v['origin']=='source' for v in bank.tasks),extra=sum(v['origin']=='extra' for v in bank.tasks),groups={g:sum(v['group']==int(g) for v in bank.tasks) for g in sections},sections=sections,sourceIssues=bank.issues)
 coverage['notes']=['Все десять номеров демобилета представлены интерактивно.','Все пронумерованные упражнения банка включены, исходные номера и повторы сохранены.','К 28 темам теоретического списка добавлены авторские вопросы для проверки понимания; они помечены отдельно.','Печатные ошибки и неоднозначности не исправляются молча: соответствующие карточки содержат пояснения.','История старых карточек №1–3 сохраняется: их идентификаторы не изменены.']
+coverage_update(bank,coverage)
 for name,value in [('tasks',bank.tasks),('coverage',coverage),('verification',bank.verification)]:
  (root/f'data/{name}.json').write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8',newline='\n')
 print(json.dumps({'total':coverage['total'],'groups':coverage['groups'],'source':coverage['source'],'extra':coverage['extra'],'issues':len(bank.issues)},ensure_ascii=False),flush=True)

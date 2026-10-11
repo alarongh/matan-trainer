@@ -8,16 +8,16 @@ export function normalize(input) {
  }
  return s.replace(/[{}]/g,c=>c==='{'?'(':')').replace(/(\d),(?=\d)/g,'$1.').replace(/\s+/g,'').replace(/pi(?=[xykatlc])/g,'pi*');
 }
-export function numeric(input,scope={}) {
+export function numeric(input,scope={},limits={characters:256,tokens:128}) {
  const s=normalize(input);
- if(!s||s.length>256) throw new Error('Введите число или выражение.');
+ if(!s||s.length>limits.characters) throw new Error('Введите число или выражение.');
  if(['infinity','+infinity','inf','+inf','∞','+∞','бeсконeчность','+бeсконeчность'].includes(s)) return Infinity;
  if(['-infinity','-inf','-∞','-бeсконeчность'].includes(s)) return -Infinity;
  const tokens=s.match(/(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?|[a-z]+|[()+\-*/^]/g)||[];
- if(tokens.join('')!==s||tokens.length>128) throw new Error('Не удалось прочитать выражение. Пример: e^(-3), 2/3, sqrt(2).');
+ if(tokens.join('')!==s||tokens.length>limits.tokens) throw new Error('Не удалось прочитать выражение. Пример: e^(-3), 2/3, sqrt(2).');
  let i=0;
  const peek=()=>tokens[i]; const take=()=>tokens[i++];
- const functions={sqrt:Math.sqrt,exp:Math.exp,ln:Math.log,log:Math.log,abs:Math.abs,sin:Math.sin,cos:Math.cos,tan:Math.tan,arcsin:Math.asin,arccos:Math.acos,arctan:Math.atan,arccot:x=>Math.PI/2-Math.atan(x)};
+ const functions={sqrt:Math.sqrt,cbrt:Math.cbrt,sign:Math.sign,exp:Math.exp,ln:Math.log,log:Math.log,abs:Math.abs,sin:Math.sin,cos:Math.cos,tan:Math.tan,tg:Math.tan,cot:x=>1/Math.tan(x),ctg:x=>1/Math.tan(x),arcsin:Math.asin,arccos:Math.acos,arctan:Math.atan,arccot:x=>Math.PI/2-Math.atan(x)};
  function atom(){
   const t=take();
   if(t==='('){const n=sum();if(take()!==')')throw new Error('Проверьте скобки.');return n;}
@@ -73,12 +73,13 @@ function unordered(a,b,equal){
 }
 function expressionEqual(input,target,variables=[]){
  // Numerical equivalence at varied fixed samples, not a symbolic proof. No arbitrary code.
- const samples=[.37,.83,1.29,2.17,3.41,4.73,6.19];
+ const samples=variables.length>1?[.37,.83,1.29,2.17,3.41,4.73,6.19,.03,.017,-.17,-.83,-2.17]:[.03,.17,.37,.83,1.29,2.17,3.41,4.73,6.19,10.1,-.17,-.83,-2.17];
  let compared=0;
  for(let i=0;i<samples.length;i++){
-  const scope=Object.fromEntries(variables.map((v,j)=>[v,v==='k'?[-3,-1,0,1,2,4,7][i]:samples[(i+j)%samples.length]]));
-  let expected;try{expected=numeric(target,scope);}catch{continue;}
-  const actual=numeric(input,scope);compared++;
+  const scope=Object.fromEntries(variables.map((v,j)=>[v,v==='k'?[-3,-1,0,1,2,4,7][i%7]:samples[(i+j)%samples.length]]));
+  const limits={characters:2048,tokens:1024};
+  let expected;try{expected=numeric(target,scope,limits);}catch{continue;}
+  const actual=numeric(input,scope,limits);compared++;
   if(!close(actual,expected))return false;
  }
  if(!compared)throw Error('Не удалось проверить выражение.');

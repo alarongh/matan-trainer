@@ -5,7 +5,7 @@ export function validateState(raw,ids){
  const s=emptyState();
  s.theme=['sage','paper','lavender','night'].includes(raw.theme)?raw.theme:'sage';
  s.group=['all',...Array.from({length:10},(_,i)=>String(i+1))].includes(raw.group)?raw.group:'all';
- s.origin=['all','source','extra'].includes(raw.origin)?raw.origin:'all';
+ s.origin=['all','source','extra','textbook'].includes(raw.origin)?raw.origin:'all';
  s.mode=['all','new','review','solved'].includes(raw.mode)?raw.mode:'all';
  s.autoAdvance=raw.autoAdvance!==false;
  s.selected=ids.has(raw.selected)?raw.selected:null;

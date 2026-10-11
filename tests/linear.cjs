@@ -22,7 +22,7 @@ async function main(){
  try{
   await page.goto(base);await page.locator('[data-task-id]').first().waitFor();
   const calculus=await page.evaluate(()=>localStorage.getItem('matan-trainer:v1'));
-  assert.equal(await page.locator('#count-all').innerText(),'426');
+  assert.equal(await page.locator('#count-all').innerText(),String(JSON.parse(fs.readFileSync('data/coverage.json','utf8')).total));
   await page.locator('#subject-select').selectOption('linear');await page.locator('[data-task-id="la-example-01"]').waitFor();
   assert.equal(await page.locator('#count-all').innerText(),'121');
   await page.locator('#open-settings').click();await page.locator('#auto-advance').uncheck();await page.locator('#settings-dialog .close-dialog').click();

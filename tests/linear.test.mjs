@@ -6,8 +6,8 @@ import katex from 'katex';
 import {checkLinearAnswer as check,complex} from '../src/linear-answer.js';
 const read=name=>JSON.parse(readFileSync(new URL('../data/'+name+'.json',import.meta.url),'utf8'));
 const tasks=read('linear-tasks'),coverage=read('linear-coverage'),ids=new Set(tasks.map(t=>t.id));
-test('calculus content, coverage and verification are preserved exactly',()=>{
- for(const [name,hash] of Object.entries({tasks:'32efb326e778d5352931bad9cf59cada93967793227eea0a4f76049c5a9b48fe',coverage:'69cf0968a79ec0bc80d584ddfd46c07fc393713abf4e9d00033255d4767bf880',verification:'8c94d18afcc06b0bd1810fb379a60a00d566be8bd8595d7c6b5d457ed7edfed5'}))assert.equal(createHash('sha256').update(JSON.stringify(read(name))).digest('hex'),hash,name);
+test('the pre-textbook calculus bank and its verification remain unchanged',()=>{
+ for(const [name,hash] of Object.entries({tasks:'32efb326e778d5352931bad9cf59cada93967793227eea0a4f76049c5a9b48fe',verification:'8c94d18afcc06b0bd1810fb379a60a00d566be8bd8595d7c6b5d457ed7edfed5'}))assert.equal(createHash('sha256').update(JSON.stringify(read(name).filter(v=>!v.id.startsWith('textbook-')))).digest('hex'),hash,name);
 });
 test('linear bank covers all source examples, tickets, demo variants and official theoretical topics',()=>{
  assert.equal(tasks.length,121);assert.equal(ids.size,121);assert.equal(coverage.source,91);assert.equal(coverage.extra,30);

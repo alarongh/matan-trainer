@@ -13,7 +13,7 @@ async function main(){
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base);await page.locator('[data-task-id]').first().waitFor();
  assert.equal(await page.locator('[data-group]').count(),11);
- assert.equal(await page.locator('#count-all').innerText(),'426');
+ assert.equal(await page.locator('#count-all').innerText(),String(JSON.parse(fs.readFileSync('data/coverage.json','utf8')).total));
  assert.equal(await page.locator('#progress-number').innerText(),'1');
  assert.equal(await page.locator('#answer').inputValue(),'');
  await page.locator('[data-group="6"]').click();await page.locator('[data-task-id="tangent-11"]').click();
@@ -43,7 +43,7 @@ async function main(){
  await page.setViewportSize({width:1440,height:1000});await page.evaluate(()=>document.body.style.zoom='2');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.evaluate(()=>document.body.style.zoom='1');
  await page.locator('[data-group="5"]').click();await page.locator('[data-task-id="oral-28"]').click();await page.locator('#reveal').click();for(let i=0;i<3;i++)await page.locator('#next-step').click();assert.equal(await page.locator('.katex-error').count(),0);
  await page.screenshot({path:'test-results/expanded-theory.png',fullPage:true});
- await page.locator('#open-sources').click();assert.equal(await page.locator('.source-issue').count(),12);await page.locator('.source-issue').first().click();assert.equal(await page.locator('#sources-dialog').isVisible(),false);
+ await page.locator('#open-sources').click();assert.equal(await page.locator('.source-issue').count(),JSON.parse(fs.readFileSync('data/coverage.json','utf8')).sourceIssues.length);await page.locator('.source-issue').first().click();assert.equal(await page.locator('#sources-dialog').isVisible(),false);
  const old=await page.evaluate(()=>JSON.parse(localStorage.getItem('matan-trainer:v1')).items['sequence-01']);assert.equal(old.attempts.length,1);assert.equal(old.status,'solved');
  assert.deepEqual(errors,[]);await browser.close();console.log('Expanded flows passed: old history, 10 sections, multiple fields and keyboard target, wrong-field feedback, multiple statements, lines, all themes, 320px/200% zoom, oral theory and source issues.');
 }

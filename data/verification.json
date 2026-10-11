@@ -1855,5 +1855,4811 @@
     "method": "linear asymptote residual at infinity",
     "result": "0",
     "passed": true
+  },
+  {
+    "id": "textbook-02-1",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-2",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.428571428571",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-3",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.0e-22",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-4",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.625",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-5",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.33333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-6",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-7",
+    "method": "squeeze bound with symbolic limit",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-8",
+    "method": "squeeze bound with symbolic limit",
+    "result": "0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-9",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-10",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-11",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "16.6666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-12",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-13",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "54.5981500331",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-14",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-15",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-16",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-17",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.33333333333e-7",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-18",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0e+21",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-19",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-20",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-21",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "3.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-22",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "3.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-23",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-24",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-25",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-26",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.166666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-27",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.41421356237",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-28",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-29",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-02-30",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-1",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.25",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-2",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "27.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-3",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "63245553203.4",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-4",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.03616800464",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-5",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.66666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-6",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.00000000003",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-7",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.0588235352941",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-8",
+    "method": "100-digit numeric direction check",
+    "result": "-1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-8",
+    "method": "100-digit numeric direction check",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-9",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-10",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-11",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.333333333333, -0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-12",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.25, -1.25",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-13",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.666666666667, 0.666666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-14",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.220970869121, 0.220970869121",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-15",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.333333333333, 0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-16",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "12.0, 12.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-17",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.25, 0.25",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-18",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.63299316186, -1.63299316186",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-19",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.6, 0.6",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-20",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.148148148148, 0.148148148148",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-21",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.111111111111, 0.111111111111",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-22",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-7.6e-22",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-23",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-24",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-25",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "3.33333333333e-43",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-26",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0e+21",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-27",
+    "method": "100-digit numeric direction check",
+    "result": "-2.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-27",
+    "method": "100-digit numeric direction check",
+    "result": "2.0e+21",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-28",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-29",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "3.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-04-30",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.666666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-1",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "18.0, 18.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-2",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-8.0, -8.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-3",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-4",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.0833333333333, 0.0833333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-5",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.1, 0.1",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-6",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.0, 5.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-7",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-8",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-9",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-10",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.375, 0.375",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-11",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.66666666667, -1.66666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-12",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-6.0, -6.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-13",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "4.0, 4.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-14",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-8.0, -8.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-15",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.73205080757, 1.73205080757",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-16",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.630929753571, 0.630929753571",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-17",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.33333333333, 1.33333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-18",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-19",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-8.31776616672, -8.31776616672",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-20",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.5, -1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-21",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.0277777777778, 0.0277777777778",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-22",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.133333333333, -0.133333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-23",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-24",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "8.31776616672, 8.31776616672",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-25",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.69268673717, -1.69268673717",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-26",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-27",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.318309886184",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-28",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.444444444444",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-29",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.318309886184",
+    "passed": true
+  },
+  {
+    "id": "textbook-05-30",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.315464876786",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-1a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.05465108108e+20, -4.05465108108e+20",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-1b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "4.05465108108e+20, 4.05465108108e+20",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-1c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.5, -2.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-2a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.5e-62, -1.5e-62",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-2b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0e-21, -5.0e-21",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-2c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.5e-41, -1.5e-41",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-3a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0e-52, -5.0e-52",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-3b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0, -5.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-3c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e+25, -6.9314718056e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-4a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.333333333333, -0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-4b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "6.9314718056e+25, 6.9314718056e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-4c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-3.33333333333e-27, -3.33333333333e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-5a",
+    "method": "one-sided logarithms, 100-digit numerical divergence corroboration",
+    "result": "-1.0e+13 / 1.0e+13",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-5b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0e-13, 1.0e-13",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-5c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e+25, -6.9314718056e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-6a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.48311355616e-27, -5.48311355616e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-6b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.548311355616, -0.548311355616",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-6c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.49437443059e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-7a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-7b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.0e-39, -1.0e-39",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-7c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-8a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.202732554054, -0.202732554054",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-8b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "6.08197662162e-14, -6.08197662162e-14",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-8c",
+    "method": "one-sided logarithms, 100-digit numerical divergence corroboration",
+    "result": "2.02732554054e+12 / -2.02732554054e+12",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-9a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e+25, -6.9314718056e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-9b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.166666666667, 0.166666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-9c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0e-27, -5.0e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-10a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e+41, -6.9314718056e+41",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-10b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.69314718056, 0.69314718056",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-10c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "4.05465108108e+25, 4.05465108108e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-11a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.785398163397, 0.785398163397",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-11b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.785398163397, -0.785398163397",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-11c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-12a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.23370055014e-13, -1.23370055014e-13",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-12b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-12c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "4.05465108108e-27, 4.05465108108e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-13a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "3.16400339136e+28, 3.16400339136e+28",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-13b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.33333333333, 1.33333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-13c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0e-27, -5.0e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-14a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.49306144334e+25, -5.49306144334e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-14b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-14c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-29.9336062089",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-15a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.49306144334e+25, -5.49306144334e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-15b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-15c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "29.9336062089",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-16a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.33424035414e-42, -1.33424035414e-42",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-16b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e-43, -6.9314718056e-43",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-16c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.09861228867e+26, 1.09861228867e+26",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-17a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.71238898038, -4.71238898038",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-17b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.19722457734, -2.19722457734",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-17c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "3.74112223177e+26, 3.74112223177e+26",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-18a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-18b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2907.25213987, -2907.25213987",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-18c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.0e-52, -2.0e-52",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-19a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "4.39444915467, 4.39444915467",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-19b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.07944154168, -2.07944154168",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-20a",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "3.4657359028e+25, 3.4657359028e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-20b",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.07944154168, 2.07944154168",
+    "passed": true
+  },
+  {
+    "id": "textbook-06-20c",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-6.9314718056e+25, -6.9314718056e+25",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-1",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-3.0, -3.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-2",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.0, -4.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-3",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.26491106407e-53, 1.26491106407e-53",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-4",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-8.0, -8.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-5",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-6",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-7",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-8",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.6, -0.6",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-9",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.0, -5.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-10",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-11",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.222222222222, -0.222222222222",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-12",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.125, -0.125",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-13",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.202732554054, -0.202732554054",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-14",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "6.0, 6.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-15",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.166666666667, 0.166666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-16",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "6.9314718056e+20, 6.9314718056e+20",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-17",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-18",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.0, -4.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-19",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-20",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.202642367285, -0.202642367285",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-21",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.07944154168, -2.07944154168",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-22",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.33333333333, 1.33333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-23",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-24",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.642092615934, -0.642092615934",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-25",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-16.0, -16.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-26",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.34657359028, -0.34657359028",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-27",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-28",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.785398163397, 0.785398163397",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-29",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.804718956217, -0.804718956217",
+    "passed": true
+  },
+  {
+    "id": "textbook-07-30",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.57079632679e-63, 1.57079632679e-63",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-1",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "9 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-2",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-3",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-4",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-5",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "4 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-6",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-7",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-8",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-9",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-10",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-11",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-12",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-13",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-14",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-15",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-16",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-17",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-18",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "1 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-19",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-20",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-21",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-22",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-23",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "8 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-24",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-25",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-26",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-27",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-28",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-29",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-09-30",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-1",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-2",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-3",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-4",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-5",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-6",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-7",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-8",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-9",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-10",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-11",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-12",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-13",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-14",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-15",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-16",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-17",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-18",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-19",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "3 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-20",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-21",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-22",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-23",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-24",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "3 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-25",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "8 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-26",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-27",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-28",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-29",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-10-30",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-1",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-2",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-3",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-4",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-5",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-6",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-7",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-8",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "4 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-9",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-10",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-11",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-12",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-13",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-14",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "8 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-15",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "5 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-16",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "8 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-18",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-19",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-20",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-21",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-22",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "7 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-23",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-24",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "6 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-25",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "4 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-26",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-27",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-28",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-29",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "10 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-11-30",
+    "method": "symbolic differentiation + independent mpmath numerical derivative",
+    "result": "4 domain-valid samples",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-1",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-2",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-3",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-4",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-5",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-6",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-7",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-8",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-9",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-10",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-11",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-12",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-13",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-14",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-15",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-16",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-17",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-18",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-19",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-20",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-21",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-22",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-23",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-24",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-25",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-26",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-27",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-28",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-29",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-12-30",
+    "method": "parametric chain rule identity",
+    "result": "dy/dx * dx/dt = dy/dt",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-1",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-2",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-3",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-4",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-5",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-6",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-7",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-8",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-9",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-10",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-11",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-12",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-13",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-14",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-15",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-16",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-17",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-18",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-19",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-20",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-21",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-22",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-23",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-24",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-25",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-26",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-27",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-28",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-29",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-13-30",
+    "method": "implicit differentiation identity",
+    "result": "F_x + F_y yprime = 0",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-1",
+    "method": "symbolic partial differentiation",
+    "result": "[3*(x**2*y + 1)/y, -3*(x - y**4)/y**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-2",
+    "method": "symbolic partial differentiation",
+    "result": "[x/sqrt((x - y)*(x + y)), -y/sqrt((x - y)*(x + y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-3",
+    "method": "symbolic partial differentiation",
+    "result": "[1/(x**2 + 1), 1/(y**2 + 1)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-4",
+    "method": "symbolic partial differentiation",
+    "result": "[cos(x + cos(y)), -sin(y)*cos(x + cos(y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-5",
+    "method": "symbolic partial differentiation",
+    "result": "[x*(2*x*log(x + y) + x + 2*y*log(x + y))/(x + y), x**2/(x + y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-6",
+    "method": "symbolic partial differentiation",
+    "result": "[exp(x/y)/y, -x*exp(x/y)/y**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-7",
+    "method": "symbolic partial differentiation",
+    "result": "[y*sin(y/x)/(x**2*cos(y/x)), -sin(y/x)/(x*cos(y/x))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-8",
+    "method": "symbolic partial differentiation",
+    "result": "[(tan(x - y)**2 + 1)/tan(x - y), -(tan(x - y)**2 + 1)/tan(x - y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-9",
+    "method": "symbolic partial differentiation",
+    "result": "[6*x**2*(x**3 + y**2)*exp(x**6)*exp(y**4)*exp(2*x**3*y**2), 4*y*(x**3 + y**2)*exp(x**6)*exp(y**4)*exp(2*x**3*y**2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-10",
+    "method": "symbolic partial differentiation",
+    "result": "[x*(3*x + 8*y**2), 4*y*(2*x**2 - y**2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-11",
+    "method": "symbolic partial differentiation",
+    "result": "[2*x*cos(2*x + 3*y) + sin(2*x + 3*y), 3*x*cos(2*x + 3*y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-12",
+    "method": "symbolic partial differentiation",
+    "result": "[-2*x*sin(x**2)/y, -cos(x**2)/y**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-13",
+    "method": "symbolic partial differentiation",
+    "result": "[2*x/(x**2 + y), 1/(x**2 + y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-14",
+    "method": "symbolic partial differentiation",
+    "result": "[y*(x - 1)*(x + 1)/x**2, (x**2 + 1)/x]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-15",
+    "method": "symbolic partial differentiation",
+    "result": "[2*x*sin(y)**4, 4*x**2*sin(y)**3*cos(y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-16",
+    "method": "symbolic partial differentiation",
+    "result": "[1/(x + y), -x/(y*(x + y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-17",
+    "method": "symbolic partial differentiation",
+    "result": "[-sin(y + sin(x))*cos(x), -sin(y + sin(x))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-18",
+    "method": "symbolic partial differentiation",
+    "result": "[-y*(tan(y/x)**2 + 1)/(x**2*tan(y/x)), (tan(y/x)**2 + 1)/(x*tan(y/x))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-19",
+    "method": "symbolic partial differentiation",
+    "result": "[y*(x*y*cos(x*y) + sin(x*y)), x*(x*y*cos(x*y) + sin(x*y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-20",
+    "method": "symbolic partial differentiation",
+    "result": "[4*x**3*cos(y)**2, -2*x**4*sin(y)*cos(y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-21",
+    "method": "symbolic partial differentiation",
+    "result": "[-y*exp(sin(y/x))*cos(y/x)/x**2, exp(sin(y/x))*cos(y/x)/x]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-22",
+    "method": "symbolic partial differentiation",
+    "result": "[y**3/(x**2 + y**2)**(3/2), x**3/(x**2 + y**2)**(3/2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-23",
+    "method": "symbolic partial differentiation",
+    "result": "[-x*sin(x + y) + cos(x + y), -x*sin(x + y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-24",
+    "method": "symbolic partial differentiation",
+    "result": "[exp(x)*cos(y), -exp(x)*sin(y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-25",
+    "method": "symbolic partial differentiation",
+    "result": "[x*(3*x - 4*y**3), -2*y*(3*x**2*y - 2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-26",
+    "method": "symbolic partial differentiation",
+    "result": "[y**x*log(y), x*y**x/y]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-27",
+    "method": "symbolic partial differentiation",
+    "result": "[(tan(x/y)**2 + 1)/(y*tan(x/y)), -x*(tan(x/y)**2 + 1)/(y**2*tan(x/y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-28",
+    "method": "symbolic partial differentiation",
+    "result": "[3*x**2*sin(y) - y**3*sin(x), x**3*cos(y) + 3*y**2*cos(x)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-29",
+    "method": "symbolic partial differentiation",
+    "result": "[-y**2*(tan(y**2/x)**2 + 1)/x**2, 2*y*(tan(y**2/x)**2 + 1)/x]",
+    "passed": true
+  },
+  {
+    "id": "textbook-24-30",
+    "method": "symbolic partial differentiation",
+    "result": "[2*x*y/((x - y)*(x + y)), (x**2*log(x**2 - y**2) - y**2*log(x**2 - y**2) - 2*y**2)/((x - y)*(x + y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-1",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(3*x**5*y + 10*x**3*y**3 + 3*x**2 + 3*x*y**5 + 3*y**2)*exp(x*y**3)*exp(x**3*y), (3*x**5*y + 10*x**3*y**3 + 3*x**2 + 3*x*y**5 + 3*y**2)*exp(x*y**3)*exp(x**3*y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-2",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[y*(x - y)*(x + y)/((x**2 + y**2)**2*Abs(y)), y*(x - y)*(x + y)/((x**2 + y**2)**2*Abs(y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-3",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(x**2 + 2*x + y**2 + 2*y)*exp(x)*exp(y), (x**2 + 2*x + y**2 + 2*y)*exp(x)*exp(y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-4",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2/y, 2/y]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-5",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[8*x*y*(x - y)*(x + y)/(x**2 + y**2)**3, 8*x*y*(x - y)*(x + y)/(x**2 + y**2)**3]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-6",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-2*x*(x**2 - y + 1)*(x**2 + y + 1)/(x**4 + 2*x**2 + y**2 + 1)**2, -2*x*(x**2 - y + 1)*(x**2 + y + 1)/(x**4 + 2*x**2 + y**2 + 1)**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-7",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*x*y/(x + y)**3, 2*x*y/(x + y)**3]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-8",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(x*cos(y) + 2*y + cos(y))*exp(x), (x*cos(y) + 2*y + cos(y))*exp(x)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-9",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-2*(x + y)/(x - y)**3, -2*(x + y)/(x - y)**3]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-10",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*y*(x - y**2)*(x + y**2)/(x**2 + y**4)**2, 2*y*(x - y**2)*(x + y**2)/(x**2 + y**4)**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-11",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-2*x*cos(x**2)/y**2, -2*x*cos(x**2)/y**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-12",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*x*y*(x - 2*y)/(x**2 - 2*x*y + 2*y**2)**2, 2*x*y*(x - 2*y)/(x**2 - 2*x*y + 2*y**2)**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-13",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-2*x*(2*x**2*tan(x**2/y) + y)*(tan(x**2/y)**2 + 1)/y**3, -2*x*(2*x**2*tan(x**2/y) + y)*(tan(x**2/y)**2 + 1)/y**3]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-14",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[0, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-15",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-2*x*y/(x**2 + y**2)**2, -2*x*y/(x**2 + y**2)**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-16",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*(2*x + 3*y), 2*(2*x + 3*y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-17",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-(4*x**3 - y**3)/(x**2*y**3), -(4*x**3 - y**3)/(x**2*y**3)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-18",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[y*(2*x**2 - y**2)/(x**2 + y**2)**(5/2), y*(2*x**2 - y**2)/(x**2 + y**2)**(5/2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-19",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[x/(sqrt(y*(2*x + y))*(2*x + y)), x/(sqrt(y*(2*x + y))*(2*x + y))]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-20",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*x*(x**2 + y**2)/((x - y)**2*(x + y)**2), 2*x*(x**2 + y**2)/((x - y)**2*(x + y)**2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-21",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[0, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-22",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(x*cos(y) - sin(y) + cos(y))*exp(x), (x*cos(y) - sin(y) + cos(y))*exp(x)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-23",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[x**y*(y*log(x) + 1)/x, x**y*(y*log(x) + 1)/x]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-24",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[1/y, 1/y]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-25",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(-x*sin(y) + x*cos(y) + y*sin(x) + y*cos(x) + sin(x) - sin(y) + cos(x) + cos(y))*exp(x)*exp(y), (-x*sin(y) + x*cos(y) + y*sin(x) + y*cos(x) + sin(x) - sin(y) + cos(x) + cos(y))*exp(x)*exp(y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-26",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-(x**2 + 4*x*y + y**2)/(x**2 + x*y + y**2)**2, -(x**2 + 4*x*y + y**2)/(x**2 + x*y + y**2)**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-27",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[4*x*y*sin(x**2 - y**2), 4*x*y*sin(x**2 - y**2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-28",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[-(6*x**2 - 25*x*y + 4*y**2 + 1)*exp(3*x**2)*exp(2*y**2)*exp(-x*y), -(6*x**2 - 25*x*y + 4*y**2 + 1)*exp(3*x**2)*exp(2*y**2)*exp(-x*y)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-29",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[(y - 1)*(y + 1)/y**2, (y - 1)*(y + 1)/y**2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-25-30",
+    "method": "symbolic partial derivatives and mixed derivative equality",
+    "result": "[2*x*y**2*sin(x - y**2) + x*cos(x - y**2) - 2*y**2*cos(x - y**2) + sin(x - y**2), 2*x*y**2*sin(x - y**2) + x*cos(x - y**2) - 2*y**2*cos(x - y**2) + sin(x - y**2)]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-1",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[8, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-2",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[2, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-3",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[5/12, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-4",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[-1/3, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-5",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[-1/2, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-6",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[-2*sqrt(3)/3, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-7",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[sqrt(6)/4, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-9",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[1, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-10",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[1, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-11",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[1, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-12",
+    "method": "source point membership and tangent slopes (including one-sided singular points)",
+    "result": "[2*sqrt(2)*(-4 + pi)/pi**2, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-13",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[-sqrt(3)/4, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-14",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[5/4, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-15",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[None, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-16",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[1/2, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-17",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[-sqrt(3), oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-18",
+    "method": "implicit point membership; branch slopes at singularities",
+    "result": "[0, oo]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-19",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[0, -1]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-20",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[0, -1/3]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-21",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/6, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-22",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/4, pi/2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-23",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[1, -3/2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-24",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[2, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-25",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[-1, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-26",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/2, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-27",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/4, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-28",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/3, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-29",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/3, pi]",
+    "passed": true
+  },
+  {
+    "id": "textbook-14-30",
+    "method": "parametric tangent/normal coefficients and singular direction limits",
+    "result": "[pi/3, 0]",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-1",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "4.83542869529e-20, 4.83542869529e-20",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-2",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "9.67085739057e-83, 9.67085739057e-83",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-3",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.58496250072, 1.58496250072",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-4",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.14033554588e-176091259055681242082, 5.14033554588e-176091259055681242082",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-5",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-6",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-7",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-8",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "symbolic slow-convergence confirmation: 1/2, 0.50849369249",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-9",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "4.93480220054, 4.93480220054",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-10",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-11",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.22741127776, 1.22741127776",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-12",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-13",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.566545017728, 0.566545017728",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-14",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-31622776553.3, -31622776553.3",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-15",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.34560910348e+434294481903251827651, 1.34560910348e+434294481903251827651",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-16",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-17",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-18",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.666666666667, 0.666666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-20",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-21",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "8.96020780671e-11",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-22",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "7.43157873573e-434294481903251827589, 7.43157873573e-434294481903251827589",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-23",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.636619772368, 0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-24",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.14033554588e-176091259055681242061, 5.14033554588e-176091259055681242061",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-25",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.49668031045e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-26",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.66666666667e-14, 1.66666666667e-14",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-27",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-28",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.0e-14, -5.0e-14",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-29",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-15-30",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "3.03196014847e-4342944819007",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-1",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.70195986807e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-2",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.636619772368, 0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-3",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.636619772368, -0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-4",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-5",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-5.98672124178e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-6",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "symbolic slow-convergence confirmation: 0, 0.0790776306956, symbolic slow-convergence confirmation: 0, 0.0790776306956",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-7",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-8",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.69314718056, 0.69314718056",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-9",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.9098593171, -1.9098593171",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-10",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "3.87855488297e-21, 3.87855488297e-21",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-11",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.49668031045e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-12",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-13",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.636619772368, -0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-14",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-15",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-16",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.636619772368, -0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-17",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-18",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-19",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-4.76611397723e-20, -4.76611397723e-20",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-20",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.636619772368, 0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-21",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-22",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "3.39898180271e-13",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-23",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.318309886184, -0.318309886184",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-24",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-25",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.99336062089e-12",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-26",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-27",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "-0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-28",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.333333333333, 0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-29",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "0.636619772368, 0.636619772368",
+    "passed": true
+  },
+  {
+    "id": "textbook-16-30",
+    "method": "limiting logarithm, 100-digit numerical corroboration",
+    "result": "symbolic slow-convergence confirmation: 0, 0.0805055377446, symbolic slow-convergence confirmation: 0, 0.0805055377446",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-1a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-25.0, -25.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-1a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "5*x / -x/5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-1b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-1b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-x**2/2 / -x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-2a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.230769230769, -0.230769230769",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-2a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x / -13*x/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-2b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-4.0, -4.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-2b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "5*x**2/2 / -5*x**2/8",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-3a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "2*x / -3*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-3a",
+    "method": "one-sided divergent Taylor limit, numerical corroboration",
+    "result": "1.33333333333e+13",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-3a",
+    "method": "one-sided divergent Taylor limit, numerical corroboration",
+    "result": "-1.33333333333e+13",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-3b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.0666666666667, 0.0666666666667",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-3b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2/6 / 5*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-4a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-4a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "7*x**2/2 / -7*x**2/4",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-4b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.13333333333, -2.13333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-4b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2/2 / -15*x**2/64",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-5a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.875, -1.875",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-5a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "5*x**2/8 / -x**2/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-5b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-6.03644406573e-27, -6.03644406573e-27",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-5b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-3*x**2/2 / log(12)",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-6a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.4",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-6b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-6b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-3*x**2/2 / 3*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-7a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0e+42",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-7b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-7.97999999984, -7.98000000016",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-7b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "19950*x**2 / -2500*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-8a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "56.0, 56.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-8a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "7*x**2 / x**2/8",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-8b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-199.0, -199.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-8b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "9950*x**2 / -50*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-9a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.173913043478, -0.173913043478",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-9a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "2*x**2 / -23*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-9b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.285714285714, 0.285714285714",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-9b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-4*x**2 / -14*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-10a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.5, -1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-10a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "3*x / -2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-10b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-10b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "5*x**2/2 / -5*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-11a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.33333333333, -1.33333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-11a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-2*x / 3*x/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-11b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "5.0, 5.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-11b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-5*x**2 / -x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-12a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "6.0, 6.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-12a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "3*x**2 / x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-12b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-98.0000000007, -97.9999999993",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-12b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-49*x**2 / x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-13a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.333333333333, -0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-13a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "2*x/3 / -2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-13b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.5, 2.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-13b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "65*x**2/2 / 13*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-14a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.5, -1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-14a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-3*x / 2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-14b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.0833333333336, 0.0833333333331",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-14b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2/2 / 6*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-15a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-15a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-x / -x/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-15b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.40000000001, -1.39999999999",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-15b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "7*x**2/2 / -5*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-16a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-16a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-x**2/2 / x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-16b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-7.0, -7.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-16b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "7*x**2/2 / -x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-17a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-17a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-2*x / 2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-17b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.333333333332, -0.333333333334",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-17b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-3*x**2/2 / 9*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-18a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-18a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2 / x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-18b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.45, 0.45",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-18b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-2*x**2 / -40*x**2/9",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-19a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.918367346938, -0.918367346939",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-19a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "45*x**2/2 / -49*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-19b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.2, 0.2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-19b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-7*x**2 / -35*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-20a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.5, 1.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-20a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "3*x**2/2 / x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-20b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.242857142857, 0.242857142857",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-20b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-17*x**2/2 / -35*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-21a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "7.0, 7.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-21a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "7*x / x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-21b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-21b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "21*x**2/2 / -21*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-22a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.999999999999, 1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-22a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x / x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-22b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.73076923077, -1.73076923077",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-22b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "90*x**2 / -52*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-23a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.0, 2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-23a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2 / x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-23b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.0e-13, -9.99999999999e-14",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-23b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "2*x**2 / -2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-24a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-1.0, -1.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-24a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-x**2 / x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-24b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.5, 0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-24b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "23*x**2/2 / 23*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-25a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-2.0, -2.0",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-25a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "3*x**2 / -3*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-25b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "0.525, 0.525",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-25b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-21*x**2/2 / -20*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-26a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.00000000003, 0.999999999972",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-26a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x / x",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-26b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.8, 1.8",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-26b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-9*x**2/2 / -5*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-27a",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.5, -0.5",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-27a",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "x**2/2 / -x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-27b",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-0.333333333333, -0.333333333333",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-27b",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-x**2/2 / 3*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-28",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "-3.55555555556, -3.55555555556",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-28",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-7*x**2/2 / 63*x**2/64",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-29",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "1.15384615385, 1.15384615385",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-29",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-15*x**2/2 / -13*x**2/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-30",
+    "method": "mpmath, 100 digits, three shrinking distances (numerical corroboration)",
+    "result": "2.14705882353, 2.14705882353",
+    "passed": true
+  },
+  {
+    "id": "textbook-19-30",
+    "method": "exact rational Taylor coefficients, first nonzero numerator/denominator terms",
+    "result": "-73*x**2/2 / -17*x**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-1-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-1-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=1; y=x + 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-2-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-2-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=1; y=x + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-3-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-3-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-2; x=2; y=x + 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-4-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-4-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; x=2; y=x + 4",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-5-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-5-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=2; y=x + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-6-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;0)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-6-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; y=2 - x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-7-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.00000000000;-1.77777777778)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-7-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; y=x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-8-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;0)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-8-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; y=2 - x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-9-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0.200000000000;-0.0222222222222)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-9-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; y=x - 3",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-10-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.00000000000;0)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-10-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; y=x + 5",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-11-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-11-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-sqrt(3); x=sqrt(3); y=2 - x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-12-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-12-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-sqrt(3); x=sqrt(3); y=2*x + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-13-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-13-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-sqrt(2); x=sqrt(2); y=2*x - 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-14-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-14-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-sqrt(3); x=sqrt(3); y=2 - 3*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-15-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-15-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=1; y=3*x - 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-16-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.00000000000;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-16-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=3 - 2*sqrt(2); x=2*sqrt(2) + 3; y=2*x + 11",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-17-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.00000000000;4.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-17-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1/2 - sqrt(5)/2; x=1/2 + sqrt(5)/2; y=-2*x - 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-18-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;3.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-18-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=2; y=3*x + 6",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-19-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-4.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-19-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-3; x=2; y=-3*x - 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-20-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-20-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-2; x=1; y=x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-21-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-21-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-2; x=1; y=3 - x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-22-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-22-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-2; x=-1; y=2 - x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-23-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-23-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; x=2; y=2*x + 5",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-24-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-24-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; x=3; y=2*x + 9",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-25-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-25-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=3; y=-2*x - 5",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-26-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-4.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-26-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-3; x=1; y=-2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-27-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-3.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-27-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-3; x=-1; y=2*x - 11",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-28-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;-2.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-28-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=2; x=3; y=-2*x - 12",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-29-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;4.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-29-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-2; x=3; y=3*x + 7",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-30-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;3.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-30-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-3; x=-2; y=x - 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-1-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.73205080757;1.58740105197) | (1.73205080757;1.58740105197)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-1-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-2-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-5.19615242271;-5.86828545532) | (5.19615242271;-5.86828545532)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-2-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-3-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.73205080757;-3.76220315590) | (1.73205080757;-3.76220315590)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-3-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-4-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.58198889747;0.191669106023) | (2.58198889747;0.191669106023)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-4-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-5-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.23606797750;-3.48220225318) | (2.23606797750;-3.48220225318)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-5-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-6-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.41421356237;1.00000000000) | (1.41421356237;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-6-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-7-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.82842712475;5.65685424949) | (2.82842712475;5.65685424949)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-7-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-8-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.09544511501;-0.742654213378) | (1.09544511501;-0.742654213378)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-8-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-9-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-3.46410161514;6.00000000000) | (3.46410161514;6.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-9-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-10-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-5.19615242271;-14.7365709106) | (5.19615242271;-14.7365709106)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-10-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-11-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.82842712475;6.65685424949) | (2.82842712475;6.65685424949)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-11-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-12-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.41421356237;-1.00000000000) | (1.41421356237;-1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-12-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-13-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.44948974278;1.78179743628) | (2.44948974278;1.78179743628)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-13-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-14-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-14-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=-x - 2; y=x - 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-15-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-15-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=3*x + 1; y=1 - 3*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-16-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.41421356237;1.00000000000) | (1.41421356237;1.00000000000)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-16-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-17-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-4.24264068712;-5.19615242271) | (4.24264068712;-5.19615242271)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-17-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-18-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-18-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=2*x; y=-2*x",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-19-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.22474487139;-2.12246204831) | (1.22474487139;-2.12246204831)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-19-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-20-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-3.67423461417;-3.50222272302) | (3.67423461417;-3.50222272302)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-20-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-21-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.40000000000;2.30292045597)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-21-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-22-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-20.4852813742;0.683804530819) | (-3.51471862576;0.824299963249)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-22-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-23-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.06694670951;0.511197683748) | (-0.933053290486;0.621234929272)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-23-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-24-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(4.66526645243;-0.955699368583) | (10.3347335476;-0.942829334272)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-24-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=-1",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-25-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.42857142857;3.01791437113)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-25-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-26-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(1.66666666667;-2.22672718203) | (5.00000000000;-2.37926177043)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-26-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=-3",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-27-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.14830372751;0.843722818301) | (-0.518362939159;-0.398165470695)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-27-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-28-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-4.79006286792;0.0550129440027) | (-2.70993713208;0.0830000632052)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-28-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-29-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(3.81497713844;-0.0116960111070) | (6.47073714727;-0.0134912777628)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-29-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-30-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-2.18065104776;-5.22991604483) | (-1.34876071695;-2.06681193777) | (0;0)",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-30-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-1-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-0.500000000000;0.735758882343)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-1-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-2-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-0.449489742783;0.681632300468) | (4.44948974278;0.613871106245)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-2-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-3-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.22474487139;-0.273277519295) | (0;0) | (1.22474487139;0.273277519295)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-3-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-4-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(1.24017244317;0.640759621946)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-4-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-5-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(7.38905609893;3.69452804947)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-5-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-6-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(2.00000000000;0.270670566473)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-6-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-7-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-0.500000000000;0.635335283237)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-7-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=-x+1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-8-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-8-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-9-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-9-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=2; y=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-10-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-0.333333333333;0.0331913789119)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-10-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=x+2",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-11-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(pi/2+k*pi;(-1)^k*exp(-pi/2-k*pi))",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-11-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-12-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-12-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; x=3; y=-1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-13-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-13-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=2; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-14-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-14-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; x=-4; y=3",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-15-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0.666666666667;0.0331913789119)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-15-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1; y=x+1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-16-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(k*pi;(-1)^k*exp(k*pi))",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-16-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-17-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-17-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-18-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(14.3919160952;0.702925701642)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-18-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-19-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(1.00000000000;0.735758882343)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-19-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-20-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;0)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-20-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-1; x=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-21-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-21-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; y=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-22-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(2.66666666667;0.595013760396)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-22-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=2; y=x-1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-23-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(-1.50000000000;0.735758882343)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-23-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-24-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-24-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; x=4; y=-3",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-25-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-25-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; x=-2; y=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-26-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(2.71828182846;2.71828182846)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-26-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "none",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-27-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0;0) | (1.26794919243;0.573643684585) | (4.73205080757;0.933350239091)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-27-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-28-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "(0.0591057465620;-0.0859547457692) | (16.9188286786;1.45425361778)",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-28-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=1",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-29-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-29-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=0; x=-3; y=-3",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-30-inflection",
+    "method": "domain-filtered second-derivative roots and sign changes",
+    "result": "нет",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-30-asymptotes",
+    "method": "domain boundaries and directional asymptote coefficients",
+    "result": "x=-7/2; y=0",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-1",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "15/2; second derivative -2",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-2",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "1/2; second derivative -432",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-3",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(3); second derivative -8*sqrt(3)/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-4",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "2; second derivative -2*sqrt(3)",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-5",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "3; second derivative -9*pi/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-6",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "192; second derivative -1/576",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-7",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "1/3; second derivative -2",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-8",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "6; second derivative 1/4",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-9",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "10; second derivative 2/5",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-10",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "24; second derivative 1/6",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-11",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "1; second derivative -2",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-12",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "atan(sqrt(2)); second derivative -sqrt(2)*3**(1/4)",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-13",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "4*r; second derivative 1/r",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-14",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(3)*sqrt(s)/(3*sqrt(pi)); second derivative -sqrt(3)*sqrt(pi)*sqrt(s)",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-15",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "p/4; second derivative -4*p",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-16",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(3)*l/3; second derivative -2*sqrt(3)*pi*l/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-17",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "6*a; second derivative 3*a/16",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-18",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(5)*r/5; second derivative -5*sqrt(5)/(2*r)",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-19",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(6)*sqrt(s)/(6*sqrt(pi)); second derivative -sqrt(6)*sqrt(pi)*sqrt(s)",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-20",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "2**(1/3)*v**(1/3); second derivative 6",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-21",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "a/2; second derivative -1/2",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-22",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "sqrt(6)*r/3; second derivative -8*sqrt(3)*pi*r",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-23",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "8/5; second derivative -8*sqrt(5)*pi/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-24",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "1/8 + sqrt(17)/8; second derivative -9*sqrt(17)/8 - 17/8",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-25",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "3**(1/3)*5**(2/3)*v**(1/3)/(5*pi**(1/3)); second derivative 10*pi",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-26",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "4; second derivative -12",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-27",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "4; second derivative -12",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-28",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "4; second derivative -12",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-29",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "20; second derivative 1/5",
+    "passed": true
+  },
+  {
+    "id": "textbook-17-30",
+    "method": "geometric one-variable model, exact stationary point and second derivative",
+    "result": "3; second derivative 24",
+    "passed": true
   }
 ]

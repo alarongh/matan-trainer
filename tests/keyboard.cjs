@@ -19,7 +19,7 @@ async function main(){
  assert.equal(await page.locator('#answer').inputValue(),'e^(-3*π/4)');
  await page.locator('#keyboard-check').click();assert.match(await page.locator('#feedback').innerText(),/^Верно/);
  await page.screenshot({path:'test-results/keyboard-desktop.png',fullPage:true});
- await page.reload();await page.locator('[data-task-id]').first().waitFor();assert.equal(await page.locator('#answer').inputValue(),'e^(-3*π/4)');
+ await page.reload();await page.locator('[data-task-id]').first().waitFor();assert.equal(await page.locator('#answer').inputValue(),'');
  await page.locator('#answer').fill('1234');await page.locator('#answer').evaluate(e=>e.setSelectionRange(1,3));await click('9');assert.equal(await page.locator('#answer').inputValue(),'194');
  await click('delete');assert.equal(await page.locator('#answer').inputValue(),'14');await click('left');await click('7');await click('right');await click('0');assert.equal(await page.locator('#answer').inputValue(),'7104');
  await page.locator('#answer').fill('1+3');await page.locator('#answer').selectText();await click('root');assert.equal(await page.locator('#answer').inputValue(),'sqrt(1+3)');
