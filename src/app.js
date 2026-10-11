@@ -183,6 +183,17 @@ function next(){
  if(candidate)navigate(candidate.id);
  else toast('Дальше в этом списке заданий нет. Можно выбрать другое задание или изменить фильтр.');
 }
+function previous(){const candidate=adjacent(-1);if(candidate)navigate(candidate.id);}
+function navigateWithArrows(event){
+ if(!['ArrowLeft','ArrowRight'].includes(event.key)||event.defaultPrevented||event.isComposing||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+ if($('task-practice').hidden||document.querySelector('dialog[open]'))return;
+ const target=event.target;
+ if(target instanceof Element&&(target.closest('input,textarea,select,[role="textbox"]')||target.isContentEditable))return;
+ event.preventDefault();
+ if(event.repeat)return;
+ cancelAdvance();
+ if(event.key==='ArrowLeft')previous();else next();
+}
 function feedback(text,kind){$('feedback').className=`feedback ${kind}`;$('feedback').textContent=text;$('feedback').hidden=false;const r=$('feedback').getBoundingClientRect();if(r.bottom>innerHeight||r.top<0)$('feedback').scrollIntoView({behavior:'smooth',block:'nearest'});}
 function submit(value){
  if(!current)return;cancelAdvance();const task=current;
@@ -284,7 +295,8 @@ async function init(){
   $('next-step').onclick=()=>{const item=itemState(state,current.id);if(item.step>=current.stages.length)restartAttempt();else reveal();};
   $('restart-attempt').onclick=restartAttempt;
   $('next').onclick=next;
-  $('previous').onclick=()=>{const candidate=adjacent(-1);if(candidate)navigate(candidate.id);};
+  $('previous').onclick=previous;
+  document.addEventListener('keydown',navigateWithArrows);
   $('clear-filters').onclick=()=>{state.mode='all';state.group='all';state.origin='all';$('search').value='';render();};
   $('open-settings').onclick=openSettings;$('mobile-settings').onclick=openSettings;
   $('open-sources').onclick=sources;$('open-formulas').onclick=formulas;
