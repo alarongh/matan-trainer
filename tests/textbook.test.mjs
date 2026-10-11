@@ -7,17 +7,57 @@ const read=n=>JSON.parse(readFileSync(new URL('../data/'+n+'.json',import.meta.u
 const all=read('tasks'),tasks=all.filter(t=>t.id.startsWith('textbook-')),coverage=read('coverage');
 const get=(section,n)=>tasks.find(t=>t.id==='textbook-'+String(section).padStart(2,'0')+'-'+n);
 
-test('textbook coverage retains every variant in the chosen ticket-related sections',()=>{
- assert.equal(tasks.length,747);assert.equal(coverage.textbook.cards,747);
- for(const section of [2,4,5,7,9,10,11,12,13,14,15,16,17,24,25])for(let n=1;n<=30;n++)assert.ok(get(section,n),section+'/'+n);
+test('textbook coverage retains every practical exercise in all 26 sections',()=>{
+ assert.equal(tasks.length,1017);assert.equal(coverage.textbook.cards,1017);
+ assert.deepEqual(coverage.textbook.excluded,[]);
+ for(const section of [1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,23,24,25,26])for(let n=1;n<=30;n++)assert.ok(get(section,n),section+'/'+n);
  for(let n=1;n<=20;n++)for(const letter of ['a','b','c'])assert.ok(get(6,n+letter));
  for(let n=1;n<=27;n++)for(const letter of ['a','b'])assert.ok(get(19,n+letter));
  for(let n=28;n<=30;n++)assert.ok(get(19,n));
- for(const section of [20,21,22])for(let n=1;n<=30;n++)for(const kind of ['inflection','asymptotes'])assert.ok(get(section,n+'-'+kind));
- assert.equal(new Set(tasks.map(t=>t.sources[0].label)).size,657);
- assert.ok(tasks.every(t=>t.sources[0].file==='textbook'&&t.sources[0].page>=8&&t.sources[0].page<=55));
+ for(const section of [20,21,22])for(let n=1;n<=30;n++)for(const kind of ['inflection','asymptotes','full'])assert.ok(get(section,n+'-'+kind));
+ assert.equal(new Set(tasks.map(t=>t.sources[0].label)).size,837);
+ assert.ok(tasks.every(t=>t.sources[0].file==='textbook'&&t.sources[0].page>=7&&t.sources[0].page<=57));
  const state={...emptyState(),origin:'textbook',selected:get(7,13).id};
  assert.equal(validateState(state,new Set(all.map(t=>t.id))).origin,'textbook');
+});
+
+test('epsilon thresholds accept larger valid N; Taylor and Hessian goldens are independent',()=>{
+ const task=get(1,1);
+ assert.equal(checkAnswer(task,'799').correct,false);
+ assert.equal(checkAnswer(task,'800').correct,true);
+ assert.equal(checkAnswer(task,'900').correct,true);
+ assert.equal(checkAnswer(task,'800,5').valid,false);
+ assert.equal(checkAnswer(get(1,8),'100').correct,false);
+ assert.equal(checkAnswer(get(1,8),'101').correct,true);
+ assert.equal(checkAnswer(get(18,1),'7/3-22h/9+88h^2/27-352h^3/81+1408h^4/243').correct,true);
+ assert.equal(checkAnswer(get(18,1),'7/3-22h/9').correct,false);
+ assert.equal(checkAnswer(get(26,1),JSON.stringify({point:'(2/7;-13/7;-1)',value:'-36/7',type:'1'})).correct,true);
+ assert.equal(checkAnswer(get(26,25),JSON.stringify({point:'(0;0;0)',value:'0',type:'1'})).correct,true);
+ assert.equal(checkAnswer(get(26,28),JSON.stringify({point:'(0;0;0)',value:'0',type:'2'})).correct,true);
+});
+
+test('written reviews never receive automatic correctness and include reference steps',()=>{
+ const reviews=tasks.filter(t=>t.kind==='review');assert.equal(reviews.length,150);
+ for(const task of reviews){assert.equal(checkAnswer(task,'готово').manual,true);assert.equal(checkAnswer(task,'готово').correct,undefined);assert.ok(task.checklist.length>=4);}
+ const d=get(8,27);assert.match(d.stages.map(s=>JSON.stringify(s)).join(' '),/−1 и 0/);
+ assert.match(get(20,'4-full').stages[1].blocks[0].tex,/1/);
+ assert.match(get(22,'20-full').stages[1].blocks[0].tex,/-1/);
+ for(const section of [20,21,22,23])for(let n=1;n<=30;n++){
+  const t=get(section,section===23?n:n+'-full');assert.ok(t.plot.segments.length);
+  assert.ok(t.plot.segments.flat().every(p=>p.length===2&&p.every(Number.isFinite)));
+ }
+});
+
+test('visually rechecked graph coefficients retain the exact printed variants',()=>{
+ assert.match(get(20,'12-full').prompt,/- 2 x\^\{3\}/);
+ assert.match(get(20,'16-full').prompt,/6/);
+ assert.match(get(20,'27-full').prompt,/- 2 x\^\{3\}/);
+ assert.equal(checkAnswer(get(20,'12-asymptotes'),'x=-sqrt(3); x=sqrt(3); y=-2x+2').correct,true);
+ assert.equal(checkAnswer(get(20,'16-asymptotes'),'x=-3; x=2; y=2x-3').correct,true);
+ assert.equal(checkAnswer(get(20,'27-asymptotes'),'x=-3; x=-1; y=-2x+5').correct,true);
+ assert.ok(!get(21,'23-full').stages[1].blocks[0].tex.includes('\\setminus'));
+ assert.match(get(22,'7-full').stages[2].blocks[0].tex,/1\.763/);
+ assert.doesNotMatch(get(22,'24-full').prompt,/2 \\ln/);
 });
 
 test('both actual retake limits and coefficient-sensitive variants have independent golden answers',()=>{

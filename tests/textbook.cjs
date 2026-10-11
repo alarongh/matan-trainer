@@ -15,7 +15,7 @@ async function main(){
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base);await page.locator('[data-task-id]').first().waitFor();
   await page.locator('#origin-filter').selectOption('textbook');
-  assert.equal(await page.locator('[data-task-id]').count(),747);
+  assert.equal(await page.locator('[data-task-id]').count(),1017);
   await page.locator('[data-group="3"]').click();
   assert.equal(await page.locator('[data-task-id]').count(),120);
   await page.locator('[data-task-id="textbook-07-13"]').click();

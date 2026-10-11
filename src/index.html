@@ -55,6 +55,7 @@
     <select id="origin-filter" aria-label="Источник заданий"><option value="all">Все источники</option><option value="source">Из материалов</option><option value="extra">Дополнительные</option><option value="textbook">Учебное пособие</option></select>
    </div>
    <div class="study-layout">
+    <label id="textbook-section-row" class="textbook-section-row" hidden>Раздел пособия <select id="textbook-section" aria-label="Раздел учебного пособия"><option value="all">Все 26 разделов</option></select></label>
     <section class="study-column">
      <article class="task-card" id="task-card" aria-labelledby="task-heading">
       <div class="task-topline"><span class="badge" id="task-group">ЗАДАНИЕ 1</span><span class="task-position" id="task-position"></span></div>
@@ -68,6 +69,7 @@
        <div class="answer-row" id="answer-row"><input id="answer" name="answer" placeholder="Например, 2/3 или e^(-3)" spellcheck="false" maxlength="256" aria-describedby="answer-help feedback"><button class="primary-button" type="submit" id="check-button">Проверить <span>↵</span></button></div>
        <div class="choice-options" id="choices" hidden><button type="button" data-choice="1"><span>1</span> Чётная</button><button type="button" data-choice="2"><span>2</span> Нечётная</button><button type="button" data-choice="3"><span>3</span> Ни та ни другая</button></div>
        <div id="answer-fields" class="answer-fields" hidden></div>
+       <div id="written-review" hidden></div>
        <p class="input-help" id="answer-help">Можно вводить дроби, корни, степени, e, pi и ∞.</p>
        <div class="math-keyboard" id="math-keyboard" hidden></div>
       </form>

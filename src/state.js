@@ -1,11 +1,12 @@
 export const KEY='matan-trainer:v1';
-export const emptyState=()=>({version:1,theme:'sage',selected:null,group:'all',origin:'all',mode:'all',autoAdvance:true,items:{}});
+export const emptyState=()=>({version:1,theme:'sage',selected:null,group:'all',origin:'all',textbookSection:'all',mode:'all',autoAdvance:true,items:{}});
 export function validateState(raw,ids){
  if(!raw||raw.version!==1||typeof raw.items!=='object'||Array.isArray(raw.items))throw new Error('Это не файл прогресса тренажёра.');
  const s=emptyState();
  s.theme=['sage','paper','lavender','night'].includes(raw.theme)?raw.theme:'sage';
- s.group=['all',...Array.from({length:10},(_,i)=>String(i+1))].includes(raw.group)?raw.group:'all';
+ s.group=['all',...Array.from({length:11},(_,i)=>String(i+1))].includes(raw.group)?raw.group:'all';
  s.origin=['all','source','extra','textbook'].includes(raw.origin)?raw.origin:'all';
+ s.textbookSection=/^(all|[1-9]|1\d|2[0-6])$/.test(raw.textbookSection)?raw.textbookSection:'all';
  s.mode=['all','new','review','solved'].includes(raw.mode)?raw.mode:'all';
  s.autoAdvance=raw.autoAdvance!==false;
  s.selected=ids.has(raw.selected)?raw.selected:null;

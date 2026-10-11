@@ -16,7 +16,8 @@
     "test:decimal": "node tests/decimal.cjs",
     "test:quiz": "node tests/quiz.cjs",
     "test:retry": "node tests/retry.cjs",
-    "test:textbook": "node tests/textbook.cjs"
+    "test:textbook": "node tests/textbook.cjs",
+    "test:written": "node tests/written.cjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.8",

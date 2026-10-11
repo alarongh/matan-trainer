@@ -49,7 +49,7 @@ const decimal=(value,comma)=>{
 };
 function decimalAnswer(task,comma){
  const answer=task.answer;
- if(['choice','multi'].includes(task.kind)||/^(none|DNE)$/.test(answer))return null;
+ if(['choice','multi','review'].includes(task.kind)||/^(none|DNE)$/.test(answer))return null;
  if(task.kind==='fields'){
   const values=JSON.parse(answer);let changed=false;
   for(const field of task.fields){const value=decimalAnswer(field,comma);if(value!==null){values[field.id]=value;changed=true;}}

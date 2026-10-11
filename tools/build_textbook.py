@@ -11,17 +11,18 @@ def populate(bank):
  from textbook_limits import populate as limits
  limits(bank);print('textbook limits',len(bank.tasks),flush=True)
  # Other source sections are loaded explicitly below.
- for module in ('textbook_calculus','textbook_advanced','textbook_graphs','textbook_applications'):
+ for module in ('textbook_calculus','textbook_advanced','textbook_graphs','textbook_applications','textbook_remaining'):
   __import__(module).populate(bank);print(module,len(bank.tasks),flush=True)
  new=[t for t in bank.tasks if t['id'].startswith('textbook-')]
- assert len(new)==747 and len({t['id'] for t in bank.tasks})==len(bank.tasks)
+ assert len(new)==1017 and len({t['id'] for t in bank.tasks})==len(bank.tasks)
  return bank
 
 def coverage_update(bank,coverage):
  new=[t for t in bank.tasks if t['id'].startswith('textbook-')]
- coverage.update(total=len(bank.tasks),source=sum(t['origin']=='source' for t in bank.tasks),extra=sum(t['origin']=='extra' for t in bank.tasks),groups={str(g):sum(t['group']==g for t in bank.tasks) for g in range(1,11)})
+ coverage['sections']['11']='Остальные задания пособия'
+ coverage.update(total=len(bank.tasks),source=sum(t['origin']=='source' for t in bank.tasks),extra=sum(t['origin']=='extra' for t in bank.tasks),groups={str(g):sum(t['group']==g for t in bank.tasks) for g in range(1,12)})
  coverage['sourceFiles']=[f for f in coverage['sourceFiles'] if f['id']!='textbook']+[{'id':'textbook','title':'Математический анализ (1 семестр). Учебное пособие · МИРЭА, 2019'}]
- coverage['textbook']={'cards':len(new),'sections':{str(i):sum(t['id'].startswith(f'textbook-{i:02}-') for t in new) for i in range(1,27) if any(t['id'].startswith(f'textbook-{i:02}-') for t in new)},'scope':'Задания, соответствующие №1–10 билета. Полные графики адаптированы к вопросам о перегибах и асимптотах; это отмечено в карточках.','excluded':[1,3,8,18,23,26]}
+ coverage['textbook']={'cards':len(new),'exercises':837,'sections':{str(i):sum(t['id'].startswith(f'textbook-{i:02}-') for t in new) for i in range(1,27)},'scope':'Все варианты и подпункты практических задач 1–26. Полное исследование графиков и разрывы — письменная самопроверка с разбором; доказательства и геометрический смысл также требуют сверки на бумаге.','excluded':[],'reviewCards':sum(t['kind']=='review' for t in new)}
  issues=[i for i in coverage.get('sourceIssues',[]) if not i['id'].startswith('textbook-')]+bank.issues
  coverage['sourceIssues']=list({i['id']:i for i in issues}.values())
  note='Добавлены упражнения учебного пособия с исходной нумерацией и страницами; новые карточки доступны в фильтре «Учебное пособие».'

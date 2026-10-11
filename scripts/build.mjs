@@ -11,7 +11,7 @@ await cp('node_modules/@fontsource-variable/onest/files', 'dist/fonts', {recursi
 await copyFile('node_modules/katex/LICENSE','dist/vendor/katex/LICENSE');
 await copyFile('node_modules/@fontsource-variable/onest/LICENSE','dist/fonts/LICENSE');
 await cp('sources', 'dist/sources', {recursive:true});
-await copyFile('data/tasks.json','dist/tasks.json');
+await writeFile('dist/tasks.json',JSON.stringify(JSON.parse(await readFile('data/tasks.json','utf8'))));
 await copyFile('data/coverage.json','dist/coverage.json');
 await copyFile('data/linear-tasks.json','dist/linear-tasks.json');
 await copyFile('data/linear-coverage.json','dist/linear-coverage.json');

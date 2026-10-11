@@ -35,14 +35,15 @@ test('complete bank contains all source examples with valid math, sources and ac
  assert.equal(legacy.length,426);assert.equal(legacy.filter(t=>t.origin==='source').length,378);
  for(const [prefix,count,start=1] of [['parity',30],['sequence',40],['monotonic',29],['sequence-theory',10],['function-theory',10],['function-limit',40],['advanced-limit',40],['derivative',39],['asymptote',40],['tangent',20],['tangent',10,31],['inflection',10,21],['practical',35],['oral',28]])for(let n=start;n<start+count;n++)assert.ok(ids.has(`${prefix}-${String(n).padStart(2,'0')}`),`${prefix}-${n}`);
  for(const task of tasks){
-  assert.equal(checkAnswer(task,task.answer).correct,true,task.id+' answer');
+  if(task.kind==='review'){assert.equal(checkAnswer(task,'готово').manual,true,task.id);assert.ok(task.checklist.length>=4);}
+  else assert.equal(checkAnswer(task,task.answer).correct,true,task.id+' answer');
   let wrong=task.answer==='0'?'1':'0';
   if(task.kind==='choice')wrong=(task.options?.map(o=>o.value)||['1','2','3']).find(v=>v!==task.answer);
   if(task.kind==='multi')wrong=task.answer==='1'?'2':'1';
   if(task.kind==='fields'){const map=JSON.parse(task.answer);const f=task.fields[0];map[f.id]=f.answer==='0'?'1':f.kind==='lines'?'x=98765':f.kind==='points'?'(98765;98765)':'0';wrong=JSON.stringify(map);}
   assert.notEqual(checkAnswer(task,wrong).correct,true,task.id+' wrong answer');
   assert.ok(task.stages.length>=4,task.id+' stages');
-  for(const tex of [task.prompt,...task.stages.flatMap(s=>s.blocks.map(b=>b.tex).filter(Boolean))])assert.doesNotThrow(()=>katex.renderToString(tex,{throwOnError:true,strict:'ignore',trust:false}),task.id+' '+tex);
+  for(const tex of [task.prompt,...(task.options||[]).map(o=>o.tex).filter(Boolean),...task.stages.flatMap(s=>s.blocks.map(b=>b.tex).filter(Boolean))])assert.doesNotThrow(()=>katex.renderToString(tex,{throwOnError:true,strict:'ignore',trust:false}),task.id+' '+tex);
   for(const src of task.sources)assert.ok(existsSync(new URL(`../sources/${src.file}.pdf`,import.meta.url)),task.id+' PDF');
  }
  const verified=JSON.parse(readFileSync(new URL('../data/verification.json',import.meta.url),'utf8'));

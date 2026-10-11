@@ -5543,7 +5543,7 @@
   {
     "id": "textbook-20-12-asymptotes",
     "method": "domain boundaries and directional asymptote coefficients",
-    "result": "x=-sqrt(3); x=sqrt(3); y=2*x + 2",
+    "result": "x=-sqrt(3); x=sqrt(3); y=2 - 2*x",
     "passed": true
   },
   {
@@ -5585,13 +5585,13 @@
   {
     "id": "textbook-20-16-inflection",
     "method": "domain-filtered second-derivative roots and sign changes",
-    "result": "(-1.00000000000;-1.00000000000)",
+    "result": "(0;-1.00000000000)",
     "passed": true
   },
   {
     "id": "textbook-20-16-asymptotes",
     "method": "domain boundaries and directional asymptote coefficients",
-    "result": "x=3 - 2*sqrt(2); x=2*sqrt(2) + 3; y=2*x + 11",
+    "result": "x=-3; x=2; y=2*x - 3",
     "passed": true
   },
   {
@@ -5723,7 +5723,7 @@
   {
     "id": "textbook-20-27-asymptotes",
     "method": "domain boundaries and directional asymptote coefficients",
-    "result": "x=-3; x=-1; y=2*x - 11",
+    "result": "x=-3; x=-1; y=5 - 2*x",
     "passed": true
   },
   {
@@ -6029,13 +6029,13 @@
   {
     "id": "textbook-21-23-inflection",
     "method": "domain-filtered second-derivative roots and sign changes",
-    "result": "(-2.06694670951;0.511197683748) | (-0.933053290486;0.621234929272)",
+    "result": "(-1.08541019662;0.543026582330) | (-0.414589803375;0.759430397434)",
     "passed": true
   },
   {
     "id": "textbook-21-23-asymptotes",
     "method": "domain boundaries and directional asymptote coefficients",
-    "result": "x=0; y=1",
+    "result": "none",
     "passed": true
   },
   {
@@ -6483,6 +6483,546 @@
     "passed": true
   },
   {
+    "id": "textbook-20-1-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-2-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-3-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-4-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-5-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-6-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-7-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-8-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-9-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-10-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-11-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-12-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-13-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-14-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-15-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-16-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-17-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-18-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-19-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-20-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-21-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-22-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-23-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-24-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-25-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-26-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-27-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-28-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-29-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-20-30-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-1-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-2-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-3-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-4-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-5-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-6-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-7-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-8-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-9-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-10-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-11-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-12-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-13-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-14-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-15-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-16-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-17-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-18-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-19-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-20-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-21-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-22-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-23-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-24-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-25-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-26-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-27-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-28-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-29-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-21-30-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-1-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-2-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-3-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-4-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-5-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-6-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-7-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-8-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-9-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-10-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-11-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-12-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-13-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-14-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-15-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-16-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-17-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-18-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-19-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-20-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-21-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-22-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-23-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-24-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-25-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-26-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-27-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-28-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-29-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-22-30-full",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
     "id": "textbook-17-1",
     "method": "geometric one-variable model, exact stationary point and second derivative",
     "result": "15/2; second derivative -2",
@@ -6660,6 +7200,1086 @@
     "id": "textbook-17-30",
     "method": "geometric one-variable model, exact stationary point and second derivative",
     "result": "3; second derivative 24",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-1",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=800; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-2",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=8; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-3",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=8; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-4",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=10; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-5",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=50; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-6",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=2500; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-7",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=8; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-8",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=101; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-9",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=500; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-10",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=20; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-11",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=76; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-12",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=147; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-13",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=27; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-14",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=25; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-15",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=12; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-16",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=20; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-17",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=9; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-18",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=156; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-19",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=1495; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-20",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=14; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-21",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=998; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-22",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=32; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-23",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=9; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-24",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=7; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-25",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=96; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-26",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=1027; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-27",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=1; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-28",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=423; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-29",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=993; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-01-30",
+    "method": "exact first-tail and parity checks; derivative of squared error sampled on tail",
+    "result": "N_min=6; N and N+1 checked at 50 digits",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-1",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x<-K\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-2",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<(-1)-x<\\delta\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-3",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow |f(x)-(4)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-4",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x>K\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-5",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<(0)-x<\\delta\\Rightarrow |f(x)-(-3)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-6",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x<-K\\Rightarrow |f(x)-(0)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-7",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-8",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x>K\\Rightarrow |f(x)-(-1)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-9",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<x-(-2)<\\delta\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-10",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-11",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<|x-(1)|<\\delta\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-12",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x<-K\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-13",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<x-(-3)<\\delta\\Rightarrow |f(x)-(-3)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-14",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-15",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<|x-(0)|<\\delta\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-16",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x>K\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-17",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<x-(0)<\\delta\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-18",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x<-K\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-19",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<|x-(-4)|<\\delta\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-20",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<|x-(0)|<\\delta\\Rightarrow |f(x)-(-8)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-21",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow |f(x)-(0)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-22",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<(-3)-x<\\delta\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-23",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x>K\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-24",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad |x|>K\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-25",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<x-(0)<\\delta\\Rightarrow |f(x)-(0)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-26",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x<-K\\Rightarrow |f(x)-(-5)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-27",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<|x-(0)|<\\delta\\Rightarrow f(x)<-M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-28",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<x-(3)<\\delta\\Rightarrow f(x)>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-29",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall\\varepsilon>0\\ \\exists K>0\\ \\forall x\\in D_f:\\quad x>K\\Rightarrow |f(x)-(0)|<\\varepsilon",
+    "passed": true
+  },
+  {
+    "id": "textbook-03-30",
+    "method": "quantifier construction from transcribed side and signed limit",
+    "result": "\\forall M>0\\ \\exists\\delta>0\\ \\forall x\\in D_f:\\quad 0<(2)-x<\\delta\\Rightarrow |f(x)|>M",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-1",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "1408*h**4/243 - 352*h**3/81 + 88*h**2/27 - 22*h/9 + 7/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-2",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-333*h**4/64 + 9*h**3/2 - 33*h**2/8 + h*(log(2) + 15/2) + log(32)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-3",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-64*h**5*sin(2)/15 - 16*h**4*cos(2)/3 + 16*h**3*sin(2)/3 + 4*h**2*cos(2) - 2*h*sin(2) + sin(1)**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-4",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "h**5*cos(1)/24 - h**4*sin(1)/6 - h**3*cos(1)/2 + h**2*sin(1) + h*cos(1)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-5",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-5*h**4/3072 + 5*h**3/768 - h**2/32 + h/4 + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-6",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "10*h**4*exp(-1)/3 + 16*h**3*exp(-1)/3 + 6*h**2*exp(-1) + 4*h*exp(-1) + exp(-1)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-7",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-11*h**4/243 - 11*h**3/81 - 11*h**2/27 - 11*h/9 - 2/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-8",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-4*h**5/3 + 2*h**4/3 + 2*h**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-9",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "128*h**5*cos(1)/15 + 32*h**4*sin(1)/3 - 32*h**3*cos(1)/3 - 8*h**2*sin(1) + 4*h*cos(1) + sin(1)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-10",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-2*h**5*sin(2)/15 + h**4*cos(2)/3 + 2*h**3*sin(2)/3 - h**2*cos(2) - h*sin(2) + cos(1)**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-11",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-77*h**4/262144 + 7*h**3/4096 - 3*h**2/256 + h/8 + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-12",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-h**4/8 + h**3/3 + h**2/2 + 1",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-13",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-12*h**4/625 + 6*h**3/125 - 3*h**2/25 + 4*h/5",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-14",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-32*h**4/9 - 22*h**3/9 - 2*h**2 - 4*h/3",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-15",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "h**5*(-7*cos(1)/120 + sin(1)/12) + h**4*(-7*sin(1)/24 - cos(1)/3) + h**3*(-sin(1) + 7*cos(1)/6) + h**2*(2*cos(1) + 7*sin(1)/2) + h*(-7*cos(1) + 2*sin(1)) - 7*sin(1)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-16",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "64*h**5*sin(4)/15 + 16*h**4*cos(4)/3 - 16*h**3*sin(4)/3 - 4*h**2*cos(4) + 2*h*sin(4) + cos(2)**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-17",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "513*h**4/1048576 - 63*h**3/8192 + 69*h**2/256 + 25*h/4 + 24",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-18",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-608*h**5*exp(2)/15 - 160*h**4*exp(2)/3 - 56*h**3*exp(2) - 44*h**2*exp(2) - 23*h*exp(2) - 6*exp(2)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-19",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-20*h**4 - 20*h**3 - 20*h**2 - 20*h - 17",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-20",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "1984*h**4/1875 - 688*h**3/375 + 96*h**2/25 + h*(-28/5 + log(25)) - log(78125)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-21",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "162*h**5*sin(8)/5 - 27*h**4*cos(8) - 18*h**3*sin(8) + 9*h**2*cos(8) + 3*h*sin(8) + sin(4)**2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-22",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "h**5*(2*cos(5) - 52*sin(5)/15) + h**4*(4*sin(5) + 26*cos(5)/3) + h**3*(52*sin(5)/3 - 6*cos(5)) + h**2*(-26*cos(5) - 6*sin(5)) + h*(3*cos(5) - 26*sin(5)) + 13*cos(5)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-23",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-160*h**4/43046721 + 40*h**3/531441 - 4*h**2/2187 + 2*h/27 + 3",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-24",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "1467*E*h**5/40 + 405*E*h**4/8 + 111*E*h**3/2 + 91*E*h**2/2 + 25*E*h + 7*E",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-25",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "60*h**4 + 30*h**3 + 15*h**2 + 8*h + 3",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-26",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "440*h**4/2401 - 412*h**3/1029 + h**2*(log(7) + 188/49) + h*(32/7 + log(40353607)) + log(5764801)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-27",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "h**5*(sin(4)/24 + cos(4)/30) - sqrt(2)*h**4*cos(pi/4 + 4)/6 + h**3*(-sin(4)/2 - 2*cos(4)/3) + h**2*(cos(4) - 2*sin(4)) + h*(4*cos(4) + sin(4)) + 4*sin(4)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-28",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "h**5*(-81*sin(1)/8 + 27*cos(1)/4) + h**4*(9*sin(1) + 135*cos(1)/8) + h**3*(-9*cos(1) + 45*sin(1)/2) + h**2*(-45*cos(1)/2 - 6*sin(1)) + h*(-15*sin(1) + 2*cos(1)) + 5*cos(1)",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-29",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "-77*h**4/67108864 + 7*h**3/262144 - 3*h**2/4096 + h/32 + 2",
+    "passed": true
+  },
+  {
+    "id": "textbook-18-30",
+    "method": "independent SymPy series equals derivative coefficient construction",
+    "result": "E*h**5/120 + E*h**4/12 + E*h**3/2 + 2*E*h**2 + 5*E*h + 6*E",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-1",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(2/7, -13/7, -1); -36/7; minimum; minors=[4, 7, 14]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-2",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(4/3, -1/2, 2/3); -25/12; minimum; minors=[2, 12, 18]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-3",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; maximum; minors=[-18, 207, -3342]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-4",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; maximum; minors=[-8, 44, -80]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-5",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 2, -1); -4; minimum; minors=[2, 4, 14]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-6",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(9, 8, -14); -18; minimum; minors=[4, 11, 2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-7",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 6/11, 12/11); 36/11; maximum; minors=[-10, 16, -88]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-8",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(19/20, 21/40, -13/40); -207/80; minimum; minors=[4, 7, 40]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-9",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(43/17, -3/17, -15/17); -181/34; minimum; minors=[2, 5, 17]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-10",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-40/71, 132/71, -4/71); 304/71; maximum; minors=[-2, 15/4, -71/2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-11",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-21/2, 33/2, -9); -99/4; minimum; minors=[4, 4, 2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-12",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(79/63, -26/21, 4/63); -395/63; minimum; minors=[10, 16, 315/2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-13",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(3/4, -137/76, -2/19); -251/76; minimum; minors=[10, 16, 152]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-14",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-2/15, -79/60, 1/4); 79/60; maximum; minors=[-8, 15, -120]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-15",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-2/7, -15/7, -1); 36/7; maximum; minors=[-4, 7, -14]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-16",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(1, -1, 1); 4; maximum; minors=[-2, 12, -18]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-17",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-3/5, 2, 1/5); -23/5; minimum; minors=[4, 8, 40]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-18",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(57/52, -15/52, -3/52); 171/52; maximum; minors=[-6, 44, -416]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-19",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-5/4, 5/4, 0); -25/4; minimum; minors=[2, 16, 24]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-20",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(8/19, -16/19, 14/19); -28/19; minimum; minors=[2, 7, 38]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-21",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-7/6, 1/6, -1/6); 7/3; maximum; minors=[-4, 36, -288]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-22",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-12/55, -2/55, -58/55); 232/55; maximum; minors=[-10, 116, -880]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-23",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-5/13, 15/13, 3/13); -60/13; minimum; minors=[6, 44, 416]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-24",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(-3/11, -2/11, -12/11); -60/11; minimum; minors=[8, 96, 880]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-25",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; minimum; minors=[18, 207, 3342]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-26",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; minimum; minors=[2, 64, 280]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-27",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; maximum; minors=[-2, 64, -280]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-28",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(0, 0, 0); 0; maximum; minors=[-18, 207, -3342]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-29",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(19/20, 21/40, -13/40); -207/80; minimum; minors=[4, 7, 40]",
+    "passed": true
+  },
+  {
+    "id": "textbook-26-30",
+    "method": "exact gradient zero and Sylvester principal minors",
+    "result": "(75/59, -70/59, 20/59); -375/59; minimum; minors=[10, 16, 59/2]",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-1",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-2",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-3",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-4",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-5",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-6",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-7",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-8",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-9",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-10",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-11",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-12",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-13",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-14",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-15",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-16",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-17",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-18",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-19",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-20",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-21",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-22",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-23",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-24",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-25",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-26",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-27",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-28",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-29",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-08-30",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-1",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-2",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-3",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-4",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-5",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-6",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-7",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-8",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-9",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-10",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-11",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-12",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-13",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-14",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-15",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-16",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-17",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-18",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-19",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-20",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-21",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-22",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-23",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-24",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-25",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-26",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-27",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-28",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-29",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
+    "passed": true
+  },
+  {
+    "id": "textbook-23-30",
+    "method": "source transcription and explicit self-review; no automatic correctness claim",
+    "result": "written work",
     "passed": true
   }
 ]

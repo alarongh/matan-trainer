@@ -35,8 +35,13 @@ export function numeric(input,scope={},limits={characters:256,tokens:128}) {
  return result;
 }
 export function checkAnswer(task,input){
+ if(task.kind==='review')return {valid:false,manual:true,message:'Письменная работа проверяется самостоятельно по разбору.'};
  const text=String(input).trim();
  if(!text)return {valid:false,message:'Сначала введите ответ.'};
+ if(task.kind==='threshold'){
+  try{const n=numeric(text);return Number.isSafeInteger(n)&&n>=1?{valid:true,correct:n>=task.minimum}:{valid:false,message:'Введите положительное целое N.'};}
+  catch(e){return {valid:false,message:e.message};}
+ }
  if(task.kind==='choice'){
   const labels={'чётная':'1','четная':'1','нечётная':'2','нечетная':'2','ни та ни другая':'3','никакая':'3','ни чётная, ни нечётная':'3'};
   const v=labels[text.toLowerCase()]||text;

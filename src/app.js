@@ -6,6 +6,7 @@ import {linearFormulas,linearInputHelp,addLinearKeys,renderGraph} from './linear
 import {mountKeyboard} from './keyboard.js';
 import {mountFormulaQuiz} from './formula-quiz.js';
 import {THEME_KEY,loadTheme,saveTheme} from './theme.js';
+import {mountReview,graphReference} from './written-review.js';
 import {KEY,emptyState,loadState,saveState,itemState,recordAttempt,validateState} from './state.js';
 const $=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
@@ -33,6 +34,7 @@ function filtered(){
  return tasks.filter(t=>{
   const status=state.items[t.id]?.status||'new';
   return (state.group==='all'||t.group===Number(state.group))&&(state.origin==='all'||t.origin===state.origin||state.origin==='textbook'&&t.sources.some(s=>s.file==='textbook'))&&
+   (state.origin!=='textbook'||state.textbookSection==='all'||t.id.startsWith(`textbook-${state.textbookSection.padStart(2,'0')}-`))&&
    (state.mode==='all'||state.mode==='new'&&status==='new'||state.mode==='review'&&['learning','assisted'].includes(status)||state.mode==='solved'&&status==='solved')&&
    (!query||`${t.topic} ${meta(t)} ${t.id} ${names[t.group]}`.toLocaleLowerCase('ru').includes(query));
  });
@@ -71,6 +73,7 @@ function render(){
  document.querySelectorAll('[data-group]').forEach(b=>{const active=b.dataset.group===state.group;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active);});
  document.querySelectorAll('[data-mode]').forEach(b=>{const active=b.dataset.mode===state.mode;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',active);});
  $('origin-filter').value=state.origin;
+ $('textbook-section-row').hidden=isLinear||state.origin!=='textbook';$('textbook-section').value=state.textbookSection;
  const list=filtered();
  if(!list.some(t=>t.id===state.selected))state.selected=list[0]?.id||null;
  current=tasks.find(t=>t.id===state.selected);
@@ -81,10 +84,10 @@ function render(){
  // A completed task starts a fresh attempt when reopened, including legacy drafts.
  if(renderedTaskId!==current.id&&['solved','assisted'].includes(item.status)){item.draft='';item.step=0;}
  renderedTaskId=current.id;
- $('task-group').textContent=`ЗАДАНИЕ ${current.group}`;
+ $('task-group').textContent=current.id.startsWith('textbook-')?`ЗАДАЧА ПОСОБИЯ ${Number(current.id.split('-')[1])}`:`ЗАДАНИЕ ${current.group}`;
  $('task-position').textContent=`${list.findIndex(t=>t.id===current.id)+1} из ${list.length}`;
  $('task-heading').textContent=current.topic;
- $('task-status').textContent=statuses[item.status];
+ $('task-status').textContent=current.kind==='review'&&item.status==='assisted'?'Сверено по разбору':statuses[item.status];
  $('task-instruction').textContent=current.instruction||(current.kind==='choice'?'Определи чётность функции на её исходной области определения.':'Вычисли предел. Введи только итоговый ответ.');
  $('task-description').textContent=current.description||'';$('task-description').hidden=!current.description;
  math($('problem'),current.prompt);
@@ -115,15 +118,17 @@ function draft(){if(current){
 }}
 function activateInput(input){activeAnswerInput=input;keyboard.setInput(input);document.querySelectorAll('.field-entry').forEach(row=>row.classList.toggle('active-field',row.contains(input)));}
 function renderAnswer(item){
- const choice=['choice','multi'].includes(current.kind),fields=current.kind==='fields';
- $('answer-row').hidden=choice||fields;$('choices').hidden=!choice;$('answer-fields').hidden=!fields;$('math-keyboard').hidden=choice;
- $('answer-label').hidden=fields;$('answer-label').textContent=choice?'Выбери утверждения':'Твой ответ';
+ const choice=['choice','multi'].includes(current.kind),fields=current.kind==='fields',written=current.kind==='review';
+ $('answer-row').hidden=choice||fields||written;$('choices').hidden=!choice;$('answer-fields').hidden=!fields;$('math-keyboard').hidden=choice||written;$('written-review').hidden=!written;
+ $('answer-label').hidden=fields||written;$('answer-label').textContent=choice?'Выбери утверждения':'Твой ответ';
+ if(written){$('answer-help').textContent='Отметка о самопроверке попадёт в «Повторить»; автоматическая оценка рисунка или доказательства не выполняется.';renderWritten(item);return;}
+ $('answer').maxLength=current.kind==='expression'?2048:256;
  $('answer-help').textContent=choice?(current.kind==='multi'?'Можно выбрать несколько пунктов. Отметь все подходящие и нажми «Проверить».':'Нажми на один вариант ответа.'):'Дробь: 2/3 · корень: sqrt(2) · степень: e^(-3). Координаты: (x;y), точки разделяй |, прямые и числа в списке — ;. Углы в радианах.';
  $('choices').replaceChildren();$('answer-fields').replaceChildren();
  if(choice){
   const options=current.options||[{value:'1',label:'Чётная'},{value:'2',label:'Нечётная'},{value:'3',label:'Ни та ни другая'}];
   for(const o of options){
-   if(current.kind==='choice'){const button=el('button');button.type='button';button.dataset.choice=o.value;button.append(el('span','',o.value),document.createTextNode(' '+o.label));button.onclick=()=>submit(o.value);$('choices').append(button);}
+   if(current.kind==='choice'){const button=el('button');button.type='button';button.dataset.choice=o.value;button.append(el('span','',o.value),document.createTextNode(' '+o.label));if(o.tex){const formula=el('div','math');math(formula,o.tex);button.append(formula);}button.onclick=()=>submit(o.value);$('choices').append(button);}
    else{const label=el('label','multi-option'),input=el('input');input.type='checkbox';input.value=o.value;input.checked=(item.draft||'').split(';').includes(o.value);input.onchange=draft;label.append(input,el('span','',`${o.value}. ${o.label}`));$('choices').append(label);}
   }
   if(current.kind==='multi'){const button=el('button','primary-button','Проверить ↵');button.type='submit';$('choices').append(button);}
@@ -139,6 +144,12 @@ function renderAnswer(item){
  }else{$('answer').value=item.draft||'';activateInput($('answer'));if(isLinear)linearInputHelp(current,$('answer'),$('answer-help'));}
  if(isLinear&&fields)$('answer-help').textContent='Заполни все поля. Матрицы: 1 2; 3 4. Координаты: (1;2;3). Корни: sqrt(2). Углы в радианах.';
 }
+function renderWritten(item){
+ mountReview($('written-review'),current,item,{save:value=>{cancelAdvance();item.draft=value;persist();},finish:value=>{
+  recordAttempt(state,current.id,value||'Сверено по разбору',true);item.draft='';persist();updateOverview();renderList(filtered());updateNavigation();
+  $('task-status').textContent='Сверено по разбору';feedback('Сохранена самопроверка. Автоматическая оценка этой работы не выполнялась.','neutral');$('next').firstChild.textContent='Следующее ';
+ }});
+}
 function renderSteps(){
  if(!current)return;
  const item=itemState(state,current.id),count=Math.min(item.step,current.stages.length);
@@ -148,6 +159,10 @@ function renderSteps(){
   for(const block of stage.blocks){if(block.note)section.append(el('p','',block.note));if(block.tex){const m=el('div','math');math(m,block.tex);section.append(m);}if(isLinear&&block.graph)section.append(renderGraph(block.graph));}
   $('steps').append(section);
  });
+ if(current.kind==='review'){
+  renderWritten(item);
+  if(count===current.stages.length&&current.plot)$('steps').lastElementChild.append(graphReference(current.plot));
+ }
  $('next-step').textContent=count<current.stages.length?'Открыть следующий шаг ↓':'Повторить самостоятельно ↺';
  $('reveal').textContent=count?'Продолжить разбор ＋':'Нужна помощь ＋';
 }
@@ -171,6 +186,7 @@ function next(){
 function feedback(text,kind){$('feedback').className=`feedback ${kind}`;$('feedback').textContent=text;$('feedback').hidden=false;const r=$('feedback').getBoundingClientRect();if(r.bottom>innerHeight||r.top<0)$('feedback').scrollIntoView({behavior:'smooth',block:'nearest'});}
 function submit(value){
  if(!current)return;cancelAdvance();const task=current;
+ if(task.kind==='review'){feedback('Выполни задание на бумаге и сверь его по этапам.','neutral');return;}
  const result=checkAnswer(task,value);
  if(!result.valid){feedback(result.message,'neutral');return;}
  const item=recordAttempt(state,task.id,String(value),result.correct);item.draft=result.correct?'':String(value);persist();updateOverview();
@@ -201,7 +217,7 @@ function openSettings(){
  $('settings-dialog').showModal();
 }
 function sources(){
- $('sources-description').textContent=`${isLinear?'Линал · 1 семестр 2025–26. ':''}Все №1–10 билета: ${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
+ $('sources-description').textContent=`${isLinear?'Линал · 1 семестр 2025–26. Все №1–10 билета. ':'Матан · все практические задачи 1–26 пособия и банк билета. '}${coverage.total} карточек (${coverage.source} из материалов и ${coverage.extra} дополнительных).`;
  $('sources-content').replaceChildren();
  for(const file of coverage.sourceFiles){const a=el('a','source-document',file.title);a.href=`./sources/${file.id}.pdf`;a.target='_blank';a.rel='noopener';a.append(el('small','',file.id==='theory'?'Теоретический список доступен как PDF.':'Оригинал PDF · открыть в новой вкладке ↗'));$('sources-content').append(a);}
  for(const note of coverage.notes)$('sources-content').append(el('p','input-help',note));
@@ -235,6 +251,10 @@ async function init(){
   const responses=await Promise.all(isLinear?[fetch('./linear-tasks.json'),fetch('./linear-coverage.json')]:[fetch('./tasks.json'),fetch('./coverage.json')]);
   if(responses.some(r=>!r.ok))throw Error('Не удалось загрузить банк заданий.');
   [tasks,coverage]=await Promise.all(responses.map(r=>r.json()));ids=new Set(tasks.map(t=>t.id));state=loadState(storage,ids);
+  if(!isLinear){
+   const chapters=['Доказательство предела последовательности','Пределы последовательностей','Определения предела функции','Элементарные пределы','Эквивалентности','Степенные пределы','Второй замечательный предел','Непрерывность и разрывы','Производные','Сложные производные','Логарифмическое дифференцирование','Параметрические производные','Неявные производные','Касательные и нормали','Неопределённости и Лопиталь','Степенные пределы с Лопиталем','Прикладные задачи','Разложения Тейлора','Пределы с Тейлором','Рациональные графики','Графики с корнями','Элементарные графики','Полярные кривые','Частные производные','Смешанные производные','Экстремумы трёх переменных'];
+   chapters.forEach((name,i)=>{const option=el('option','',`${i+1}. ${name}`);option.value=String(i+1);$('textbook-section').append(option);});
+  }
   names=coverage.sections;
   const nav=document.querySelector('.group-nav');nav.replaceChildren();
   for(const [g,label] of [['all','Все задания'],...Object.entries(names)]){const button=el('button','nav-item');button.dataset.group=g;button.append(el('span',g==='all'?'nav-icon':'nav-number',g==='all'?'◈':g),el('span','',label));const count=el('span','nav-count',String(g==='all'?tasks.length:coverage.groups[g]));count.id='count-'+g;button.append(count);nav.append(button);}
@@ -256,7 +276,8 @@ async function init(){
   document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{state.mode=b.dataset.mode;render();}));
   document.querySelectorAll('button[data-theme]').forEach(b=>b.addEventListener('click',()=>theme(b.dataset.theme)));
   select.onchange=()=>theme(select.value);
-  $('origin-filter').onchange=()=>{state.origin=$('origin-filter').value;render();};$('search').oninput=render;
+  $('origin-filter').onchange=()=>{state.origin=$('origin-filter').value;if(state.origin==='textbook')state.group='all';render();};$('search').oninput=render;
+  $('textbook-section').onchange=()=>{state.textbookSection=$('textbook-section').value;state.group='all';$('search').value='';render();};
   $('answer').oninput=draft;$('answer').onfocus=()=>activateInput($('answer'));
   $('answer-form').onsubmit=e=>{e.preventDefault();submit(answerValue());};
   $('reveal').onclick=reveal;

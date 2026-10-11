@@ -44,13 +44,14 @@ def line_tex(lines):
  return r'\\'.join(result)
 
 def populate(b):
+ full=[]
  rational=[
  (1,1,0,-1,0,-1),(1,2,0,-2,0,-1),(1,1,0,-4,0,-4),(1,1,-3,2,-3,2),(1,1,-1,-2,-1,-2),
  (-1,0,0,0,2,1),(1,-2,0,0,-2,1),(-1,0,0,0,2,1),(1,-1,0,0,2,1),(1,3,3,1,-2,1),
- (-1,2,0,-6,0,-3),(2,2,0,-6,0,-3),(2,-1,0,2,0,-2),(-3,2,0,-6,0,-3),(3,-2,0,2,0,-1),
- (2,-1,6,1,-6,1),(-2,1,-1,-2,-1,-1),(3,3,-3,-6,-1,-2),(-3,-4,-4,24,1,-6),(1,1,1,-2,1,-2),
+ (-1,2,0,-6,0,-3),(-2,2,0,-6,0,-3),(2,-1,0,2,0,-2),(-3,2,0,-6,0,-3),(3,-2,0,2,0,-1),
+ (2,-1,-1,6,1,-6),(-2,1,-1,-2,-1,-1),(3,3,-3,-6,-1,-2),(-3,-4,-4,24,1,-6),(1,1,1,-2,1,-2),
  (-1,2,2,-4,1,-2),(-1,-1,-3,-2,3,2),(2,-1,3,-2,-3,2),(2,1,-4,3,-4,3),(-2,-1,2,3,-2,-3),
- (-2,-4,-8,12,2,-3),(2,-3,-12,-9,4,3),(-2,-2,10,-12,-5,6),(3,4,-4,-24,-1,-6),(1,3,15,18,5,6)]
+ (-2,-4,-8,12,2,-3),(-2,-3,-12,-9,4,3),(-2,-2,10,-12,-5,6),(3,4,-4,-24,-1,-6),(1,3,15,18,5,6)]
  for i,(a,c,d,e,p,q) in enumerate(rational,1):
   original_num=a*x**3+c*x*x+d*x+e;original_den=x*x+p*x+q
   f=s.cancel(original_num/original_den);num,den=s.fraction(f)
@@ -63,16 +64,23 @@ def populate(b):
   details=r'f(x)='+tex(quotient)+r'+\frac{'+tex(s.div(num,den,x)[1])+'}{'+tex(den)+r'},\quad f^{\prime\prime}='+tex(d2)
   graph_cards(b,20,i,48 if i<=9 else 49,f,pts,lines,d2,details)
   for task in b.tasks[-2:]:task['prompt']=r'y=\frac{'+tex(original_num)+'}{'+tex(original_den)+'}'
- fractional(b)
- elementary(b)
+  zeros=[r for r,m in s.Poly(original_num,x).real_roots(multiple=False) if original_den.subs(x,r)!=0]
+  ztex=r'x\in\{'+','.join(tex(s.N(r,9)) for r in zeros)+r'\}' if zeros else r'\varnothing'
+  full.append((20,i,48 if i<=9 else 49,f,pts,lines,d2,b.tasks[-1]['prompt'],{'excluded':s.solve(original_den,x),'zero_equation':ztex}))
+ fractional(b,full)
+ elementary(b,full)
+ from textbook_full_graphs import full_graph
+ for section,i,page,f,pts,lines,d2,prompt,kwargs in full:
+  full_graph(b,section,i,page,f,pts,lines,d2,prompt,**kwargs)
+  if i%5==0:print("full graph",section,i,flush=True)
 
-def fractional(b):
+def fractional(b,full):
  # (alpha,beta,a,b,c), as printed. The even roots use their natural real domains.
  rows=[(3,2,1,0,1),(3,2,9,1,-1),(3,2,1,1,-3),(5,4,4,-2,1),(5,4,3,0,-2),
  (4,3,1,2,-1),(4,3,4,0,2),(3,4,2,0,-1),(3,2,4,-2,2),(3,2,9,-1,-2),
  (4,3,4,1,2),(4,3,1,0,-1),(6,5,4,0,1),(2,1,9,-2,-1),(2,1,4,1,3),(4,3,1,0,1),
  (4,3,9,0,-1),(2,1,1,0,2),(6,5,1,-1,-2),(6,5,9,0,-1),
- (3,1,-2,1,-1),(3,-1,-4,1,1),(3,-2,-1,1,-2),(3,-2,5,-1,2),(5,1,-1,2,-1),
+ (3,1,-2,1,-1),(3,-1,-4,1,1),(3,2,-1,1,-2),(3,-2,5,-1,2),(5,1,-1,2,-1),
  (5,-1,2,-3,2),(5,2,-1,-1,3),(5,-2,-3,0,1),(3,-3,4,0,-2),(5,3,-2,0,1)]
  for i,(alpha,beta,a,bb,c) in enumerate(rows,1):
   a=s.Integer(a);c=s.Integer(c);bb=s.Integer(bb);p=R(beta,alpha)
@@ -101,8 +109,27 @@ def fractional(b):
   # Preserve the radical form of the printed function rather than silently replacing it by Abs.
   original=c*s.Pow((x*x-a)**beta,R(1,alpha),evaluate=False)+bb if i<=10 else c*s.Pow(s.Abs(x*x-a)**beta,R(1,alpha),evaluate=False)+bb if i<=20 else c*x**beta*s.Pow((x-a)**2,R(1,alpha),evaluate=False)+bb
   for task in b.tasks[-2:]:task['prompt']='y='+tex(original)
+  if i<=20:
+   d1=2*c*p*x*s.sign(x*x-a)*s.Abs(x*x-a)**(p-1) if not i in (6,7) else 2*c*p*x*(x*x-a)**(p-1)
+   crit=[s.Integer(0),-s.sqrt(a),s.sqrt(a)] if a>=0 else [s.Integer(0)]
+   exclusions=[]
+  else:
+   d1=c*x**(beta-1)*s.Abs(x-a)**(p-1)*(beta*s.Abs(x-a)+p*x*s.sign(x-a))
+   crit=[s.Integer(0),a,s.cancel(beta*a/(beta+p))]
+   exclusions=[s.Integer(0)] if beta<0 else []
+  if i<=20:
+   target=-bb/c;zeros=[]
+   if target>=0:
+    power=target**(1/p)
+    squared=[a+power] if i in (6,7) else [a+power,a-power]
+    zeros=list(set(q for val in squared if val>=0 for q in [-s.sqrt(val),s.sqrt(val)]))
+  else:
+   poly=c**alpha*x**(beta*alpha)*(x-a)**2-(-bb)**alpha if beta>=0 else c**alpha*(x-a)**2-(-bb)**alpha*x**(-beta*alpha)
+   zeros=[r for r,m in s.Poly(poly,x).real_roots(multiple=False) if not (beta<0 and r==0)]
+  ztex=r'x\in\{'+','.join(tex(s.N(r,9)) for r in sorted(zeros,key=float))+r'\}' if zeros else r'\varnothing'
+  full.append((21,i,50,f,pts,lines,d2,b.tasks[-1]['prompt'],{'critical':crit,'excluded':exclusions,'d1':d1,'zero_equation':ztex}))
 
-def elementary(b):
+def elementary(b,full):
  E=s.exp;L=s.log;S=s.sin;C=s.cos;P=s.pi
  rows=[
  ((2*x+3)*E(-2*x-2),[-R(1,2)],'y=0'),
@@ -118,7 +145,7 @@ def elementary(b):
  (E(2*x+2)/(2*x+2),[],'x=-1; y=0'),(L(x)/s.sqrt(x),[E(R(8,3))],'x=0; y=0'),
  ((3-x)*E(x-2),[1],'y=0'),(L((1+x)/(1-x)),[0],'x=-1; x=1'),
  (E(1/x**2),[],'x=0; y=1'),(x*E(1/(2-x)),[R(8,3)],'x=2; y=x-1'),
- ((2*x+5)*E(-2*x-4),[-R(3,2)],'y=0'),(2*L(1-4/x)-3,[],'x=0; x=4; y=-3'),
+ ((2*x+5)*E(-2*x-4),[-R(3,2)],'y=0'),(L(1-4/x)-3,[],'x=0; x=4; y=-3'),
  (4*L(x/(x+2))+1,[],'x=0; x=-2; y=1'),(x*(2-L(x))**2,[s.E],''),
  (x**3*E(-x),[0,3-s.sqrt(3),3+s.sqrt(3)],'y=0'),
  (s.sqrt(x)/L(x),[E(-2*s.sqrt(2)),E(2*s.sqrt(2))],'x=1'),
@@ -136,3 +163,17 @@ def elementary(b):
    b.tasks[-2]['instruction']='Введи семейство точек через целое k. Формат (x(k);y(k)); k∈ℤ.'
   if i==2:
    for task in b.tasks[-2:]:task['prompt']=r'y=\sqrt[3]{x^2 e^{-x}}'
+  crits={1:[-1],2:[0,2],3:[-1/s.sqrt(2),1/s.sqrt(2)],4:[],5:[s.E],6:[1],7:[],8:[-1/s.sqrt(2),1/s.sqrt(2)],9:[],
+   10:[(1-s.sqrt(5))/2,(1+s.sqrt(5))/2],11:[],12:[],13:[1],14:[],15:[(3-s.sqrt(5))/2,(3+s.sqrt(5))/2],16:[],17:[-R(1,2)],18:[s.exp(2)],19:[2],20:[],21:[],
+   22:[],23:[-2],24:[],25:[],26:[s.E**2,s.E**4],27:[0,3],28:[s.E**2],29:[],30:[-R(5,2)]}
+  excluded={2:[0],4:[1],5:[0,1],7:[0],8:[0],9:[2],10:[0],12:[0,3],13:[2],14:[-4,0],15:[1],17:[-1],18:[0],
+   20:[-1,1],21:[0],22:[2],24:[0,4],25:[-2,0],26:[0],28:[0,1],29:[-3,0],30:[-R(7,2)]}.get(i,[])
+  zeros={1:'-3/2',2:'0',3:'0',4:'1',6:'0',8:None,10:'-1',11:'k*pi',12:'3*exp(1/3)/(exp(1/3)-1)',14:'-4*exp(1)/(exp(1)-1)',15:'0',16:'pi/2+k*pi',18:'1',19:'3',20:'0',22:'0',23:'-5/2',24:'4/(1-exp(3))',25:'2/(exp(-1/4)-1)',26:'exp(2)',27:'0',29:'3/(exp(3/2)-1)'}
+  zerotex=r'\varnothing'
+  if i==7:zerotex=r'x\approx1.763222834\quad (x\ln x=1,\ x>0)'
+  elif i==8:zerotex=r'\varnothing\quad (x^2-\ln|x|>0)'
+  elif i in zeros:
+   from sympy.parsing.sympy_parser import parse_expr,standard_transformations,convert_xor
+   root=parse_expr(zeros[i],local_dict={'exp':s.exp,'k':s.Symbol('k',integer=True),'pi':s.pi},transformations=standard_transformations+(convert_xor,))
+   zerotex='x='+tex(root)+(r',\quad k\in\mathbb Z' if i in (11,16) else '')
+  full.append((22,i,50 if i<=2 else 51 if i<=28 else 52,f,pts,lines,d2,b.tasks[-1]['prompt'],{'critical':list(map(s.sympify,crits[i])),'excluded':list(map(s.sympify,excluded)),'zero_equation':zerotex}))
