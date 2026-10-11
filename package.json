@@ -18,7 +18,8 @@
     "test:retry": "node tests/retry.cjs",
     "test:textbook": "node tests/textbook.cjs",
     "test:written": "node tests/written.cjs",
-    "test:physics": "node tests/physics.cjs"
+    "test:physics": "node tests/physics.cjs",
+    "test:quiz-types": "node tests/quiz-types.cjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.8",

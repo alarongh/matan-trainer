@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import katex from 'katex';
-import {formulaBanks,fullTex,tileTex} from '../src/formula-bank.js';
+import {formulaBanks,fullTex,tileTex,rightTex} from '../src/formula-bank.js';
+import {numeric} from '../src/answer.js';
 import {emptyQuiz,startWave,nextFormula,submitFormula,matchFormula,waveQueue,validateQuiz,loadQuiz,saveQuiz,quizKey} from '../src/quiz-core.js';
-test('both formula banks cover every ticket section and render every fragment, template and revealed step',()=>{
- assert.equal(formulaBanks.matan.length,58);assert.equal(formulaBanks.linear.length,48);
+test('formula banks cover every section and render every fragment, template and revealed step',()=>{
+ assert.equal(formulaBanks.matan.length,112);assert.equal(formulaBanks.linear.length,48);
  for(const [subject,cards] of Object.entries(formulaBanks)){
   assert.equal(new Set(cards.map(c=>c.id)).size,cards.length);
   for(let group=1;group<=10;group++)assert.ok(cards.some(c=>c.groups.includes(group)),subject+' №'+group);
@@ -17,13 +18,47 @@ test('both formula banks cover every ticket section and render every fragment, t
     assert.deepEqual([...order].sort(),card.parts.map((_,i)=>i),card.id+' permutation');
     assert.deepEqual(matchFormula(card,order.map(i=>card.parts[i])),[],card.id+' valid construction');
    }
-   for(const value of [...card.parts,...card.wrong])assert.doesNotThrow(()=>katex.renderToString(tileTex(value),{throwOnError:true}),card.id+' piece');
-   for(let mask=0;mask<2**card.parts.length;mask++)assert.doesNotThrow(()=>katex.renderToString(fullTex(card,card.parts.map((v,i)=>mask&(1<<i)?v:null)),{throwOnError:true}),card.id+' partial');
+   for(const value of [...card.parts,...card.wrong])assert.doesNotThrow(()=>katex.renderToString(tileTex(value),{throwOnError:true,strict:'ignore'}),card.id+' piece');
+   for(const step of card.steps||[])if(step[2])assert.doesNotThrow(()=>katex.renderToString(step[2],{throwOnError:true,strict:'ignore'}),card.id+' worked step');
+   for(let mask=0;mask<2**card.parts.length;mask++)assert.doesNotThrow(()=>katex.renderToString(fullTex(card,card.parts.map((v,i)=>mask&(1<<i)?v:null)),{throwOnError:true,strict:'ignore'}),card.id+' partial');
    for(let i=0;i<card.parts.length;i++)for(const wrong of card.wrong){
     const selected=[...card.parts];selected[i]=wrong;assert.ok(matchFormula(card,selected).length,card.id+' wrong fragment');
-    assert.doesNotThrow(()=>katex.renderToString(fullTex(card,selected),{throwOnError:true}),card.id+' wrong preview');
+    assert.doesNotThrow(()=>katex.renderToString(fullTex(card,selected),{throwOnError:true,strict:'ignore'}),card.id+' wrong preview');
    }
   }
+ }
+});
+test('matan reverse and transformation waves preserve old history and match the chosen practice',()=>{
+ const cards=formulaBanks.matan;
+ assert.deepEqual(Object.fromEntries(['forward','reverse','transform'].map(type=>[type,cards.filter(c=>c.type===type).length])),{forward:66,reverse:20,transform:26});
+ for(const practice of ['forward','reverse','transform']){
+  const state=emptyQuiz();state.practice=practice;state.groups=[3,4,6];assert.ok(startWave(state,cards,()=>.37));
+  assert.ok(state.queue.every(id=>{const card=cards.find(c=>c.id===id);return card.type===practice&&card.groups.some(g=>state.groups.includes(g));}));
+  state.items['m-first-limit']={attempts:1,correct:1,wrong:0,clean:1,streak:1,lastAt:1};
+  state.round.selected=[...cards.find(c=>c.id===state.round.id).parts];
+  const restored=validateQuiz(JSON.parse(JSON.stringify(state)),cards);assert.deepEqual(restored,state);
+  for(let i=0;i<state.queue.length*3;i++){nextFormula(state,cards,()=>.37);assert.equal(cards.find(c=>c.id===state.round.id).type,practice);}
+  assert.equal(restored.items['m-first-limit'].clean,1,'old formula result retained');
+ }
+ const legacy=emptyQuiz();delete legacy.practice;startWave(legacy,cards.slice(0,58));assert.equal(validateQuiz(legacy,cards).practice,'all');
+ for(const card of cards.filter(c=>c.type==='reverse'))assert.equal(fullTex(card),rightTex(card)+'\\;'+card.relation+'\\;'+card.left,'reverse layout '+card.id);
+ const state=emptyQuiz();state.groups=[10];state.practice='reverse';assert.equal(startWave(state,cards),false,'empty selection cannot launch');
+});
+test('independent math values agree with logarithm and coefficient-sensitive construction cards',()=>{
+ const cards=formulaBanks.matan,at=id=>cards.find(c=>c.id==='m-transform-'+id);
+ const close=(actual,expected)=>assert.ok(Math.abs(actual-expected)<1e-9,actual+' vs '+expected);
+ const value=tex=>numeric(tex.replace(/\\ln(\d+)/g,'ln($1)'));
+ // Evaluate the selected fragments independently of the authored explanations.
+ close(numeric(rightTex(at('exp-to-root'))),Math.sqrt(2/3));
+ close(value(rightTex(at('limit-exponent'))),(Math.log(2)-Math.log(3))/2);
+ close(value(rightTex(at('cancel-small'))),(Math.log(7)-Math.log(2))/4);
+ close(numeric(rightTex(at('square-ratio'))),25/4);
+ close(numeric(rightTex(at('cos-power-limit'))),Math.exp(-36));
+ const quartic=at('sine-double-limit');close((numeric(quartic.parts[1])/numeric(quartic.parts[2]))**(1/numeric(quartic.parts[0])),(7/2)**.25);
+ for(const x of [-.31,.17,1.2]){
+  close(numeric(rightTex(at('rationalize')),{x}),Math.sqrt(x+4)-2);
+  close(numeric(rightTex(at('factor-cancel')),{x}),(x*x+4*x+3)/(x*x+x-6));
+  close(numeric(rightTex(at('base-minus-one')),{x}),(1+2**x)/(1+3**x)-1);
  }
 });
 test('endless waves respect multiple selected sections, avoid adjacent repeats and prioritize mistakes',()=>{
@@ -34,7 +69,7 @@ test('endless waves respect multiple selected sections, avoid adjacent repeats a
  const weak=expected[0];state.items[weak]={wrong:1,streak:0};
  const queue=waveQueue(cards,state,()=>.37);assert.equal(queue.filter(id=>id===weak).length,2);
  assert.ok(queue.every((id,i)=>i===0||id!==queue[i-1]));
- for(let i=0;i<400;i++){const previous=state.round.id;assert.ok(nextFormula(state,cards,()=>.37));assert.ok(expected.includes(state.round.id));assert.notEqual(state.round.id,previous);}
+ for(let i=0;i<expected.length*6;i++){const previous=state.round.id;assert.ok(nextFormula(state,cards,()=>.37));assert.ok(expected.includes(state.round.id));assert.notEqual(state.round.id,previous);}
  assert.ok(state.wave>5);
  const single=[cards[0]],one=emptyQuiz();assert.ok(startWave(one,single));for(let i=0;i<10;i++)assert.ok(nextFormula(one,single));
  state.groups=[];assert.equal(startWave(state,cards),false);

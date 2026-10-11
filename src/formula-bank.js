@@ -1,4 +1,5 @@
 import {physicsFormulas} from './physics-formulas.js';
+import {extendMatanCards} from './matan-formula-practice.js';
 // Authored recall cards based on the formulas used in the existing study banks.
 // Every tile is complete TeX; templates place tiles inside fractions/powers safely.
 function f(id,groups,title,left,layout,parts,wrong,conditions,tip,explanation,relation='='){
@@ -120,6 +121,7 @@ export const formulaBanks={
  ]
 };
 const swapped=[[0,1],[1,0]];
+formulaBanks.matan=extendMatanCards(formulaBanks.matan);
 const permutations=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
 const orders={
  'm-double-sine':permutations,'m-difference-squares':swapped,
@@ -131,7 +133,7 @@ const orders={
  'l-polynomial-division':[[0,1,2],[1,0,2]]
 };
 orders['p-m16']=[[0,1],[1,0]];orders['p-m23']=[[0,1],[1,0]];orders['p-g31']=[[0,1],[1,0]];orders['p-g05']=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
-for(const bank of Object.values(formulaBanks))for(const card of bank)card.orders=orders[card.id]||[card.parts.map((_,i)=>i)];
+for(const bank of Object.values(formulaBanks))for(const card of bank)card.orders=card.orders||orders[card.id]||[card.parts.map((_,i)=>i)];
 export function tileTex(tex){return tex.includes('&')?'\\begin{matrix}'+tex+'\\end{matrix}':tex;}
 export function rightTex(card,selected=card.parts){return card.layout.replace(/@(\d+)@/g,(_,i)=>' '+(selected[i]??'\\boxed{\\;?\\;}')+' ');}
-export function fullTex(card,selected=card.parts){return card.left+'\\;'+card.relation+'\\;'+rightTex(card,selected);}
+export function fullTex(card,selected=card.parts){const built=rightTex(card,selected);return card.type==='reverse'?built+'\\;'+card.relation+'\\;'+card.left:card.left+'\\;'+card.relation+'\\;'+built;}

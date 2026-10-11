@@ -19,7 +19,7 @@ async function main(){
  async function overflow(width){assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'page overflow at '+width);}
  try{
   await page.goto(base);await ready();const calculus=await page.evaluate(()=>localStorage.getItem('matan-trainer:v1'));
-  assert.equal(await page.locator('#count-all').innerText(),'426');
+  assert.equal(await page.locator('#count-all').innerText(),String(JSON.parse(fs.readFileSync('data/tasks.json','utf8')).length));
   await page.locator('#show-quiz').click();assert.equal(await page.locator('#task-practice').isVisible(),false);
   assert.equal(await page.locator('.quiz-topic input').count(),10);
   await page.getByRole('button',{name:'Снять выбор',exact:true}).click();assert.equal(await page.locator('#quiz-start').isDisabled(),true);

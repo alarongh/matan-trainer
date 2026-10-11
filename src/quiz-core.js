@@ -1,5 +1,6 @@
 export const quizKey=subject=>'formula-quiz:'+subject+':v1';
-export const emptyQuiz=()=>({version:1,groups:Array.from({length:10},(_,i)=>i+1),autoAdvance:true,wave:0,queue:[],cursor:0,round:null,items:{}});
+export const emptyQuiz=()=>({version:1,groups:Array.from({length:10},(_,i)=>i+1),practice:'all',autoAdvance:true,wave:0,queue:[],cursor:0,round:null,items:{}});
+export const eligibleCards=(cards,state)=>cards.filter(card=>card.groups.some(g=>state.groups.includes(g))&&(state.practice==='all'||(card.type||'forward')===state.practice));
 export function shuffled(values,random=Math.random){
  const result=[...values];for(let i=result.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;
 }
@@ -9,7 +10,7 @@ export function matchFormula(card,selected){
  return wrong.reduce((best,v)=>v.length<best.length?v:best,wrong[0]);
 }
 export function waveQueue(cards,state,random=Math.random,previous=null){
- const available=cards.filter(card=>card.groups.some(g=>state.groups.includes(g)));
+ const available=eligibleCards(cards,state);
  const pool=shuffled(available.flatMap(card=>state.items[card.id]?.wrong>0&&state.items[card.id]?.streak<2&&available.length>1?[card.id,card.id]:[card.id]),random);
  const queue=[];let last=previous;
  while(pool.length){let index=pool.findIndex(id=>id!==last);if(index<0)index=0;last=pool.splice(index,1)[0];queue.push(last);}return queue;
@@ -42,6 +43,7 @@ export function validateQuiz(raw,cards){
  const state=emptyQuiz(),byId=new Map(cards.map(c=>[c.id,c]));
  if(!raw||raw.version!==1)return state;
  if(Array.isArray(raw.groups))state.groups=[...new Set(raw.groups.filter(g=>Number.isInteger(g)&&g>=1&&g<=10))];
+ if(['all','forward','reverse','transform'].includes(raw.practice))state.practice=raw.practice;
  state.autoAdvance=raw.autoAdvance!==false;
  const count=v=>Number.isSafeInteger(v)&&v>=0?Math.min(v,1_000_000):0;
  if(raw.items&&typeof raw.items==='object')for(const [id,v] of Object.entries(raw.items)){
@@ -50,7 +52,8 @@ export function validateQuiz(raw,cards){
   state.items[id].lastAt=Number.isFinite(v.lastAt)&&v.lastAt>=0?v.lastAt:0;
  }
  if(!Array.isArray(raw.queue)||raw.queue.length>cards.length*2)return state;
- state.queue=raw.queue.filter(id=>byId.has(id));
+ const eligible=new Set(cards.filter(c=>state.practice==='all'||(c.type||'forward')===state.practice).map(c=>c.id));
+ state.queue=raw.queue.filter(id=>eligible.has(id));
  state.wave=count(raw.wave);state.cursor=Math.min(count(raw.cursor),Math.max(0,state.queue.length-1));
  const card=byId.get(state.queue[state.cursor]);
  if(card){
